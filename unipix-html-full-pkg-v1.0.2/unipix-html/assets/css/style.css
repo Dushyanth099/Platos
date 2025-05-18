@@ -21491,7 +21491,7 @@ body.index-sc h6 {
   }
 }
 .gallery-container {
-  /* background-image: url("/assets/galleryriflebg.png"); */
+  background-image: url("../galleryriflebg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -28096,7 +28096,7 @@ h1 {
   left: 0;
   width: 300px;
   height: 200px;
-  background: url("assets/gunimage.png")
+  background: url("../gunimage.png")
     no-repeat center / cover;
   z-index: 2;
 }
