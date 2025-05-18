@@ -28096,7 +28096,7 @@ h1 {
   left: 0;
   width: 300px;
   height: 200px;
-  background: url("/unipix-html-full-pkg-v1.0.2/unipix-html/assets/gunimage.png")
+  background: url("assets/gunimage.png")
     no-repeat center / cover;
   z-index: 2;
 }
