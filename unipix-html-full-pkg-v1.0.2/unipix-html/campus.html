@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platos Academy</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/fav.svg"
+    />
+    <!-- animate css -->
+    <link rel="stylesheet" href="assets/css/plugins/animate.min.css" />
+    <!-- fontawesome 6.4.2 -->
+    <link rel="stylesheet" href="assets/css/plugins/fontawesome.min.css" />
+    <!-- bootstrap min css -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+    <!-- swiper Css 10.2.0 -->
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
+    <!-- Bootstrap 5.0.2 -->
+    <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css" />
+    <!-- metismenu scss -->
+    <link rel="stylesheet" href="assets/css/vendor/metismenu.css" />
+    <!-- nice select js -->
+    <link rel="stylesheet" href="assets/css/plugins/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/plugins/jquery-ui.css" />
+    <!-- custom style css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <!-- AOS CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    .activities-carousel .owl-stage {
+      display: flex;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .activities-carousel .rts__single--member {
+      margin: 0 auto;
+      transition: all 0.3s ease;
+    }
+
+    .activities-carousel .owl-nav {
+      position: absolute;
+      top: 480px;
+      right: 20px;
+    }
+
+    .activities-carousel .owl-nav button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: black !important;
+      margin-left: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .activities-carousel .owl-nav button:hover {
+      background: blue !important;
+      color: black !important;
+    }
+
+    .activities-carousel .owl-nav button span {
+      font-size: 24px;
+      line-height: 1;
+      position: relative;
+      top: -3px;
+    }
+  </style>
+  <body class="page">
+    <!-- header area start -->
+
+    <header class="header header_sticky v_1">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="header__wrapper">
+              <div class="header__logo">
+                <a href="index.html" class="header__logo--link">
+                  <img src="assets/platoslogowhite.png" alt="unipix" />
+                </a>
+              </div>
+              <div class="header__menu">
+                <div class="navigation">
+                  <nav class="navigation__menu">
+                    <ul>
+                      <li class="navigation__menu--item">
+                        <a
+                          href="index.html"
+                          class="navigation__menu--item__link"
+                          >Home</a
+                        >
+                      </li>
+
+                      <li class="navigation__menu--item has-child has-arrow">
+                        <a
+                          href="about.html"
+                          class="navigation__menu--item__link"
+                          >About</a
+                        >
+                        <ul class="submenu sub__style">
+                          <li><a href="about.html">Why Choose us</a></li>
+                          <li><a href="about.html">Vision</a></li>
+                          <!-- <li class="has-child has-arrow">
+                            <a href="#">Faculty</a>
+                            <ul class="sub__style">
+                              <li>
+                                <a class="mobile-menu-link" href=".html"
+                                  >Faculty</a
+                                >
+                              </li>
+                              <li>
+                                <a class="mobile-menu-link" href=".html"
+                                  >Faculty Details</a
+                                >
+                              </li>
+                              <li><a href=".html">Faculty Staff</a></li>
+                              <li class="has-child">
+                                <a href=".html">Faculty Staff details</a>
+                              </li>
+                            </ul>
+                          </li> -->
+                          <li><a href="about.html">Mission</a></li>
+                          <li><a href="about.html">Founders & Trustee</a></li>
+                          <li><a href="about.html">Fascilitators</a></li>
+                        </ul>
+                      </li>
+                      <li class="navigation__menu--item has-child has-arrow">
+                        <a
+                          href="admissions.html"
+                          class="navigation__menu--item__link"
+                          >Admission</a
+                        >
+                        <ul class="submenu sub__style">
+                          <li>
+                            <a href="admissions.html">Admission Process</a>
+                          </li>
+                          <li><a href="admissions.html">Form</a></li>
+                          <li>
+                            <a href="admissions.html">Enquiry</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="navigation__menu--item has-child has-arrow">
+                        <a
+                          href="campus.html"
+                          class="navigation__menu--item__link"
+                          >Campus</a
+                        >
+                        <ul class="submenu sub__style">
+                          <li><a href="campus.html">Campus Life</a></li>
+                          <li><a href="campus.html">Infrastructure</a></li>
+                          <li><a href="campus.html">Campus Safety</a></li>
+                          <li><a href="campus.html">Transport</a></li>
+                        </ul>
+                      </li>
+                      <li class="navigation__menu--item">
+                        <a
+                          href="rifleclub.html"
+                          class="navigation__menu--item__link"
+                          >Rifle Club</a
+                        >
+                      </li>
+                      <li class="navigation__menu--item">
+                        <a
+                          href="extracurricularactivities.html"
+                          class="navigation__menu--item__link"
+                          >Extra curricular activities</a
+                        >
+                      </li>
+
+                      <li class="navigation__menu--item">
+                        <a
+                          href="contact.html"
+                          class="navigation__menu--item__link"
+                          >Contact</a
+                        >
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <div class="header__right">
+                <div class="header__right--item">
+                  <!-- <div id="langSwitcher" class="lang__trigger">
+                    <span class="selected__lang">English</span>
+                    <i class="fa-light fa-globe"></i>
+                    <div class="translate__lang">
+                      <ul>
+                        <li><a href="#" class="active">English</a></li>
+                        <li><a href="#">French</a></li>
+                        <li><a href="#">Spanish</a></li>
+                        <li><a href="#">Romanian</a></li>
+                      </ul>
+                    </div>
+                  </div> -->
+                  <div id="search-btn" class="search__trigger">
+                    <i class="fa-sharp fa-light fa-magnifying-glass"></i>
+                  </div>
+                  <div id="menu-btn" class="menu__trigger">
+                    <img src="assets/images/icon/bar__line.svg" alt="bar" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header area end -->
+
+    <!-- BREADCRUMB AREA -->
+    <section
+      class="rts-breadcrumb breadcrumb-height breadcumb-bg"
+      style="background-image: url(assets/aboutbannerbg.jpg)"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="breadcrumb-content">
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Campus
+                </li>
+              </ul>
+              <h2 class="section-title">Campus</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- BREADCRUMB AREA END -->
+   
+  
+    <!- campus life -->
+    <div class="rts-campus-life rts-section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="campus-life">
+            <div class="campus-life__content">
+              <h1 class="section-title">Campus Life</h1>
+              <p class="description w-680">
+                Our thriving residential campus is home to a community of
+                creative and accomplished people from around the world.
+              </p>
+
+              <div class="campus-video">
+                <img src="assets/images/campuslifeimg.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- campus life end -->
+
+    <!-- funfact -->
+
+    <div class="rts-funfact v_2 stroke">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div
+              class="rts-funfact-wrapper"
+              style="min-width: 1000px !important"
+            >
+              <div class="single-cta-item">
+                <h2 class="single-cta-item__title">1,623</h2>
+                <p>Faculty Members</p>
+              </div>
+              <div class="single-cta-item">
+                <h2 class="single-cta-item__title">6:1</h2>
+                <p>Student-to-faculty Ratio</p>
+              </div>
+              <div class="single-cta-item">
+                <h2 class="single-cta-item__title">Nearly 200</h2>
+                <p>Graduate Fields of study</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- funfact end-->
+
+    <!-- section one -->
+    <!-- single section -->
+    <div class="rts-campus-section rts-section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="rts-section rt-center mb--45">
+            <!-- <h3 class="rts-section-title">Student Life</h3> -->
+          </div>
+        </div>
+        <div class="row g-5">
+          <!-- single item -->
+          <div
+            class="col-lg-4 col-md-6 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="single-item">
+              <div class="single-item__content">
+                <div class="single-item__image">
+                  <img src="assets/images/stulifeimg1.JPG" alt="item-image" />
+                </div>
+                <div class="single-item__meta">
+                  <h5 class="item-title"><a href="#">Student Affairs</a></h5>
+                  <p class="item-description">
+                    Comprising more than 25 offices & centers, Student Affairs
+                    provides a broad of this services.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- single item end -->
+          <!-- single item -->
+          <div
+            class="col-lg-4 col-md-6 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="single-item">
+              <div class="single-item__content">
+                <div class="single-item__image">
+                  <img src="assets/images/stulifeimg2.jpeg" alt="item-image" />
+                </div>
+                <div class="single-item__meta">
+                  <h5 class="item-title"><a href="#">Housing & Dining</a></h5>
+                  <p class="item-description">
+                    Nearly all undergraduates and more than 65% graduate
+                    students reside in 81 merit undergraduate
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- single item end -->
+          <!-- single item -->
+          <div
+            class="col-lg-4 col-md-6 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="single-item">
+              <div class="single-item__content">
+                <div class="single-item__image">
+                  <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
+                </div>
+                <div class="single-item__meta">
+                  <h5 class="item-title">
+                    <a href="#">Engagement & Diversity</a>
+                  </h5>
+                  <p class="item-description">
+                    Growing up in the Chicago suburbs, Jess found video games to
+                    be a rich portal to alternative.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- single item end -->
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .single-item {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .single-item:hover {
+        transform: translateY(-50px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .single-item__image img {
+        width: 100%;
+        transition: transform 0.4s ease;
+      }
+
+      .single-item:hover .single-item__image img {
+        transform: scale(1.05);
+      }
+
+      .single-item__meta {
+        background-color: #fff;
+        padding: 15px;
+        transition: background-color 0.3s ease;
+      }
+
+      .single-item:hover .single-item__meta {
+        background-color: #f9f9f9;
+      }
+    </style>
+
+    <!-- single section end -->
+
+    <!-- section two -->
+    <!-- single section -->
+    <div class="rts-campus-section rts-section-padding v_2">
+      <div class="container">
+        <div class="row">
+          <div class="rts-section rt-center mb--80">
+            <h3 class="rts-section-title">infrastructure</h3>
+          </div>
+        </div>
+        <div class="row g-5">
+          <!-- single item -->
+          <div
+            class="col-lg-4 col-md-6 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="single-item">
+              <div class="single-item__content">
+                <div class="single-item__image">
+                  <img src="assets/images/infa3.jpeg" alt="item-image" />
+                </div>
+                <div class="single-item__meta">
+                  <h5 class="item-title"><a href="#">The Arts at Unipix</a></h5>
+                  <p class="item-description">
+                    Stanford has a rich tradition of fostering creativity and
+                    the arts, A vibrant campus
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- single item end -->
+          <!-- single item -->
+          <div
+            class="col-lg-4 col-md-6 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="single-item">
+              <div class="single-item__content">
+                <div class="single-item__image">
+                  <img src="assets/images/infa1.JPG" alt="item-image" />
+                </div>
+                <div class="single-item__meta">
+                  <h5 class="item-title"><a href="#">Museums</a></h5>
+                  <p class="item-description">
+                    The Stanford campus is home to two world-class art museums.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- single item end -->
+          <!-- single item -->
+          <div
+            class="col-lg-4 col-md-6 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="single-item">
+              <div class="single-item__content">
+                <div class="single-item__image">
+                  <img src="assets/images/infa2.jpg" alt="item-image" />
+                </div>
+                <div class="single-item__meta">
+                  <h5 class="item-title"><a href="#">Performing Arts</a></h5>
+                  <p class="item-description">
+                    Presents range performances and distinctive performing arts
+                    experiences.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- single item end -->
+        </div>
+      </div>
+    </div>
+    <!-- single section end -->
+
+    <!-- section three -->
+    <!-- single section -->
+    <div class="rts-campus-section rts-section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="rts-section rt-center mb--80">
+            <h3 class="rts-section-title">Campus Safety</h3>
+          </div>
+        </div>
+        <div class="row g-5">
+          <!-- single item -->
+          <div
+            class="col-lg-4 col-md-6 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="single-item">
+              <div class="single-item__content">
+                <div class="single-item__image">
+                  <img src="assets/images/safteyimg1.jpeg" alt="item-image" />
+                </div>
+                <div class="single-item__meta">
+                  <h5 class="item-title">
+                    <a href="#">Recreation and Wellness</a>
+                  </h5>
+                  <p class="item-description">
+                    Students, faculty, recreational facilities and wellness
+                    programs.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- single item end -->
+          <!-- single item -->
+          <div
+            class="col-lg-4 col-md-6 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="single-item">
+              <div class="single-item__content">
+                <div class="single-item__image">
+                  <img src="assets/images/safetyimg2.JPG" alt="item-image" />
+                </div>
+                <div class="single-item__meta">
+                  <h5 class="item-title"><a href="#">Cardinal Athletics</a></h5>
+                  <p class="item-description">
+                    Stanford students compete in 36 varsity sports and 43 club
+                    sports.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- single item end -->
+          <!-- single item -->
+          <div
+            class="col-lg-4 col-md-6 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="single-item">
+              <div class="single-item__content">
+                <div class="single-item__image">
+                  <img src="assets/images/safetyimg3.JPG" alt="item-image" />
+                </div>
+                <div class="single-item__meta">
+                  <h5 class="item-title"><a href="#">BeWell</a></h5>
+                  <p class="item-description">
+                    Offers incentives, programs, and activities that promote
+                    health and wellness.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- single item end -->
+        </div>
+      </div>
+    </div>
+
+    <!-- section four -->
+    <!-- single section -->
+    <div class="rts-campus-section rts-section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="rts-section rt-center mb--80">
+            <h3 class="rts-section-title">Transport</h3>
+          </div>
+        </div>
+        <div class="row g-5">
+          <!-- single item -->
+          <div
+            class="col-lg-4 col-md-6 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="single-item">
+              <div class="single-item__content">
+                <div class="single-item__image">
+                  <img src="assets/images/transport1.jpeg" alt="item-image" />
+                </div>
+                <div class="single-item__meta">
+                  <h5 class="item-title">
+                    <a href="#">Recreation and Wellness</a>
+                  </h5>
+                  <p class="item-description">
+                    Students, faculty, recreational facilities and wellness
+                    programs.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- single item end -->
+          <!-- single item -->
+          <div
+            class="col-lg-4 col-md-6 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="single-item">
+              <div class="single-item__content">
+                <div class="single-item__image">
+                  <img src="assets/images/transport2.jpeg" alt="item-image" />
+                </div>
+                <div class="single-item__meta">
+                  <h5 class="item-title"><a href="#">Cardinal Athletics</a></h5>
+                  <p class="item-description">
+                    Stanford students compete in 36 varsity sports and 43 club
+                    sports.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- single item end -->
+          <!-- single item -->
+          <div
+            class="col-lg-4 col-md-6 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="single-item">
+              <div class="single-item__content">
+                <div class="single-item__image">
+                  <img src="assets/images/transport3.jpeg" alt="item-image" />
+                </div>
+                <div class="single-item__meta">
+                  <h5 class="item-title"><a href="#">BeWell</a></h5>
+                  <p class="item-description">
+                    Offers incentives, programs, and activities that promote
+                    health and wellness.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- single item end -->
+        </div>
+      </div>
+    </div>
+
+    <!-- single section end -->
+
+    <!-- newsletter start -->
+    <div class="rts-newsletter v_1 rts-cta-background">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="rts-newsletter-box"
+              style="background-image: url(assets/images/newsletter/bg-1.jpg)"
+            >
+              <div class="rts-newsletter-box-content">
+                <h4 class="newsletter-title">
+                  Don’t Miss Awesome Story From Our Alumni
+                </h4>
+                <div class="newsletter-form w-530">
+                  <form action="#">
+                    <input
+                      type="email"
+                      name="subscription"
+                      id="subscription"
+                      placeholder="Enter Your mail"
+                      required
+                    />
+                    <button type="submit" class="rts-nbg-btn btn-arrow">
+                      Subscribe
+                      <span
+                        ><i class="fa-sharp fa-regular fa-arrow-right"></i
+                      ></span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- newsletter end -->
+
+    <!-- footer start -->
+    <footer class="rts-footer v_2 pt--100 pb--100">
+      <div class="container-fluid" style="max-width: 1500px !important">
+        <div class="row gy-5 gy-lg-0">
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="row">
+              <div class="col-md-6">
+                <a href="index.html" class="d-block rts-footer-logo mb--40">
+                  <img src="assets/footerlogo.png" alt="Unipix" />
+                </a>
+              </div>
+              <div class="col-md-6">
+                <p>
+                  We are passionate education dedicated to providing
+                  high-quality resources learners all backgrounds.
+                </p>
+                <div class="rts-contact-link">
+                  <a href="mailto:platosacademy.com"
+                    ><i class="fa-sharp fa-light fa-location-dot"></i>
+                    Tiruppu,4/317, Paramankadu, Chinniyagoundan pudur,
+                    Chinnandipalayam, (Iduvampalayam Po), Tiruppur-641667
+                  </a>
+                  <br />
+                  <a href="callto:+91 7200076653"
+                    ><i class="fa-thin fa-phone"></i>+91 7200076653
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="rts-footer-widget w-320"></div>
+          </div>
+          <div class="col-lg-2 col-md-6 col-sm-6">
+            <div
+              class="rts-footer-widget"
+              style="text-align: center !important"
+            >
+              <h6 class="rt-semi">Our Campus</h6>
+              <div class="rts-footer-menu">
+                <ul>
+                  <li><a href=".html">Academic</a></li>
+                  <li><a href=".html">Athletics</a></li>
+                  <li><a href=".html">Campus life</a></li>
+                  <li><a href=".html">Research</a></li>
+                  <li><a href=".html">Academic Area</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 col-sm-4">
+            <div
+              class="rts-footer-widget ml--30"
+              style="text-align: center !important"
+            >
+              <h6 class="rt-semi">Our Campus</h6>
+              <div class="rts-footer-menu">
+                <ul>
+                  <li><a href=".html">About </a></li>
+                  <li><a href=".html">Tution Fee</a></li>
+                  <li><a href=".html">Alumni</a></li>
+                  <li><a href=".html">Faculty Staff</a></li>
+                  <li><a href=".html">Event</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-8">
+            <div class="rts-footer-widget ml--30">
+              <h6 class="rt-semi">Recent Events</h6>
+              <div class="rts-post-widget">
+                <ul class="list-unstyled">
+                  <li class="single-post">
+                    <a href=".html" class="blog-thumb">
+                      <img src="assets/images/blog/w-1.jpg" alt="latest post" />
+                    </a>
+                    <div class="post-content">
+                      <span class="rt-date">February 15,2024 </span>
+                      <a href=".html">
+                        From Plato's to IIT: NEET Success Stories
+                      </a>
+                    </div>
+                  </li>
+                  <li class="single-post">
+                    <a href=".html" class="blog-thumb">
+                      <img
+                        src="assets/images/blog/small-thumb-1.jpg"
+                        alt="latest post"
+                      />
+                    </a>
+                    <div class="post-content">
+                      <span class="rt-date">February 20,2024</span>
+                      <a href=".html">
+                        Rifle Club Champions Share Their Journey
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="rts-footer-copy-right v_1">
+      <div class="container">
+        <div class="row">
+          <div class="rt-center">
+            <p class="--p-xs">
+              Copyright &copy; <span id="year"></span> All Rights Reserved by
+              <a href="#">Platos</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer end -->
+
+    <!-- offcanvase menu -->
+
+    <!-- header style two -->
+    <div id="side-bar" class="side-bar">
+      <button class="close-icon-menu"><i class="far fa-times"></i></button>
+      <!-- inner menu area desktop start -->
+      <div class="inner-main-wrapper-desk">
+        <div class="thumbnail">
+          <img src="assets/platoslogowhite.png" alt="Platos Academy" />
+        </div>
+        <div class="inner-content">
+          <p class="disc">
+            Welcome to our CBSE school, where academic excellence meets holistic
+            development. Explore a world of learning, growth, and opportunity.
+          </p>
+          <!-- offcanvase banner -->
+          <div class="offcanvase__banner mt--50">
+            <div class="offcanvase__banner--content">
+              <img src="assets/images/offcanvase.jpg" alt="offcanvase" />
+              <a href="admission.html" class="rts-theme-btn">Apply Now</a>
+            </div>
+          </div>
+          <div class="offcanvase__info">
+            <div class="offcanvase__info--content">
+              <a href="callto:+91 7200076651"
+                ><span><i class="fa-sharp fa-light fa-phone"></i></span>+(91)
+                7200076653</a
+              >
+              <a href="#"
+                ><span><i class="fa-sharp fa-light fa-location-dot"></i></span
+                >4/317,Paramankadu,Chinniyagoundan pudur,
+                Chinnandipalayam,(Iduvampalayam Po),Tiruppur-641667</a
+              >
+              <div class="offcanvase__info--content--social">
+                <p class="title">Follow Us:</p>
+                <div class="social__links">
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- mobile menu area start -->
+
+      <div class="mobile-menu-main">
+        <nav class="nav-main mainmenu-nav mt--30">
+          <ul class="mainmenu metismenu" id="mobile-menu-active">
+            <li class="has-droupdown">
+              <a href="#" class="main">Homepages</a>
+              <ul class="submenu mm-collapse">
+                <li>
+                  <a class="mobile-menu-link" href=".html">Home Style One</a>
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href=".html">Home Style Two</a>
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href=".html">Home Style Three</a>
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href=".html">Home Style Four</a>
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href=".html">Home Style Five</a>
+                </li>
+              </ul>
+            </li>
+            <li class="has-droupdown">
+              <a href="#" class="main">Pages</a>
+              <ul class="submenu mm-collapse">
+                <li>
+                  <a class="mobile-menu-link" href=".html">About Us</a>
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href=".html">Athletics</a>
+                </li>
+                <li class="has-dropdown third-lvl">
+                  <a href="javascript:void(0);">Faculty</a>
+                  <ul class="submenu third-lvl base">
+                    <li>
+                      <a class="mobile-menu-link" href=".html">Faculty</a>
+                    </li>
+                    <li>
+                      <a class="mobile-menu-link" href=".html"
+                        >Faculty Details</a
+                      >
+                    </li>
+                    <li>
+                      <a class="mobile-menu-link" href=".html">Faculty</a>
+                    </li>
+                    <li>
+                      <a class="mobile-menu-link" href=".html"
+                        >Faculty Staff details</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href=".html">Research</a>
+                </li>
+              </ul>
+            </li>
+            <li class="has-droupdown">
+              <a href="#" class="main">Academics</a>
+              <ul class="submenu mm-collapse">
+                <li>
+                  <a class="mobile-menu-link" href="academic.html">Academic</a>
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="admission.html"
+                    >Admission</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="academic-area.html"
+                    >Academic Area</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="campus-life.html"
+                    >Campus Life</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="scholarship.html"
+                    >Scholarship</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href=".html">Tution Fee</a>
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href=".html">Alumni</a>
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href=".html">Program Single</a>
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href=".html"
+                    >Department Details</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="has-droupdown">
+              <a href="#" class="main">Events</a>
+              <ul class="submenu mm-collapse">
+                <li><a class="mobile-menu-link" href=".html">Event</a></li>
+                <li>
+                  <a class="mobile-menu-link" href=".html">Event Details</a>
+                </li>
+              </ul>
+            </li>
+            <li class="has-droupdown">
+              <a href="#" class="main">Blog</a>
+              <ul class="submenu mm-collapse">
+                <li><a class="mobile-menu-link" href=".html">Blog</a></li>
+                <li>
+                  <a class="mobile-menu-link" href=".html">Blog Grid</a>
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href=".html">Blog List</a>
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href=".html">Blog Details</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="has-droupdown">
+              <a href="#" class="main" href="campus-life.html">Campus</a>
+
+              <ul class="submenu mm-collapse">
+                <li>
+                  <a class="mobile-menu-link" href="campus-life.html"
+                    >Campus Life</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="campus-life.html"
+                    >infrastructure</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="campus-life.html"
+                    >Campus Safety</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="campus-life.html"
+                    >Transport</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="contact.html" class="main">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="offcanvase__info--content mt--30">
+          <a href="callto:+91 7200076653"
+            ><span><i class="fa-sharp fa-light fa-phone"></i></span>+(91)
+            7200076653</a
+          >
+          <a href="#"
+            ><span><i class="fa-sharp fa-light fa-location-dot"></i></span
+            >Tiruppur,4/317,Paramankadu,Chinniyagoundan pudur,
+            Chinnandipalayam,(Iduvampalayam Po),Tiruppur-641667</a
+          >
+          <div class="offcanvase__info--content--social">
+            <p class="title">Follow Us:</p>
+            <div class="social__links">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- mobile menu area end -->
+    </div>
+
+    <!-- rts backto top start -->
+    <div class="progress-wrap">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path
+          d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+          style="
+            transition: stroke-dashoffset 10ms linear 0s;
+            stroke-dasharray: 307.919, 307.919;
+            stroke-dashoffset: 307.919;
+          "
+        ></path>
+      </svg>
+    </div>
+    <!-- rts back to top end -->
+    <div id="anywhere-home" class=""></div>
+
+    <!-- scripts -->
+    <!-- jquery js -->
+
+    <script src="assets/js/vendor/jquery.min.js"></script>
+    <!-- bootstrap 5.0.2 -->
+    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    <!-- jquery ui js -->
+    <script src="assets/js/vendor/jquery-ui.js"></script>
+    <!-- wow js -->
+    <script src="assets/js/vendor/waw.js"></script>
+    <!-- mobile menu -->
+    <script src="assets/js/vendor/metismenu.js"></script>
+    <!-- magnific popup -->
+    <script src="assets/js/vendor/magnifying-popup.js"></script>
+    <!-- swiper JS 10.2.0 -->
+    <script src="assets/js/plugins/swiper.js"></script>
+    <!-- counterup -->
+    <script src="assets/js/plugins/counterup.js"></script>
+    <script src="assets/js/vendor/waypoint.js"></script>
+    <!-- isotop mesonary -->
+    <script src="assets/js/plugins/isotop.js"></script>
+    <script src="assets/js/plugins/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/plugins/sticky-sidebar.js"></script>
+    <script src="assets/js/plugins/resize-sensor.js"></script>
+    <script src="assets/js/plugins/twinmax.js"></script>
+    <!-- dymanic Contact Form -->
+    <script src="assets/js/plugins/contact.form.js"></script>
+    <script src="assets/js/plugins/nice-select.min.js"></script>
+    <!-- main Js -->
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

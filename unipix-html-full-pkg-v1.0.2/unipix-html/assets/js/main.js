@@ -585,92 +585,92 @@
   });
   // extracurricular
   // gallery
-  
 
+  const wrapper = document.getElementById("carouselWrapper");
+  const items = wrapper.querySelectorAll(".item");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
 
-    const wrapper = document.getElementById('carouselWrapper');
-    const items = wrapper.querySelectorAll('.item');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    
-    let currentIndex = 0;
-    let intervalId;
-    
-    function showSlides(index) {
-      const total = items.length;
-    
-      items.forEach((item, i) => {
-        const position = (i - index + total) % total;
-    
-        if (position === 0) {
-          // Far left (smallest)
-          item.style.opacity = "0.5";
-          item.style.transform = "translateX(-520px) scale(0.6)";
-          item.style.zIndex = "1";
-        } else if (position === 1) {
-          // Left mid
-          item.style.opacity = "0.8";
-          item.style.transform = "translateX(-290px) scale(0.8)";
-          item.style.zIndex = "2";
-        } else if (position === 2) {
-          // Center (main image)
-          item.style.opacity = "1";
-          item.style.transform = "translateX(0) scale(1)";
-          item.style.zIndex = "5";
-        } else if (position === 3) {
-          // Right mid
-          item.style.opacity = "0.8";
-          item.style.transform = "translateX(290px) scale(0.8)";
-          item.style.zIndex = "2";
-        } else if (position === 4) {
-          // Far right (smallest)
-          item.style.opacity = "0.5";
-          item.style.transform = "translateX(520px) scale(0.6)";
-          item.style.zIndex = "1";
-        } else {
-          // Hide others
-          item.style.opacity = "0";
-          item.style.transform = "translateX(400px) scale(0.5)";
-          item.style.zIndex = "0";
-        }
-      });
-    }
-    
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % items.length;
-      showSlides(currentIndex);
-    }
-    
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + items.length) % items.length;
-      showSlides(currentIndex);
-    }
-    
-    function startAutoSlide() {
-      intervalId = setInterval(nextSlide, 1000);
-    }
-    
-    function stopAutoSlide() {
-      clearInterval(intervalId);
-    }
-    
-    nextBtn.addEventListener('click', () => {
-      nextSlide();
-      stopAutoSlide();
-      startAutoSlide();
+  let currentIndex = 0;
+  let intervalId;
+
+  function showSlides(index) {
+    const total = items.length;
+
+    items.forEach((item, i) => {
+      const position = (i - index + total) % total;
+
+      if (position === 0) {
+        // Far left (smallest)
+        item.style.opacity = "0.5";
+        item.style.transform = "translateX(-520px) scale(0.6)";
+        item.style.zIndex = "1";
+      } else if (position === 1) {
+        // Left mid
+        item.style.opacity = "0.8";
+        item.style.transform = "translateX(-290px) scale(0.8)";
+        item.style.zIndex = "2";
+      } else if (position === 2) {
+        // Center (main image)
+        item.style.opacity = "1";
+        item.style.transform = "translateX(0) scale(1)";
+        item.style.zIndex = "5";
+      } else if (position === 3) {
+        // Right mid
+        item.style.opacity = "0.8";
+        item.style.transform = "translateX(290px) scale(0.8)";
+        item.style.zIndex = "2";
+      } else if (position === 4) {
+        // Far right (smallest)
+        item.style.opacity = "0.5";
+        item.style.transform = "translateX(520px) scale(0.6)";
+        item.style.zIndex = "1";
+      } else {
+        // Hide others
+        item.style.opacity = "0";
+        item.style.transform = "translateX(400px) scale(0.5)";
+        item.style.zIndex = "0";
+      }
     });
-    
-    prevBtn.addEventListener('click', () => {
-      prevSlide();
-      stopAutoSlide();
-      startAutoSlide();
-    });
-    
-    wrapper.addEventListener('mouseenter', stopAutoSlide);
-    wrapper.addEventListener('mouseleave', startAutoSlide);
-    
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % items.length;
     showSlides(currentIndex);
-    startAutoSlide();
-  
+  }
 
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    showSlides(currentIndex);
+  }
+
+  function startAutoSlide() {
+    intervalId = setInterval(nextSlide, 1000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(intervalId);
+  }
+
+  nextBtn.addEventListener("click", () => {
+    nextSlide();
+    stopAutoSlide();
+    startAutoSlide();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    prevSlide();
+    stopAutoSlide();
+    startAutoSlide();
+  });
+
+  wrapper.addEventListener("mouseenter", stopAutoSlide);
+  wrapper.addEventListener("mouseleave", startAutoSlide);
+
+  showSlides(currentIndex);
+  startAutoSlide();
+
+  // swiper
+
+ 
 })(jQuery, window);

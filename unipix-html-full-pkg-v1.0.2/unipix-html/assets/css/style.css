@@ -11064,6 +11064,61 @@ Custom Row
     padding-right: 15px !important;
   }
 }
+.header-top {
+  background-color: #0f0dae; /* optional: add your background color */
+  padding: 10px 0;
+  font-size: 14px;
+  color: white;
+}
+
+.header-top .row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-links ul {
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}
+
+.header-links li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-title {
+  margin-right: 10px;
+}
+@media (max-width: 768px) {
+  .header-top .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-links ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
 
 /*===========================
     Input Placeholder
@@ -18952,7 +19007,7 @@ body.index-sc h6 {
   }
 }
 .rts-about-section img {
-  height: 100%;
+  height: 618px;
   width: 100%;
   object-fit: cover;
 }
@@ -18960,11 +19015,11 @@ body.index-sc h6 {
 .rts-about-details {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 .rts-about-details .single-about-info {
   background: var(--rt-primary);
-  padding: 30px 30px 35px 40px;
+  padding: 20px 20px 25px 30px;
 }
 .rts-about-details .single-about-info .content {
   display: flex;
@@ -21435,7 +21490,23 @@ body.index-sc h6 {
     margin-left: 0;
   }
 }
+.gallery-container {
+  background-image: url("/unipix-html-full-pkg-v1.0.2/unipix-html/assets/galleryriflebg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  position: relative;
+  z-index: 1;
+}
 
+.gallery-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: -1;
+}
 .rts-gallery.section-bg {
   background: #f6f6f6;
 }
@@ -24416,7 +24487,7 @@ body.index-sc h6 {
   }
 }
 .rts-funfact-wrapper .single-cta-item {
-  max-width: 160px;
+  /* max-width: 160px; */
   position: relative;
 }
 .rts-funfact-wrapper .single-cta-item:not(:last-child):after {
@@ -27691,3 +27762,713 @@ h1 {
 
 /* cards end */
 /* gallery section ends */
+/* about page css
+ */
+/* General Section Styling */
+.why-choose-us-section {
+  background: linear-gradient(to right, #f4f7fc, #ffffff);
+  padding: 60px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-choose-row {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Image Column */
+.why-image-col {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.why-image {
+  width: 900px;
+  object-fit: cover;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.why-image:hover {
+  transform: scale(1.02);
+}
+
+/* Text Column */
+.why-text-col {
+  flex: 1 1 55%;
+  color: #333;
+}
+
+.why-header h2 {
+  font-size: 32px;
+  color: #1a237e;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.why-header p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+/* Points */
+.why-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.why-points li {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #1a237e;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+.why-points :hover{
+  cursor: pointer;
+  background-color: #abc2e4;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+.why-points strong {
+  display: block;
+  color: #0d47a1;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* Responsive Grid for smaller screens */
+@media (max-width: 1024px) {
+  .why-points {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .why-image {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .why-header h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .why-header p {
+    text-align: center;
+  }
+
+  .why-points {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+  }
+
+  .why-points li {
+    font-size: 14.5px;
+  }
+}
+/* founders and trustee */
+.messagedd-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.messageddleft-side {
+  flex: 0 0 250px;
+  text-align: center;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+
+.messageddperson-name {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 700;
+  color: #1a237e;
+}
+
+.messageddperson-title {
+  font-size: 16px;
+  margin-top: 5px;
+  color: #555;
+  font-style: italic;
+}
+
+.messageddright-side {
+  flex: 1;
+}
+
+.messageddright-side h2 {
+  font-size: 28px;
+  color: #0d47a1;
+  margin-bottom: 15px;
+}
+
+.messageddright-side p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .messagedd-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .messageddleft-side {
+    margin-bottom: 30px;
+  }
+
+  .messageddprofile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .messageddright-side h2 {
+    text-align: center;
+  }
+}
+/* fascilitators strats */
+.team-sec {
+  height: 500px;
+  padding: 0px 0;
+  position: relative;
+}
+
+.team-box {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear; /* Smoother transitions */
+}
+.team-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.box-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.th-social {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.th-social a {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.box-content {
+  text-align: center;
+  padding: 15px;
+}
+
+.box-title {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.team-desig {
+  color: #777;
+  font-size: 14px;
+}
+.slider-area {
+  position: relative;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  background-color: blue;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.th-social {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.slider-arrow:hover {
+  background-color: #f1f1f1;
+  transform: translateY(-50%) scale(1.1);
+}
+.th-slider {
+  position: relative;
+  padding: 0 40px; /* Add padding to prevent arrows overlapping content */
+}
+.slider-prev {
+  left: 100px;
+}
+
+.slider-next {
+  right: 130px;
+}
+
+/* fascilitators ends */
+/* rifle club starts */
+/* Rifle Club Section */
+.rifle-club-section {
+  background: white;
+  padding: 40px 0;
+  margin: 50px 0;
+}
+
+.rifle-animation-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.rifle-container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+
+.rifle {
+  position: absolute;
+  left: 0;
+  width: 300px;
+  height: 200px;
+  background: url("/unipix-html-full-pkg-v1.0.2/unipix-html/assets/gunimage.png")
+    no-repeat center / cover;
+  z-index: 2;
+}
+
+.muzzle-flash {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #ffcc00, #ff6600, transparent);
+  border-radius: 50%;
+  transform: translateY(-50%) scale(0);
+  opacity: 0;
+  z-index: 3;
+}
+
+.bullet {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: gold;
+  border-radius: 50%;
+  top: 50%;
+  left: 280px;
+  transform: translateY(-50%);
+  opacity: 0;
+  z-index: 1;
+}
+
+.rifle-club-text h2 {
+  font-size: 2.5rem;
+  color: #0f0dae;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.rifle-club-text p {
+  font-size: var(--p-s);
+  line-height: var(--line-height-b2);
+  font-weight: var(--f-regular);
+  color: var(--rt-body);
+  font-family: var(--font-primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .rifle-animation-wrapper {
+    flex-direction: column;
+  }
+
+  .rifle-container {
+    margin-bottom: 30px;
+  }
+
+  .rifle-club-text {
+    width: 100%;
+    border-radius: 50%;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+/* rifle club ends */
+/* About Section Styling */
+/* About Section Styling */
+.rifle-club-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.rifle-club-content {
+  flex: 1;
+}
+
+.rifle-club-image {
+  flex: 1;
+  position: relative;
+}
+
+.rifle-club-image img {
+  width: 100%;
+  height: 780px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.rifle-club-container h1 {
+  color: #222;
+  font-size: 2.2rem;
+  position: relative;
+}
+
+.rifle-club-container h1:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  height: 3px;
+  background: #d32f2f;
+}
+
+.rifle-club-container h2 {
+  color: #d32f2f;
+  font-size: 1.4rem;
+}
+
+.rifle-club-container p {
+  color: #444;
+  line-height: 1.7;
+}
+
+.rifle-club-container .highlight {
+  font-weight: 600;
+  color: #222;
+}
+
+.rifle-club-container .rifle-club-description {
+  font-size: var(--p-s);
+  line-height: var(--line-height-b2);
+  font-weight: var(--f-regular);
+  color: var(--rt-body);
+  font-family: var(--font-primary);
+}
+.rifle-club-container .rifletitle {
+  color: var(--rt-primary-2);
+  text-transform: capitalize;
+  font-family: var(--font-primary);
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .rifle-club-container {
+    flex-direction: column;
+  }
+
+  .rifle-club-image {
+    order: -1;
+    margin-bottom: 30px;
+  }
+}
+
+/* video riffle */
+.video-box1 {
+  height: 500px;
+  margin-top: 60px;
+  position: relative;
+  z-index: 2;
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 89%, 0% 100%);
+}
+
+.video-box1:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(1, 15, 28, 0.6), rgba(1, 15, 28, 0.6));
+  z-index: -1;
+}
+
+.video-box1 .box-title {
+  font-weight: 600;
+  font-size: 200px;
+  line-height: 200px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.video-box1 .video-shape {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Circular Play Button Styles */
+.discount-wrapp {
+  width: 120px;
+  height: 120px;
+  background: transparent;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.discount-wrapp:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+  animation: rotate 20s linear infinite;
+}
+
+.play-btn {
+  width: 60px;
+  height: 60px;
+  background: #121212;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blue;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.play-btn:hover {
+  transform: scale(1.1);
+  background: #c9f31d;
+  color: #121212;
+}
+
+.play-btn i {
+  font-size: 20px;
+  margin-left: 5px; /* Adjust play icon position */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1299px) {
+  .video-box1 .box-title {
+    font-size: 150px;
+    line-height: 150px;
+  }
+}
+
+@media (max-width: 767px) {
+  .video-box1 {
+    height: 400px;
+  }
+
+  .video-box1 .box-title {
+    font-size: 100px;
+    line-height: 100px;
+  }
+
+  .discount-wrapp {
+    width: 100px;
+    height: 100px;
+  }
+
+  .play-btn {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 575px) {
+  .video-box1 .box-title {
+    font-size: 70px;
+    line-height: 80px;
+  }
+
+  .discount-wrapp {
+    width: 80px;
+    height: 80px;
+  }
+
+  .play-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .play-btn i {
+    font-size: 16px;
+  }
+}
+/* riffleclub gallery */
+.gallery-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  color: white;
+  font-family: "Nunito", sans-serif;
+}
+
+.gallery-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.gallery-wheel-section {
+  position: absolute;
+  height: 40vh;
+  bottom: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+.gallery-wheel {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  width: 180vmin;
+  height: 180vmin;
+
+  transform: translate(-50%, -50%);
+}
+
+.gallery-wheel__card {
+  position: absolute;
+  width: 18%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  transform-origin: center;
+}
+
+.gallery-wheel__card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery-wheel__card:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: white;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-arrow {
+  width: 20px;
+  height: 20px;
+  margin-top: 8px;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KPHBhdGggZmlsbD0id2hpdGUiIGQ9Ik00ODMuMiwxOTIuMmMtMjAuNS0yMC41LTUzLjUtMjAuOC03My43LTAuNkwyNTcsMzQ0LjFMMTA0LjUsMTkxLjZjLTIwLjItMjAuMi01My4yLTE5LjktNzMuNywwLjYKCWMtMjAuNSwyMC41LTIwLjgsNTMuNS0wLjYsNzMuN2wxOTAsMTkwYzEwLjEsMTAuMSwyMy40LDE1LjEsMzYuOCwxNWMxMy4zLDAuMSwyNi43LTQuOSwzNi44LTE1bDE5MC0xOTAKCUM1MDMuOSwyNDUuNyw1MDMuNywyMTIuNyw0ODMuMiwxOTIuMnoiLz4KPC9zdmc+);
+  background-size: contain;
+}
