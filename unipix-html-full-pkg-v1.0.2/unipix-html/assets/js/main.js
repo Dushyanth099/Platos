@@ -345,23 +345,27 @@
     stickyHeader: function (e) {
       function sticky_header() {
         const headerSticky = $("header.header__sticky");
+        const headerTop = $(".header-top");
         const scroll = $(window).scrollTop();
-        const isScrollingDown = scroll > lastScroll;
-        const header_height = headerSticky.innerHeight();
-        if (scroll > header_height && scroll > lastScroll) {
-          headerSticky.addClass("back-hide-header");
-        } else if (scroll < lastScroll) {
-          headerSticky.removeClass("back-hide-header");
-        }
+
+        // Sticky navbar when scrolled down
         headerSticky.toggleClass("fixed", scroll > 300);
-        $(".header-top-one-wrapper").toggle(scroll <= 100);
-        headerSticky.toggleClass("active", scroll === 100);
+
+        // Instantly show only when at top, otherwise hide
+        if (scroll === 0) {
+          headerTop.show(); // instantly show
+        } else {
+          headerTop.hide(); // instantly hide
+        }
+
         lastScroll = scroll;
       }
+
       let lastScroll = 0;
       $(document).ready(sticky_header);
-      $(window).on("load scroll resize", sticky_header);
+      $(window).on("scroll resize", sticky_header);
     },
+
     progressAvtivation: function () {
       $(window).scroll(function () {
         if ($(this).scrollTop() > 250) {
@@ -670,7 +674,8 @@
   showSlides(currentIndex);
   startAutoSlide();
 
-  // swiper
+  // gallery
+  
 
- 
+  // swiper
 })(jQuery, window);
