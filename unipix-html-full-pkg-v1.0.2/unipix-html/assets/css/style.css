@@ -15025,7 +15025,9 @@ body.index-sc h6 {
 }
 
 .section-title {
-  line-height: 100%;
+  font-size: 70px;
+
+  color: var(--rt-theme);
 }
 
 .rt-between {
@@ -15126,7 +15128,6 @@ body.index-sc h6 {
 }
 
 .rts-section-padding {
-  padding: 120px 0;
 }
 @media screen and (max-width: 992px) {
   .rts-section-padding {
@@ -15139,10 +15140,6 @@ body.index-sc h6 {
   }
 }
 
-.rts__padding--120-100 {
-  padding-top: 120px;
-  padding-bottom: 100px;
-}
 @media screen and (max-width: 992px) {
   .rts__padding--120-100 {
     padding-top: 80px;
@@ -16132,6 +16129,7 @@ body.index-sc h6 {
   }
 }
 .tution__single--box.v__1,
+.tution__single--box.v__1,
 .tution__single--box:hover {
   background: var(--rt-primary-2);
   color: var(--rt-white);
@@ -16149,7 +16147,7 @@ body.index-sc h6 {
   margin-bottom: 50px;
 }
 .tution__single--box--faculty {
-  text-decoration: underline;
+
   font-family: var(--rt-primary);
   font-weight: 500;
   margin-bottom: 25px;
@@ -18046,6 +18044,28 @@ body.index-sc h6 {
   display: block;
   margin-left: 250px;
 }
+.banner .banner__content--abouttitle {
+  font-size: 120px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--rt-white);
+  line-height: 120px;
+  margin-bottom: 390px;
+  margin-left: 30px;
+  align-items: center;
+}
+.banner__wrapp {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  min-width: 120%;
+  margin: 0 auto;
+  margin-left: auto;
+  /* margin-left: -10%; */
+  z-index: 99;
+  padding-top: 140px;
+}
+
 @media screen and (max-width: 992px) {
   .banner .banner__content--title span {
     margin-left: 0;
@@ -26367,12 +26387,11 @@ body.index-sc h6 {
 
 .rt-semi {
   font-weight: 600;
-   font-weight: 600;
-    text-decoration: underline;
-    color: white;
-    font-family: var(--font-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  color: white;
+  font-family: var(--font-primary);
 }
-
 
 .rts-footer.v_1 {
   background: var(--footer-bg);
@@ -27904,7 +27923,7 @@ h1 {
   display: flex;
   gap: 40px;
   align-items: flex-start;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   font-family: Arial, sans-serif;
@@ -27912,17 +27931,15 @@ h1 {
 }
 
 .messageddleft-side {
-  flex: 0 0 250px;
+  flex: 0 0 500px;
   text-align: center;
 }
 
 .profile-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: 500px;
+  height: 500px;
   object-fit: cover;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  margin-bottom: 15px;
 }
 
 .messageddperson-name {
@@ -28478,4 +28495,8 @@ h1 {
   margin-top: 8px;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KPHBhdGggZmlsbD0id2hpdGUiIGQ9Ik00ODMuMiwxOTIuMmMtMjAuNS0yMC41LTUzLjUtMjAuOC03My43LTAuNkwyNTcsMzQ0LjFMMTA0LjUsMTkxLjZjLTIwLjItMjAuMi01My4yLTE5LjktNzMuNywwLjYKCWMtMjAuNSwyMC41LTIwLjgsNTMuNS0wLjYsNzMuN2wxOTAsMTkwYzEwLjEsMTAuMSwyMy40LDE1LjEsMzYuOCwxNWMxMy4zLDAuMSwyNi43LTQuOSwzNi44LTE1bDE5MC0xOTAKCUM1MDMuOSwyNDUuNyw1MDMuNywyMTIuNyw0ODMuMiwxOTIuMnoiLz4KPC9zdmc+);
   background-size: contain;
+}
+.rts-footer-logo {
+  width: 180px;
+  height: auto;
 }
