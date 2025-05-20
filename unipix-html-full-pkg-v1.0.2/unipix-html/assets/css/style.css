@@ -23464,7 +23464,7 @@ body.index-sc h6 {
 .program-sidebar .program-event {
   padding: 50px 44px 60px;
   text-align: center;
-  background-image: url(../images/course/event-bg.jpg);
+  background-image: url(../scl1.JPG);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -28050,7 +28050,7 @@ h1 {
 
 .box-img img {
   width: 750px;
-  height: auto;
+  height: 300px;
   display: block;
 }
 
