@@ -15026,7 +15026,6 @@ body.index-sc h6 {
 
 .section-title {
   font-size: 70px;
-
   color: var(--rt-theme);
 }
 
@@ -15625,7 +15624,8 @@ body.index-sc h6 {
 }
 .rts__section--title {
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 28px;
   margin-bottom: 0;
   margin-top: -15px;
 }
@@ -17947,6 +17947,7 @@ body.index-sc h6 {
   display: flex;
   justify-content: space-between;
   position: relative;
+  right: 60px;
   min-width: 120%;
   margin: 0 auto;
   margin-left: auto;
@@ -18026,6 +18027,7 @@ body.index-sc h6 {
   }
 }
 .banner .banner__content--title {
+  margin-top: 40px;
   font-size: 120px;
   font-weight: 400;
   text-transform: uppercase;
@@ -18048,15 +18050,29 @@ body.index-sc h6 {
   display: block;
   margin-left: 250px;
 }
+
 .banner .banner__content--abouttitle {
+  position: absolute;
+  bottom: 50%;
+  left:5%;
   font-size: 120px;
   font-weight: 400;
   text-transform: uppercase;
   color: var(--rt-white);
   line-height: 120px;
-  margin-bottom: 390px;
-  margin-left: 30px;
   align-items: center;
+}
+@media screen and (max-width: 1200px) {
+  .banner .banner__content--abouttitle {
+    font-size: 75px;
+    line-height: 110px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .banner .banner__content--abouttitle {
+    font-size: 50px;
+    line-height: 120%;
+  }
 }
 .banner__wrapp {
   display: flex;
@@ -20319,7 +20335,7 @@ body.index-sc h6 {
 }
 
 .rts-program-single__content {
-  padding: 20px;
+
   background-color: #f8f9fa;
   height: 100%;
   display: flex;
@@ -20400,6 +20416,7 @@ body.index-sc h6 {
 }
 .rts-program-single__content .program-image {
   position: relative;
+  
   overflow: hidden;
 }
 .rts-program-single__content .program-image img {
@@ -22361,7 +22378,7 @@ body.index-sc h6 {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: #dadada;
   position: relative;
-  top: 70px;
+  top: 50px;
   font-family: var(--font-hind);
 }
 @media screen and (max-width: 1200px) {
@@ -23614,7 +23631,6 @@ body.index-sc h6 {
 
 .rts-ap-section .rts-application-form .single-form-part:not(:last-child) {
   margin: 40px;
-  
 }
 .rts-ap-section .rts-application-form .single-form-part .form-title {
   margin-bottom: 30px;
@@ -23638,7 +23654,6 @@ body.index-sc h6 {
   .single-form-part
   .single-input:not(:last-child) {
   margin-bottom: 30px;
-  
 }
 .rts-ap-section .rts-application-form .single-form-part .single-input-item {
   width: 100%;
@@ -26299,7 +26314,6 @@ body.index-sc h6 {
   left: 0;
   top: 0;
   background: var(--rt-primary-2);
-  opacity: 0.9;
   border-radius: 10px;
 }
 .rts-newsletter-box-content {
@@ -27300,8 +27314,8 @@ body.index-sc h6 {
 }
 .close-popup-btn {
   position: absolute;
-  top: 15px;
-  right: 110px;
+  top: 70px;
+  right:180px;
   width: 43px;
   background: #007bff; /* Blue */
   color: white;
@@ -28125,101 +28139,70 @@ h1 {
 
 /* fascilitators ends */
 /* rifle club starts */
-/* Rifle Club Section */
-.rifle-club-section {
-  background: white;
-  padding: 40px 0;
-  margin: 50px 0;
-}
 
-.rifle-animation-wrapper {
+
+
+
+.rifle-club {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  text-align: center;
+  padding: 2rem;
+}
+
+.rifle-club__image-wrapper {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  position: relative;
+
+  overflow: hidden;
 }
 
-.rifle-container {
-  position: relative;
-  width: 300px;
-  height: 200px;
+.rifle-club__image {
+  width: 1300px;
+  object-fit: cover;
+  display: block;
 }
 
-.rifle {
-  position: absolute;
-  left: 0;
-  width: 300px;
-  height: 200px;
-  background: url("../gunimage.png") no-repeat center / cover;
-  z-index: 2;
+.rifle-club__content {
+  margin-top: 1.5rem;
+  max-width: 800px;
 }
 
-.muzzle-flash {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(circle, #ffcc00, #ff6600, transparent);
-  border-radius: 50%;
-  transform: translateY(-50%) scale(0);
-  opacity: 0;
-  z-index: 3;
+.rifle-club__title {
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
 }
 
-.bullet {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: gold;
-  border-radius: 50%;
-  top: 50%;
-  left: 280px;
-  transform: translateY(-50%);
-  opacity: 0;
-  z-index: 1;
-}
-
-.rifle-club-text h2 {
-  font-size: 2.5rem;
-  color: #0f0dae;
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.rifle-club-text p {
+.rifle-club__description {
+  margin-top: 30px;
   font-size: var(--p-s);
   line-height: var(--line-height-b2);
   font-weight: var(--f-regular);
   color: var(--rt-body);
   font-family: var(--font-primary);
 }
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .rifle-animation-wrapper {
-    flex-direction: column;
-  }
-
-  .rifle-container {
-    margin-bottom: 30px;
-  }
-
-  .rifle-club-text {
+@media (max-width: 820px) {
+  .rifle-club__image-wrapper {
     width: 100%;
-    border-radius: 50%;
-    padding-left: 0;
-    text-align: center;
+    height: auto;
+  }
+
+  .rifle-club__image {
+    height: auto;
+  }
+
+  .rifle-club__content {
+    padding: 0 1rem;
   }
 }
 
+
+
 /* rifle club ends */
-/* About Section Styling */
-/* About Section Styling */
+
+
+/* rifle About Section Styling */
 .rifle-club-container {
   display: flex;
   max-width: 1200px;

@@ -43,6 +43,10 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 
   <body class="page">
     <!-- header area start -->
@@ -213,22 +217,21 @@
 
     <!-- gsap starts -->
     <!-- Rifle Club Section -->
-    <div class="rifle-club-section">
-      <div class="rifle-animation-wrapper">
-        <div class="rifle-container">
-          <div class="rifle">
-            <div class="muzzle-flash"></div>
-          </div>
-          <div class="bullet"></div>
-        </div>
-        <div class="rifle-club-text animate__animated animate__fadeIn">
-          <h2>Welcome to Plato's Academy Rifle Club</h2>
-          <p>
-            Join our marksmanship training and competitive shooting programs
-          </p>
-        </div>
+    <section class="rifle-club animate__animated animate__bounceInLeft">
+      <div class="rifle-club__image-wrapper">
+        <img
+          src="assets/gunimage.png"
+          alt="Plato's Academy Rifle Club"
+          class="rifle-club__image"
+        />
       </div>
-    </div>
+      <div class="rifle-club__content">
+        <h2 class="rifle-club__title">Welcome to Plato's Academy Rifle Club</h2>
+        <p class="rifle-club__description">
+          Join our marksmanship training and competitive shooting programs
+        </p>
+      </div>
+    </section>
 
     <div class="rifle-club-container">
       <div class="rifle-club-content animate__animated animate__bounceInLeft">
@@ -273,7 +276,7 @@
       </div>
 
       <div class="rifle-club-image animate__animated animate__bounceInRight">
-        <img src="assets/platosgunboy.jpg" alt=" Shooting Range" />
+        <img src="assets/nikithagun.jpg" alt=" Shooting Range" />
       </div>
     </div>
 
@@ -444,22 +447,24 @@ About Area
         </div>
       </div>
     </div>
-    <!-- footer start -->
-    <footer class="rts-footer v_2 pt--100 pb--100">
+     <!-- footer start -->
+     <footer class="rts-footer v_2 pt--100 pb--100">
       <div class="container-fluid" style="max-width: 1500px !important">
         <div class="row gy-5 gy-lg-0">
           <div class="col-lg-4 col-md-6 col-sm-6">
             <div class="row">
               <div class="col-md-6">
-                <a href="index.html" class="d-block rts-footer-logo mb--40">
-                  <img src="assets/footerlogo.png" alt="Unipix" />
+                <a href="index.html" class="d-block rts-footer-logo mb--20">
+                  <img src="assets/footerlogo.png" alt="platos" />
                 </a>
-              </div>
-              <div class="col-md-6">
                 <p>
                   We are passionate education dedicated to providing
                   high-quality resources learners all backgrounds.
                 </p>
+              </div>
+
+              <div class="col-md-6 text-center">
+                <h6 class="rt-semi">Address</h6>
                 <div class="rts-contact-link">
                   <a href="mailto:platosacademy.com"
                     ><i class="fa-sharp fa-light fa-location-dot"></i>
@@ -483,11 +488,15 @@ About Area
               <h6 class="rt-semi">Our Campus</h6>
               <div class="rts-footer-menu">
                 <ul>
-                  <li><a href=".html">Academic</a></li>
-                  <li><a href=".html">Athletics</a></li>
-                  <li><a href=".html">Campus life</a></li>
-                  <li><a href=".html">Research</a></li>
-                  <li><a href=".html">Academic Area</a></li>
+                  <li><a href=".html">Academics</a></li>
+                  <li><a href="campus.html">Campus life</a></li>
+                  <li><a href=".html">Achievements</a></li>
+                  <li><a href="rifleclub.html">Rifle Club</a></li>
+                  <li>
+                    <a href="extracurricularactivities.html"
+                      >Extracurricular Activities</a
+                    >
+                  </li>
                 </ul>
               </div>
             </div>
@@ -497,46 +506,35 @@ About Area
               class="rts-footer-widget ml--30"
               style="text-align: center !important"
             >
-              <h6 class="rt-semi">Our Campus</h6>
+              <h6 class="rt-semi">Admission Policy</h6>
               <div class="rts-footer-menu">
                 <ul>
-                  <li><a href=".html">About </a></li>
-                  <li><a href=".html">Tution Fee</a></li>
-                  <li><a href=".html">Alumni</a></li>
-                  <li><a href=".html">Faculty Staff</a></li>
-                  <li><a href=".html">Event</a></li>
+                  <li><a href="admissions.html">Admission Process </a></li>
+                  <li><a href="admissions.html">Form</a></li>
+                  <li><a href="admissions.html">Enquiry</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-8">
             <div class="rts-footer-widget ml--30">
-              <h6 class="rt-semi">Recent Events</h6>
+              <h6 class="rt-semi">Challo App</h6>
               <div class="rts-post-widget">
                 <ul class="list-unstyled">
                   <li class="single-post">
-                    <a href=".html" class="blog-thumb">
-                      <img src="assets/images/blog/w-1.jpg" alt="latest post" />
-                    </a>
                     <div class="post-content">
-                      <span class="rt-date">February 15,2024 </span>
-                      <a href=".html">
-                        From Plato's to IIT: NEET Success Stories
+                      <a href="#">
+                        <strong>Student, Teacher & Parent Portal</strong>
                       </a>
-                    </div>
-                  </li>
-                  <li class="single-post">
-                    <a href=".html" class="blog-thumb">
-                      <img
-                        src="assets/images/blog/small-thumb-1.jpg"
-                        alt="latest post"
-                      />
-                    </a>
-                    <div class="post-content">
-                      <span class="rt-date">February 20,2024</span>
-                      <a href=".html">
-                        Rifle Club Champions Share Their Journey
-                      </a>
+                      <p style="margin-top: 5px">
+                        Chalo App is a complete school management platform that
+                        connects students, teachers, and parents. It offers live
+                        attendance, homework tracking, exam updates, fee
+                        management, and seamless communication — all in one
+                        place.
+                      </p>
                     </div>
                   </li>
                 </ul>
@@ -551,14 +549,20 @@ About Area
         <div class="row">
           <div class="rt-center">
             <p class="--p-xs">
-              Copyright &copy; <span id="year"></span> All Rights Reserved by
-              <a href="#">Platos</a>
+              Copyright &copy; <span id="year"></span>
+              <a href="#">Platos Academy</a> All Rights Reserved by
+              <a href="#">Palette Production</a>
             </p>
           </div>
         </div>
       </div>
     </div>
     <!-- footer end -->
+    <!-- footer end -->
+    <!-- footer copyright -->
+
+    <!-- footer copyright end -->
+
     <!-- offcanvase menu -->
     <!-- header style two -->
     <div id="side-bar" class="side-bar">
@@ -608,128 +612,84 @@ About Area
       <div class="mobile-menu-main">
         <nav class="nav-main mainmenu-nav mt--30">
           <ul class="mainmenu metismenu" id="mobile-menu-active">
+            <li>
+              <a href="index.html" class="main">Home</a>
+            </li>
             <li class="has-droupdown">
-              <a href="#" class="main">Homepages</a>
+              <a href="javascript:void(0);" class="main">About</a>
               <ul class="submenu mm-collapse">
                 <li>
-                  <a class="mobile-menu-link" href=".html">Home Style One</a>
+                  <a class="mobile-menu-link" href="about.html"
+                    >Why Choose Us</a
+                  >
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href=".html">Home Style Two</a>
+                  <a class="mobile-menu-link" href="about.html">Vision</a>
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href=".html">Home Style Three</a>
+                  <a class="mobile-menu-link" href="about.html">Mission</a>
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href=".html">Home Style Four</a>
+                  <a class="mobile-menu-link" href="about.html"
+                    >Founders & Trustee</a
+                  >
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href=".html">Home Style Five</a>
+                  <a class="mobile-menu-link" href="about.html"
+                    >Fascilitators</a
+                  >
                 </li>
               </ul>
             </li>
             <li class="has-droupdown">
-              <a href="#" class="main">Pages</a>
+              <a href="javascript:void(0);" class="main">Admissions</a>
               <ul class="submenu mm-collapse">
                 <li>
-                  <a class="mobile-menu-link" href=".html">About Us</a>
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href=".html">Athletics</a>
-                </li>
-                <li class="has-dropdown third-lvl">
-                  <a href="javascript:void(0);">Faculty</a>
-                  <ul class="submenu third-lvl base">
-                    <li>
-                      <a class="mobile-menu-link" href=".html">Faculty</a>
-                    </li>
-                    <li>
-                      <a class="mobile-menu-link" href=".html"
-                        >Faculty Details</a
-                      >
-                    </li>
-                    <li>
-                      <a class="mobile-menu-link" href=".html">Faculty</a>
-                    </li>
-                    <li>
-                      <a class="mobile-menu-link" href=".html"
-                        >Faculty Staff details</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href=".html">Research</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-droupdown">
-              <a href="#" class="main">Academics</a>
-              <ul class="submenu mm-collapse">
-                <li>
-                  <a class="mobile-menu-link" href="academic.html">Academic</a>
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href="admission.html"
-                    >Admission</a
+                  <a class="mobile-menu-link" href="admissions.html"
+                    >Admission Process</a
                   >
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="academic-area.html"
-                    >Academic Area</a
-                  >
+                  <a class="mobile-menu-link" href="admissions.html">Form</a>
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="campus-life.html"
-                    >Campus Life</a
-                  >
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href="scholarship.html"
-                    >Scholarship</a
-                  >
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href=".html">Tution Fee</a>
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href=".html">Alumni</a>
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href=".html">Program Single</a>
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href=".html"
-                    >Department Details</a
-                  >
+                  <a class="mobile-menu-link" href="admissions.html">Enquiry</a>
                 </li>
               </ul>
             </li>
 
             <li class="has-droupdown">
-              <a href="#" class="main">Events</a>
+              <a href="javascript:void(0);" class="main">Campus</a>
               <ul class="submenu mm-collapse">
-                <li><a class="mobile-menu-link" href=".html">Event</a></li>
                 <li>
-                  <a class="mobile-menu-link" href=".html">Event Details</a>
+                  <a class="mobile-menu-link" href="campus.html">Campus Life</a>
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="campus.html"
+                    >Infrastructure</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="academic-area.html"
+                    >Campus Safety</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="campus-life.html"
+                    >Transport</a
+                  >
                 </li>
               </ul>
             </li>
-            <li class="has-droupdown">
-              <a href="#" class="main">Blog</a>
-              <ul class="submenu mm-collapse">
-                <li><a class="mobile-menu-link" href=".html">Blog</a></li>
-                <li>
-                  <a class="mobile-menu-link" href=".html">Blog Grid</a>
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href=".html">Blog List</a>
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href=".html">Blog Details</a>
-                </li>
-              </ul>
+            <li>
+              <a href="rifleclub.html" class="main">Riffle Club</a>
             </li>
+            <li>
+              <a href="extracurricularactivities.html" class="main"
+                >Extra Curricular Activities</a
+              >
+            </li>
+
             <li>
               <a href="contact.html" class="main">Contact Us</a>
             </li>
