@@ -27,6 +27,20 @@
     <!-- custom style css -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 
   <body class="page">
     <!-- header area start -->
@@ -194,7 +208,174 @@
       </div>
     </section>
     <!-- BREADCRUMB AREA END -->
+    <!-- apply start -->
 
+    <div class="rts-application-form">
+      <!-- Application Popup (hidden by default) -->
+      <div
+        id="application-popup"
+        style="
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(40, 33, 33, 0.7);
+          z-index: 9999;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: auto;
+          padding: 40px;
+          display: none;
+        "
+      >
+        <!-- Close Button -->
+        <button id="close-popup" class="close-popup-btn">✕</button>
+
+        <section class="rts-application-area moving rts-section-padding v_1">
+          <div class="container">
+            <!-- application form -->
+            <div class="row justify-content-md-center">
+              <div class="col-md-11 col-lg-6 col-xl-5">
+                <div class="rts-admission-form-image">
+                  <h5
+                    class="rts__section--title mb--25 mt-2"
+                    style="color: white; margin-left: 20px !important"
+                  >
+                    Welcome to Platos Academy
+                  </h5>
+                  <img src="assets/popup.JPG" alt="" />
+                </div>
+                <div class="rts-section-big-text">Admission Now</div>
+              </div>
+              <div class="col-md-11 col-lg-6 col-xl-5">
+                <div class="rts-application-form">
+                  <div class="rts-application-form-content">
+                    <h5 class="heading-title mb--25">Application Form</h5>
+                    <form action="#" class="rts-form">
+                      <div class="rts-input rt-flex">
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="fname"
+                            id="fname"
+                            placeholder="First Name"
+                            required
+                          />
+                        </div>
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="lname"
+                            id="lname"
+                            placeholder="Last Name"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="rts-input rt-flex">
+                        <div class="single-input">
+                          <input
+                            type="email"
+                            name="email"
+                            id="email2"
+                            placeholder="Email.."
+                            required
+                          />
+                        </div>
+                        <div class="single-input">
+                          <input
+                            type="number"
+                            name="Phone"
+                            id="Phone"
+                            placeholder="Phone"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div class="rts-input rt-flex">
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="address"
+                            id="address"
+                            placeholder="address"
+                            required
+                          />
+                        </div>
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="city"
+                            id="city"
+                            placeholder="City"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div class="rts-input rt-flex">
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="country"
+                            id="country"
+                            placeholder="Country"
+                            required
+                          />
+                        </div>
+                        <div class="single-input">
+                          <input
+                            type="number"
+                            name="zip"
+                            id="zip"
+                            placeholder="Zip Code"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="rts-input w-full">
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="data"
+                            id="datepicker"
+                            placeholder="dd/mm/yy"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="rts-input w-full">
+                        <div class="single-input">
+                          <textarea
+                            name="msg"
+                            id="msg"
+                            placeholder="Enter Your Comments"
+                          ></textarea>
+                        </div>
+                      </div>
+                      <button
+                        type="submit"
+                        class="rts-theme-btn rts-nbg-btn btn-arrow v2 full-btn"
+                      >
+                        Apply Now
+                        <span
+                          ><i class="fa-sharp fa-regular fa-arrow-right"></i
+                        ></span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- apply end -->
     <!-- admission page content -->
     <div class="rts-page-content rts-section-padding">
       <div class="container">
@@ -549,15 +730,17 @@
           <div class="col-lg-4 col-md-6 col-sm-6">
             <div class="row">
               <div class="col-md-6">
-                <a href="index.html" class="d-block rts-footer-logo mb--40">
-                  <img src="assets/footerlogo.png" alt="Unipix" />
+                <a href="index.html" class="d-block rts-footer-logo mb--20">
+                  <img src="assets/footerlogo.png" alt="platos" />
                 </a>
-              </div>
-              <div class="col-md-6">
                 <p>
                   We are passionate education dedicated to providing
                   high-quality resources learners all backgrounds.
                 </p>
+              </div>
+
+              <div class="col-md-6 text-center">
+                <h6 class="rt-semi">Address</h6>
                 <div class="rts-contact-link">
                   <a href="mailto:platosacademy.com"
                     ><i class="fa-sharp fa-light fa-location-dot"></i>
@@ -581,11 +764,15 @@
               <h6 class="rt-semi">Our Campus</h6>
               <div class="rts-footer-menu">
                 <ul>
-                  <li><a href=".html">Academic</a></li>
-                  <li><a href=".html">Athletics</a></li>
-                  <li><a href=".html">Campus life</a></li>
-                  <li><a href=".html">Research</a></li>
-                  <li><a href=".html">Academic Area</a></li>
+                  <li><a href=".html">Academics</a></li>
+                  <li><a href="campus.html">Campus life</a></li>
+                  <li><a href=".html">Achievements</a></li>
+                  <li><a href="rifleclub.html">Rifle Club</a></li>
+                  <li>
+                    <a href="extracurricularactivities.html"
+                      >Extracurricular Activities</a
+                    >
+                  </li>
                 </ul>
               </div>
             </div>
@@ -595,46 +782,35 @@
               class="rts-footer-widget ml--30"
               style="text-align: center !important"
             >
-              <h6 class="rt-semi">Our Campus</h6>
+              <h6 class="rt-semi">Admission Policy</h6>
               <div class="rts-footer-menu">
                 <ul>
-                  <li><a href=".html">About </a></li>
-                  <li><a href=".html">Tution Fee</a></li>
-                  <li><a href=".html">Alumni</a></li>
-                  <li><a href=".html">Faculty Staff</a></li>
-                  <li><a href=".html">Event</a></li>
+                  <li><a href="admissions.html">Admission Process </a></li>
+                  <li><a href="admissions.html">Form</a></li>
+                  <li><a href="admissions.html">Enquiry</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-8">
             <div class="rts-footer-widget ml--30">
-              <h6 class="rt-semi">Recent Events</h6>
+              <h6 class="rt-semi">Challo App</h6>
               <div class="rts-post-widget">
                 <ul class="list-unstyled">
                   <li class="single-post">
-                    <a href=".html" class="blog-thumb">
-                      <img src="assets/images/blog/w-1.jpg" alt="latest post" />
-                    </a>
                     <div class="post-content">
-                      <span class="rt-date">February 15,2024 </span>
-                      <a href=".html">
-                        From Plato's to IIT: NEET Success Stories
+                      <a href="#">
+                        <strong>Student, Teacher & Parent Portal</strong>
                       </a>
-                    </div>
-                  </li>
-                  <li class="single-post">
-                    <a href=".html" class="blog-thumb">
-                      <img
-                        src="assets/images/blog/small-thumb-1.jpg"
-                        alt="latest post"
-                      />
-                    </a>
-                    <div class="post-content">
-                      <span class="rt-date">February 20,2024</span>
-                      <a href=".html">
-                        Rifle Club Champions Share Their Journey
-                      </a>
+                      <p style="margin-top: 5px">
+                        Chalo App is a complete school management platform that
+                        connects students, teachers, and parents. It offers live
+                        attendance, homework tracking, exam updates, fee
+                        management, and seamless communication — all in one
+                        place.
+                      </p>
                     </div>
                   </li>
                 </ul>
@@ -658,7 +834,6 @@
       </div>
     </div>
     <!-- footer end -->
-
     <!-- offcanvase menu -->
     <!-- header style two -->
     <div id="side-bar" class="side-bar">
@@ -666,15 +841,12 @@
       <!-- inner menu area desktop start -->
       <div class="inner-main-wrapper-desk">
         <div class="thumbnail">
-          <img
-            src="assets/images/logo/logo__five.svg"
-            alt="Unipix-university"
-          />
+          <img src="assets/footerlogo.png" alt="Platos Academy" />
         </div>
         <div class="inner-content">
           <p class="disc">
-            A modern HTML template for education, offering intuitive design &
-            essential features for seamless learning experiences.
+            Welcome to our CBSE school, where academic excellence meets holistic
+            development. Explore a world of learning, growth, and opportunity.
           </p>
           <!-- offcanvase banner -->
           <div class="offcanvase__banner mt--50">
@@ -685,13 +857,14 @@
           </div>
           <div class="offcanvase__info">
             <div class="offcanvase__info--content">
-              <a href="callto:+61485826710"
-                ><span><i class="fa-sharp fa-light fa-phone"></i></span>+(61)
-                485-826-710</a
+              <a href="callto:+91 7200076651"
+                ><span><i class="fa-sharp fa-light fa-phone"></i></span>+(91)
+                7200076653</a
               >
               <a href="#"
                 ><span><i class="fa-sharp fa-light fa-location-dot"></i></span
-                >Yarra Park, Melbourne, Australia</a
+                >4/317,Paramankadu,Chinniyagoundan pudur,
+                Chinnandipalayam,(Iduvampalayam Po),Tiruppur-641667</a
               >
               <div class="offcanvase__info--content--social">
                 <p class="title">Follow Us:</p>
@@ -710,158 +883,84 @@
       <div class="mobile-menu-main">
         <nav class="nav-main mainmenu-nav mt--30">
           <ul class="mainmenu metismenu" id="mobile-menu-active">
+            <li>
+              <a href="index.html" class="main">Home</a>
+            </li>
             <li class="has-droupdown">
-              <a href="#" class="main">Homepages</a>
+              <a href="javascript:void(0);" class="main">About</a>
               <ul class="submenu mm-collapse">
                 <li>
-                  <a class="mobile-menu-link" href="index.html"
-                    >Home Style One</a
+                  <a class="mobile-menu-link" href="about.html"
+                    >Why Choose Us</a
                   >
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="index-two.html"
-                    >Home Style Two</a
+                  <a class="mobile-menu-link" href="about.html">Vision</a>
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="about.html">Mission</a>
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="about.html"
+                    >Founders & Trustee</a
                   >
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="index-three.html"
-                    >Home Style Three</a
-                  >
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href="index-four.html"
-                    >Home Style Four</a
-                  >
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href="index-five.html"
-                    >Home Style Five</a
+                  <a class="mobile-menu-link" href="about.html"
+                    >Fascilitators</a
                   >
                 </li>
               </ul>
             </li>
             <li class="has-droupdown">
-              <a href="#" class="main">Pages</a>
+              <a href="javascript:void(0);" class="main">Admissions</a>
               <ul class="submenu mm-collapse">
                 <li>
-                  <a class="mobile-menu-link" href="about.html">About Us</a>
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href="athletics.html"
-                    >Athletics</a
-                  >
-                </li>
-                <li class="has-dropdown third-lvl">
-                  <a href="javascript:void(0);">Faculty</a>
-                  <ul class="submenu third-lvl base">
-                    <li>
-                      <a class="mobile-menu-link" href="faculty-sub.html"
-                        >Faculty</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="mobile-menu-link"
-                        href="faculty-sub-details.html"
-                        >Faculty Details</a
-                      >
-                    </li>
-                    <li>
-                      <a class="mobile-menu-link" href="faculty.html"
-                        >Faculty</a
-                      >
-                    </li>
-                    <li>
-                      <a class="mobile-menu-link" href="faculty-details.html"
-                        >Faculty Staff details</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href="research.html">Research</a>
-                </li>
-              </ul>
-            </li>
-            <li class="has-droupdown">
-              <a href="#" class="main">Academics</a>
-              <ul class="submenu mm-collapse">
-                <li>
-                  <a class="mobile-menu-link" href="academic.html">Academic</a>
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href="admission.html"
-                    >Admission</a
+                  <a class="mobile-menu-link" href="admissions.html"
+                    >Admission Process</a
                   >
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="academic-area.html"
-                    >Academic Area</a
-                  >
+                  <a class="mobile-menu-link" href="admissions.html">Form</a>
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="campus-life.html"
-                    >Campus Life</a
-                  >
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href="scholarship.html"
-                    >Scholarship</a
-                  >
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href="tution-fee.html"
-                    >Tution Fee</a
-                  >
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href="alumni.html">Alumni</a>
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href="program-single.html"
-                    >Program Single</a
-                  >
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href="department-details.html"
-                    >Department Details</a
-                  >
+                  <a class="mobile-menu-link" href="admissions.html">Enquiry</a>
                 </li>
               </ul>
             </li>
 
             <li class="has-droupdown">
-              <a href="#" class="main">Events</a>
+              <a href="javascript:void(0);" class="main">Campus</a>
               <ul class="submenu mm-collapse">
-                <li><a class="mobile-menu-link" href="event.html">Event</a></li>
                 <li>
-                  <a class="mobile-menu-link" href="event-details.html"
-                    >Event Details</a
+                  <a class="mobile-menu-link" href="campus.html">Campus Life</a>
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="campus.html"
+                    >Infrastructure</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="academic-area.html"
+                    >Campus Safety</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="campus-life.html"
+                    >Transport</a
                   >
                 </li>
               </ul>
             </li>
-            <li class="has-droupdown">
-              <a href="#" class="main">Blog</a>
-              <ul class="submenu mm-collapse">
-                <li><a class="mobile-menu-link" href="blog.html">Blog</a></li>
-                <li>
-                  <a class="mobile-menu-link" href="blog-grid.html"
-                    >Blog Grid</a
-                  >
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href="blog-list.html"
-                    >Blog List</a
-                  >
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href="blog-details.html"
-                    >Blog Details</a
-                  >
-                </li>
-              </ul>
+            <li>
+              <a href="rifleclub.html" class="main">Riffle Club</a>
             </li>
+            <li>
+              <a href="extracurricularactivities.html" class="main"
+                >Extra Curricular Activities</a
+              >
+            </li>
+
             <li>
               <a href="contact.html" class="main">Contact Us</a>
             </li>
@@ -869,13 +968,14 @@
         </nav>
 
         <div class="offcanvase__info--content mt--30">
-          <a href="callto:+61485826710"
-            ><span><i class="fa-sharp fa-light fa-phone"></i></span>+(61)
-            485-826-710</a
+          <a href="callto:+91 7200076653"
+            ><span><i class="fa-sharp fa-light fa-phone"></i></span>+(91)
+            7200076653</a
           >
           <a href="#"
-            ><span><i class="fa-sharp fa-light fa-location-dot"></i></span>Yarra
-            Park, Melbourne, Australia</a
+            ><span><i class="fa-sharp fa-light fa-location-dot"></i></span
+            >Tiruppur,4/317,Paramankadu,Chinniyagoundan pudur,
+            Chinnandipalayam,(Iduvampalayam Po),Tiruppur-641667</a
           >
           <div class="offcanvase__info--content--social">
             <p class="title">Follow Us:</p>

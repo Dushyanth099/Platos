@@ -16147,11 +16147,11 @@ body.index-sc h6 {
   margin-bottom: 50px;
 }
 .tution__single--box--faculty {
-
   font-family: var(--rt-primary);
   font-weight: 500;
   margin-bottom: 25px;
 }
+
 .tution__single--box--faculty:not(:first-child) {
   margin-top: 30px;
 }
@@ -17281,6 +17281,10 @@ body.index-sc h6 {
   left: 0;
 }
 .rts-theme-btn.primary {
+  position: relative;
+  margin-bottom: 20px;
+  bottom: 0%;
+  left: 33%;
   color: var(--rt-white);
   background: var(--rt-primary);
 }
@@ -20327,7 +20331,6 @@ body.index-sc h6 {
   max-width: 500px;
   max-height: 500px;
   object-fit: cover;
- 
 }
 
 @media screen and (max-width: 1200px) {
@@ -23562,12 +23565,12 @@ body.index-sc h6 {
 .admission-content-top .requirement-deadline__content ul li::before {
   position: absolute;
   content: "";
-  background-image: url(../images/icon/check.svg);
+  background-image: url(../blueicon.png);
   left: -30px;
-  height: 12px;
-  width: 18px;
+  height: 22px;
+  width: 22px;
   background-repeat: no-repeat;
-  top: 5px;
+  top: 0px;
 }
 @media screen and (max-width: 768px) {
   .admission-content-top .application-deadline__content--table {
@@ -23610,14 +23613,20 @@ body.index-sc h6 {
 }
 
 .rts-ap-section .rts-application-form .single-form-part:not(:last-child) {
-  margin-bottom: 40px;
+  margin: 40px;
+  
 }
 .rts-ap-section .rts-application-form .single-form-part .form-title {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+  font-size: 26px;
+  position: relative;
+  top: 10px;
+  left: 30%;
 }
 .rts-ap-section .rts-application-form .single-form-part .single-input {
   display: flex;
   gap: 30px;
+  margin: 40px;
 }
 @media screen and (max-width: 576px) {
   .rts-ap-section .rts-application-form .single-form-part .single-input {
@@ -23629,6 +23638,7 @@ body.index-sc h6 {
   .single-form-part
   .single-input:not(:last-child) {
   margin-bottom: 30px;
+  
 }
 .rts-ap-section .rts-application-form .single-form-part .single-input-item {
   width: 100%;
@@ -28025,6 +28035,7 @@ h1 {
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
+  margin-bottom: 10px;
   transition: transform 0.3s;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -28038,7 +28049,7 @@ h1 {
 }
 
 .box-img img {
-  width: 100%;
+  width: 750px;
   height: auto;
   display: block;
 }
@@ -28109,7 +28120,7 @@ h1 {
 }
 
 .slider-next {
-  right: -50px;
+  right: -20px;
 }
 
 /* fascilitators ends */
