@@ -18054,7 +18054,7 @@ body.index-sc h6 {
 .banner .banner__content--abouttitle {
   position: absolute;
   bottom: 50%;
-  left:5%;
+  left: 5%;
   font-size: 120px;
   font-weight: 400;
   text-transform: uppercase;
@@ -20335,7 +20335,6 @@ body.index-sc h6 {
 }
 
 .rts-program-single__content {
-
   background-color: #f8f9fa;
   height: 100%;
   display: flex;
@@ -20416,7 +20415,7 @@ body.index-sc h6 {
 }
 .rts-program-single__content .program-image {
   position: relative;
-  
+
   overflow: hidden;
 }
 .rts-program-single__content .program-image img {
@@ -23481,7 +23480,7 @@ body.index-sc h6 {
 .program-sidebar .program-event {
   padding: 50px 44px 60px;
   text-align: center;
-  background-image: url(../scl1.JPG);
+  background-image: url(../admissionsmallimg.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -27315,7 +27314,7 @@ body.index-sc h6 {
 .close-popup-btn {
   position: absolute;
   top: 70px;
-  right:180px;
+  right: 180px;
   width: 43px;
   background: #007bff; /* Blue */
   color: white;
@@ -28140,9 +28139,6 @@ h1 {
 /* fascilitators ends */
 /* rifle club starts */
 
-
-
-
 .rifle-club {
   display: flex;
   flex-direction: column;
@@ -28197,10 +28193,7 @@ h1 {
   }
 }
 
-
-
 /* rifle club ends */
-
 
 /* rifle About Section Styling */
 .rifle-club-container {
