@@ -87,6 +87,174 @@
     }
   </style>
   <body class="page">
+    <!-- apply start -->
+
+    <div class="rts-application-form">
+      <!-- Application Popup (hidden by default) -->
+      <div
+        id="application-popup"
+        style="
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(40, 33, 33, 0.7);
+          z-index: 9999;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: auto;
+          padding: 40px;
+          display: none;
+        "
+      >
+        <!-- Close Button -->
+        <button id="close-popup" class="close-popup-btn">✕</button>
+
+        <section class="rts-application-area moving rts-section-padding v_1">
+          <div class="container">
+            <!-- application form -->
+            <div class="row justify-content-md-center">
+              <div class="col-md-11 col-lg-6 col-xl-5">
+                <div class="rts-admission-form-image">
+                  <h5
+                    class="rts__section--title mb--25 mt-2"
+                    style="color: white; margin-left: 20px !important"
+                  >
+                    Welcome to Platos Academy
+                  </h5>
+                  <img src="assets/popup.JPG" alt="" />
+                </div>
+                <div class="rts-section-big-text">Admission Now</div>
+              </div>
+              <div class="col-md-11 col-lg-6 col-xl-5">
+                <div class="rts-application-form">
+                  <div class="rts-application-form-content">
+                    <h5 class="heading-title mb--25">Application Form</h5>
+                    <form action="#" class="rts-form">
+                      <div class="rts-input rt-flex">
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="fname"
+                            id="fname"
+                            placeholder="First Name"
+                            required
+                          />
+                        </div>
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="lname"
+                            id="lname"
+                            placeholder="Last Name"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="rts-input rt-flex">
+                        <div class="single-input">
+                          <input
+                            type="email"
+                            name="email"
+                            id="email2"
+                            placeholder="Email.."
+                            required
+                          />
+                        </div>
+                        <div class="single-input">
+                          <input
+                            type="number"
+                            name="Phone"
+                            id="Phone"
+                            placeholder="Phone"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div class="rts-input rt-flex">
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="address"
+                            id="address"
+                            placeholder="address"
+                            required
+                          />
+                        </div>
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="city"
+                            id="city"
+                            placeholder="City"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div class="rts-input rt-flex">
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="country"
+                            id="country"
+                            placeholder="Country"
+                            required
+                          />
+                        </div>
+                        <div class="single-input">
+                          <input
+                            type="number"
+                            name="zip"
+                            id="zip"
+                            placeholder="Zip Code"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="rts-input w-full">
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="data"
+                            id="datepicker"
+                            placeholder="dd/mm/yy"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="rts-input w-full">
+                        <div class="single-input">
+                          <textarea
+                            name="msg"
+                            id="msg"
+                            placeholder="Enter Your Comments"
+                          ></textarea>
+                        </div>
+                      </div>
+                      <button
+                        type="submit"
+                        class="rts-theme-btn rts-nbg-btn btn-arrow v2 full-btn"
+                      >
+                        Apply Now
+                        <span
+                          ><i class="fa-sharp fa-regular fa-arrow-right"></i
+                        ></span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- apply end -->
     <!-- header area start -->
 
     <header class="header header__sticky v__1">
@@ -262,9 +430,7 @@
           <div class="rts__section--wrapper">
             <h2 class="rts__section--title">Extra-Curricular Activities</h2>
             <div class="rts__section--link">
-              <a href="faculty.html" class="rts-nbg-btn btn-arrow"
-                >Learn More Activities ></a
-              >
+              <a href="contact.html" class="rts-nbg-btn btn-arrow">Visit ></a>
             </div>
           </div>
         </div>
@@ -275,14 +441,10 @@
               <!-- single team -->
               <div class="rts__single--member">
                 <div class="rts__single--member--thumb">
-                  <a href="faculty-details.html">
-                    <img src="assets/silambam.jpg" alt="" />
-                  </a>
+                  <img src="assets/silambam.jpg" alt="" />
                 </div>
                 <div class="rts__single--member--meta">
-                  <h5 class="rts__single--member--meta--title">
-                    <a href="faculty-details.html">Silambam</a>
-                  </h5>
+                  <h5 class="rts__single--member--meta--title">Silambam</h5>
                   <span class="rts__single--member--meta--designation">
                     Mastering discipline and agility through traditional martial
                     arts.
@@ -293,14 +455,10 @@
               <!-- single team -->
               <div class="rts__single--member">
                 <div class="rts__single--member--thumb">
-                  <a href="faculty-details.html">
-                    <img src="assets/skating.jpg" alt="" />
-                  </a>
+                  <img src="assets/skating.jpg" alt="" />
                 </div>
                 <div class="rts__single--member--meta">
-                  <h5 class="rts__single--member--meta--title">
-                    <a href="faculty-details.html">Skating</a>
-                  </h5>
+                  <h5 class="rts__single--member--meta--title">Skating</h5>
                   <span class="rts__single--member--meta--designation">
                     Building coordination and perseverance on wheels.
                   </span>
@@ -310,14 +468,10 @@
               <!-- single team -->
               <div class="rts__single--member">
                 <div class="rts__single--member--thumb">
-                  <a href="faculty-details.html">
-                    <img src="assets/chess.jpg" alt="" />
-                  </a>
+                  <img src="assets/chess.jpg" alt="" />
                 </div>
                 <div class="rts__single--member--meta">
-                  <h5 class="rts__single--member--meta--title">
-                    <a href="faculty-details.html">Chess </a>
-                  </h5>
+                  <h5 class="rts__single--member--meta--title">Chess</h5>
                   <span class="rts__single--member--meta--designation">
                     Sharpening minds with strategy and logic.
                   </span>
@@ -325,13 +479,11 @@
               </div>
               <div class="rts__single--member">
                 <div class="rts__single--member--thumb">
-                  <a href="faculty-details.html">
-                    <img src="assets/bharathanatiyam.jpg" alt="" />
-                  </a>
+                  <img src="assets/bharathanatiyam.jpg" alt="" />
                 </div>
                 <div class="rts__single--member--meta">
                   <h5 class="rts__single--member--meta--title">
-                    <a href="faculty-details.html">Bharatanatyam </a>
+                    Bharatanatyam
                   </h5>
                   <span class="rts__single--member--meta--designation">
                     Expressing culture and rhythm through classical dance.
@@ -340,13 +492,11 @@
               </div>
               <div class="rts__single--member">
                 <div class="rts__single--member--thumb">
-                  <a href="faculty-details.html">
-                    <img src="assets/westerndance.jpg" alt="" />
-                  </a>
+                  <img src="assets/westerndance.jpg" alt="" />
                 </div>
                 <div class="rts__single--member--meta">
                   <h5 class="rts__single--member--meta--title">
-                    <a href="faculty-details.html">Western Dance </a>
+                    Western Dance
                   </h5>
                   <span class="rts__single--member--meta--designation">
                     Energetic performances and creative choreography.
@@ -355,14 +505,10 @@
               </div>
               <div class="rts__single--member">
                 <div class="rts__single--member--thumb">
-                  <a href="faculty-details.html">
-                    <img src="assets/tennis.jpg" alt="" />
-                  </a>
+                  <img src="assets/tennis.jpg" alt="" />
                 </div>
                 <div class="rts__single--member--meta">
-                  <h5 class="rts__single--member--meta--title">
-                    <a href="faculty-details.html">Tennis </a>
-                  </h5>
+                  <h5 class="rts__single--member--meta--title">Tennis</h5>
                   <span class="rts__single--member--meta--designation">
                     Training champions for national-level competitions.
                   </span>
@@ -370,14 +516,10 @@
               </div>
               <div class="rts__single--member">
                 <div class="rts__single--member--thumb">
-                  <a href="faculty-details.html">
-                    <img src="assets/yoga.jpg" alt="" />
-                  </a>
+                  <img src="assets/yoga.jpg" alt="" />
                 </div>
                 <div class="rts__single--member--meta">
-                  <h5 class="rts__single--member--meta--title">
-                    <a href="faculty-details.html">Yoga </a>
-                  </h5>
+                  <h5 class="rts__single--member--meta--title">Yoga</h5>
                   <span class="rts__single--member--meta--designation">
                     Enhancing focus and well-being with certified training.
                   </span>
@@ -690,8 +832,8 @@
 
     <!-- newsletter end -->
 
-     <!-- footer start -->
-     <footer class="rts-footer v_2 pt--100 pb--100">
+    <!-- footer start -->
+    <footer class="rts-footer v_2 pt--100 pb--100">
       <div class="container-fluid" style="max-width: 1500px !important">
         <div class="row gy-5 gy-lg-0">
           <div class="col-lg-4 col-md-6 col-sm-6">

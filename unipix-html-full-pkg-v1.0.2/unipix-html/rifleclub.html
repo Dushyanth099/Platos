@@ -214,7 +214,174 @@
       </div>
     </section>
     <!-- BREADCRUMB AREA END -->
+    <!-- apply start -->
 
+    <div class="rts-application-form">
+      <!-- Application Popup (hidden by default) -->
+      <div
+        id="application-popup"
+        style="
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(40, 33, 33, 0.7);
+          z-index: 9999;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: auto;
+          padding: 40px;
+          display: none;
+        "
+      >
+        <!-- Close Button -->
+        <button id="close-popup" class="close-popup-btn">✕</button>
+
+        <section class="rts-application-area moving rts-section-padding v_1">
+          <div class="container">
+            <!-- application form -->
+            <div class="row justify-content-md-center">
+              <div class="col-md-11 col-lg-6 col-xl-5">
+                <div class="rts-admission-form-image">
+                  <h5
+                    class="rts__section--title mb--25 mt-2"
+                    style="color: white; margin-left: 20px !important"
+                  >
+                    Welcome to Platos Academy
+                  </h5>
+                  <img src="assets/popup.JPG" alt="" />
+                </div>
+                <div class="rts-section-big-text">Admission Now</div>
+              </div>
+              <div class="col-md-11 col-lg-6 col-xl-5">
+                <div class="rts-application-form">
+                  <div class="rts-application-form-content">
+                    <h5 class="heading-title mb--25">Application Form</h5>
+                    <form action="#" class="rts-form">
+                      <div class="rts-input rt-flex">
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="fname"
+                            id="fname"
+                            placeholder="First Name"
+                            required
+                          />
+                        </div>
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="lname"
+                            id="lname"
+                            placeholder="Last Name"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="rts-input rt-flex">
+                        <div class="single-input">
+                          <input
+                            type="email"
+                            name="email"
+                            id="email2"
+                            placeholder="Email.."
+                            required
+                          />
+                        </div>
+                        <div class="single-input">
+                          <input
+                            type="number"
+                            name="Phone"
+                            id="Phone"
+                            placeholder="Phone"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div class="rts-input rt-flex">
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="address"
+                            id="address"
+                            placeholder="address"
+                            required
+                          />
+                        </div>
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="city"
+                            id="city"
+                            placeholder="City"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div class="rts-input rt-flex">
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="country"
+                            id="country"
+                            placeholder="Country"
+                            required
+                          />
+                        </div>
+                        <div class="single-input">
+                          <input
+                            type="number"
+                            name="zip"
+                            id="zip"
+                            placeholder="Zip Code"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="rts-input w-full">
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="data"
+                            id="datepicker"
+                            placeholder="dd/mm/yy"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="rts-input w-full">
+                        <div class="single-input">
+                          <textarea
+                            name="msg"
+                            id="msg"
+                            placeholder="Enter Your Comments"
+                          ></textarea>
+                        </div>
+                      </div>
+                      <button
+                        type="submit"
+                        class="rts-theme-btn rts-nbg-btn btn-arrow v2 full-btn"
+                      >
+                        Apply Now
+                        <span
+                          ><i class="fa-sharp fa-regular fa-arrow-right"></i
+                        ></span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- apply end -->
     <!-- gsap starts -->
     <!-- Rifle Club Section -->
     <section class="rifle-club animate__animated animate__bounceInLeft">
@@ -447,8 +614,8 @@ About Area
         </div>
       </div>
     </div>
-     <!-- footer start -->
-     <footer class="rts-footer v_2 pt--100 pb--100">
+    <!-- footer start -->
+    <footer class="rts-footer v_2 pt--100 pb--100">
       <div class="container-fluid" style="max-width: 1500px !important">
         <div class="row gy-5 gy-lg-0">
           <div class="col-lg-4 col-md-6 col-sm-6">
