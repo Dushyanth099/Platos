@@ -20344,8 +20344,8 @@ body.index-sc h6 {
 }
 
 .program-image {
-  max-width: 500px;
-  max-height: 500px;
+  width: 420px;
+  height: 415px;
   object-fit: cover;
 }
 
@@ -26970,7 +26970,7 @@ body.index-sc h6 {
   font-weight: 500;
 }
 .contact-method__single .contact-text .contact-link {
-  position: absolute;
+  /* position: absolute; */
   bottom: 60px;
   display: flex;
   flex-direction: column;
