@@ -18081,7 +18081,7 @@ body.index-sc h6 {
   min-width: 120%;
   margin: 0 auto;
   margin-left: auto;
-  /* margin-left: -10%; */
+  margin-left: 5%;
   z-index: 99;
   padding-top: 140px;
 }
@@ -23581,7 +23581,11 @@ body.index-sc h6 {
 .admission-content-top .requirement-deadline__content ul li::before {
   position: absolute;
   content: "";
-  background-image: url(../blueicon.png);
+  background-color: #0f0dae;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7"/></svg>')
+    no-repeat center;
+  mask: url('data:image/svg+xml;utf8,<svg fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7"/></svg>')
+    no-repeat center;
   left: -30px;
   height: 22px;
   width: 22px;
