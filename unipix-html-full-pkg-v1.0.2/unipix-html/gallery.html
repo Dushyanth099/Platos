@@ -27,6 +27,9 @@
     <link rel="stylesheet" href="assets/css/plugins/nice-select.css" />
     <link rel="stylesheet" href="assets/css/plugins/jquery-ui.css" />
     <!-- custom style css -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
@@ -34,23 +37,190 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <!-- <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    /> -->
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
 
   <body>
-     <!-- header area start -->
+    <!-- apply start -->
 
-     <header class="header header__sticky v__1">
-      
+    <div class="rts-application-form">
+      <!-- Application Popup (hidden by default) -->
+      <div
+        id="application-popup"
+        style="
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(40, 33, 33, 0.7);
+          z-index: 9999;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: auto;
+          padding: 40px;
+          display: none;
+        "
+      >
+        <!-- Close Button -->
+        <button id="close-popup" class="close-popup-btn">✕</button>
+
+        <section class="rts-application-area moving rts-section-padding v_1">
+          <div class="container">
+            <!-- application form -->
+            <div class="row justify-content-md-center">
+              <div class="col-md-11 col-lg-6 col-xl-5">
+                <div class="rts-admission-form-image">
+                  <h5
+                    class="rts__section--title mb--25 mt-2"
+                    style="color: white; margin-left: 20px !important"
+                  >
+                    Welcome to Platos Academy
+                  </h5>
+                  <img src="assets/popup.JPG" alt="" />
+                </div>
+                <div class="rts-section-big-text">Admission Now</div>
+              </div>
+              <div class="col-md-11 col-lg-6 col-xl-5">
+                <div class="rts-application-form">
+                  <div class="rts-application-form-content">
+                    <h5 class="heading-title mb--25">Application Form</h5>
+                    <form action="#" class="rts-form">
+                      <div class="rts-input rt-flex">
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="fname"
+                            id="fname"
+                            placeholder="First Name"
+                            required
+                          />
+                        </div>
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="lname"
+                            id="lname"
+                            placeholder="Last Name"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="rts-input rt-flex">
+                        <div class="single-input">
+                          <input
+                            type="email"
+                            name="email"
+                            id="email2"
+                            placeholder="Email.."
+                            required
+                          />
+                        </div>
+                        <div class="single-input">
+                          <input
+                            type="number"
+                            name="Phone"
+                            id="Phone"
+                            placeholder="Phone"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div class="rts-input rt-flex">
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="address"
+                            id="address"
+                            placeholder="address"
+                            required
+                          />
+                        </div>
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="city"
+                            id="city"
+                            placeholder="City"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div class="rts-input rt-flex">
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="country"
+                            id="country"
+                            placeholder="Country"
+                            required
+                          />
+                        </div>
+                        <div class="single-input">
+                          <input
+                            type="number"
+                            name="zip"
+                            id="zip"
+                            placeholder="Zip Code"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="rts-input w-full">
+                        <div class="single-input">
+                          <input
+                            type="text"
+                            name="data"
+                            id="datepicker"
+                            placeholder="dd/mm/yy"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="rts-input w-full">
+                        <div class="single-input">
+                          <textarea
+                            name="msg"
+                            id="msg"
+                            placeholder="Enter Your Comments"
+                          ></textarea>
+                        </div>
+                      </div>
+                      <button
+                        type="submit"
+                        class="rts-theme-btn rts-nbg-btn btn-arrow v2 full-btn"
+                      >
+                        Apply Now
+                        <span
+                          ><i class="fa-sharp fa-regular fa-arrow-right"></i
+                        ></span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- apply end -->
+    <!-- header area start -->
+
+    <header class="header header__sticky v__1">
       <div class="container-fluid">
         <div class="row">
           <div class="col-xl-12">
@@ -135,31 +305,64 @@
                         </ul>
                       </li>
 
-
                       <li class="navigation__menu--item has-child has-arrow">
-                        <a href="academics.html" class="navigation__menu--item__link">Academics</a>
+                        <a
+                          href="academics.html"
+                          class="navigation__menu--item__link"
+                          >Academics</a
+                        >
                         <ul class="submenu sub__style">
-                            <li><a href="academics.html">Our Academics</a></li>
-                           
-                            <li class="has-child has-arrow">
-                                <a href="#">Academics Curriculam</a>
-                                <ul class="sub__style">
-                                    <li><a class="mobile-menu-link" href="academics.html">Pre Primary</a></li>
-                                    <li><a class="mobile-menu-link" href="academics.html">Grade 1 To 10</a></li>
-                                    <li><a href="academics.html">Grade 11 & 12</a></li>              
-                                </ul>
-                            </li>
-                            <li class="has-child has-arrow">
-                                <a href="#">Roles & Responsibilities</a>
-                                <ul class="sub__style">
-                                    <li><a class="mobile-menu-link" href="academics.html">Staffs</a></li>
-                                    <li><a class="mobile-menu-link" href="academics.html">Students</a></li>          
-                                </ul>
-                            </li>
-                            <li><a href="academics.html">Academic Calender</a></li>
-                            <li><a href="academics.html">Coaching Programs</a></li>
+                          <li><a href="academics.html">Our Academics</a></li>
+
+                          <li class="has-child has-arrow">
+                            <a href="#">Academics Curriculam</a>
+                            <ul class="sub__style">
+                              <li>
+                                <a
+                                  class="mobile-menu-link"
+                                  href="academics.html"
+                                  >Pre Primary</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="mobile-menu-link"
+                                  href="academics.html"
+                                  >Grade 1 To 10</a
+                                >
+                              </li>
+                              <li>
+                                <a href="academics.html">Grade 11 & 12</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="has-child has-arrow">
+                            <a href="#">Roles & Responsibilities</a>
+                            <ul class="sub__style">
+                              <li>
+                                <a
+                                  class="mobile-menu-link"
+                                  href="academics.html"
+                                  >Staffs</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="mobile-menu-link"
+                                  href="academics.html"
+                                  >Students</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="academics.html">Academic Calender</a>
+                          </li>
+                          <li>
+                            <a href="academics.html">Coaching Programs</a>
+                          </li>
                         </ul>
-                    </li>
+                      </li>
 
                       <li class="navigation__menu--item has-child has-arrow">
                         <a
@@ -171,8 +374,11 @@
                           <li>
                             <a href="achievements.html">Achievements</a>
                           </li>
-                          <li><a href="extracurricularactivities.html">Extra Curricular Activities</a></li>
-                          
+                          <li>
+                            <a href="extracurricularactivities.html"
+                              >Extra Curricular Activities</a
+                            >
+                          </li>
                         </ul>
                       </li>
                       <li class="navigation__menu--item">
@@ -197,7 +403,6 @@
                           >Challo</a
                         >
                       </li>
-
                     </ul>
                   </nav>
                 </div>
@@ -216,7 +421,7 @@
                       </ul>
                     </div>
                   </div> -->
-                  
+
                   <div id="menu-btn" class="menu__trigger">
                     <img src="assets/images/icon/bar__line.svg" alt="bar" />
                   </div>
@@ -228,7 +433,6 @@
       </div>
     </header>
     <!-- header area end -->
-
 
     <!-- BREADCRUMB AREA -->
     <section
