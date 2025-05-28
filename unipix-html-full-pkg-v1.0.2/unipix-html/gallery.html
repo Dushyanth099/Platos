@@ -44,263 +44,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     /> -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <!-- AOS CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
-      rel="stylesheet"
-    />
-
-    <style>
-      @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,400");
-
-      .tabs input[name="tab-control"] {
-        display: none;
-      }
-
-      .tabs .content section h2,
-      .tabs ul li label {
-        font-family: "Montserrat";
-        font-weight: bold;
-        font-size: 18px;
-        color: #428bff;
-        background-color: #0f0dae; /* light blue background */
-        border: 2px solid transparent;
-        border-radius: 8px;
-        padding: 10px 15px;
-        font-size: 16px;
-        transition: all 0.3s ease-in-out;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-
-      .tabs ul li label:hover,
-      .tabs ul li label:focus,
-      .tabs ul li label:active {
-        /* background-color: #d1e4ff; */
-        color: #0a0a0b;
-        border-color: #428bff;
-        box-shadow: 0 3px 8px rgba(66, 139, 255, 0.3);
-      }
-
-      .tabs ul {
-        list-style-type: none;
-        padding-left: 0;
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 10px;
-        justify-content: space-between;
-        align-items: flex-end;
-        flex-wrap: wrap;
-      }
-
-      .tabs ul li {
-        box-sizing: border-box;
-        flex: 1;
-        width: 25%;
-        padding: 0 10px;
-        text-align: center;
-      }
-
-      .tabs ul li label {
-        color: #ffffff;
-        display: block;
-        cursor: pointer;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        transition: all 0.2s ease-in-out;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      .tabs ul li label br {
-        display: none;
-      }
-
-      .tabs ul li label:hover,
-      .tabs ul li label:focus,
-      .tabs ul li label:active {
-        outline: 0;
-        color: #0a0a0b;
-      }
-
-      .tabs .slider {
-        position: relative;
-        width: 25%;
-        transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
-      }
-
-      .tabs .slider .indicator {
-        position: relative;
-        width: 50px;
-        max-width: 100%;
-        margin: 0 auto;
-        height: 4px;
-        background: #428bff;
-        border-radius: 1px;
-      }
-
-      .tabs .content section {
-        display: none;
-        animation: content 0.3s ease-in-out forwards;
-        line-height: 1.4;
-      }
-
-      .tabs .content section h2 {
-        color: #428bff;
-        display: none;
-      }
-
-      .tabs .content section h2::after {
-        content: "";
-        position: relative;
-        display: block;
-        width: 30px;
-        height: 3px;
-        background: #428bff;
-        margin-top: 5px;
-        left: 1px;
-      }
-
-      /* Simulated tab logic with nth-of-type */
-      .tabs input:nth-of-type(1):checked ~ ul > li:nth-child(1) label {
-        cursor: default;
-        color: #428bff;
-      }
-
-      .tabs input:nth-of-type(1):checked ~ ul > li:nth-child(1) label svg {
-        fill: #428bff;
-      }
-
-      .tabs input:nth-of-type(1):checked ~ .slider {
-        transform: translateX(0%);
-      }
-
-      .tabs input:nth-of-type(1):checked ~ .content > section:nth-child(1) {
-        display: block;
-      }
-
-      .tabs input:nth-of-type(2):checked ~ ul > li:nth-child(2) label {
-        cursor: default;
-        color: #428bff;
-      }
-
-      .tabs input:nth-of-type(2):checked ~ ul > li:nth-child(2) label svg {
-        fill: #428bff;
-      }
-
-      .tabs input:nth-of-type(2):checked ~ .slider {
-        transform: translateX(100%);
-      }
-
-      .tabs input:nth-of-type(2):checked ~ .content > section:nth-child(2) {
-        display: block;
-      }
-
-      .tabs input:nth-of-type(3):checked ~ ul > li:nth-child(3) label {
-        cursor: default;
-        color: #428bff;
-      }
-
-      .tabs input:nth-of-type(3):checked ~ ul > li:nth-child(3) label svg {
-        fill: #428bff;
-      }
-
-      .tabs input:nth-of-type(3):checked ~ .slider {
-        transform: translateX(200%);
-      }
-
-      .tabs input:nth-of-type(3):checked ~ .content > section:nth-child(3) {
-        display: block;
-      }
-
-      .tabs input:nth-of-type(4):checked ~ ul > li:nth-child(4) label {
-        background-color: #428bff;
-        color: white;
-        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
-      }
-
-      .tabs input:nth-of-type(4):checked ~ ul > li:nth-child(4) label svg {
-        fill: #428bff;
-      }
-
-      .tabs input:nth-of-type(4):checked ~ .slider {
-        transform: translateX(300%);
-      }
-
-      .tabs input:nth-of-type(4):checked ~ .content > section:nth-child(4) {
-        display: block;
-      }
-
-      @keyframes content {
-        from {
-          opacity: 0;
-          transform: translateY(5%);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0%);
-        }
-      }
-
-      @media (max-width: 1000px) {
-        .tabs ul li label {
-          white-space: initial;
-        }
-
-        .tabs ul li label br {
-          display: initial;
-        }
-
-        .tabs ul li label svg {
-          height: 1.5em;
-        }
-      }
-
-      @media (max-width: 600px) {
-        .tabs ul li label {
-          padding: 5px;
-          border-radius: 5px;
-        }
-
-        .tabs ul li label span {
-          display: none;
-        }
-
-        .tabs .slider {
-          display: none;
-        }
-
-        .tabs .content {
-          margin-top: 20px;
-        }
-
-        .tabs .content section h2 {
-          display: block;
-        }
-      }
-      .btn:focus,
-      .btn:active,
-      button:focus,
-      button:active {
-        outline: none !important;
-        box-shadow: none !important;
-      }
-
-      #image-gallery .modal-footer {
-        display: block;
-      }
-
-      .thumb {
-        margin-top: 15px;
-        margin-bottom: 15px;
-      }
-    </style>
   </head>
 
   <body>
@@ -454,12 +197,6 @@
         <div class="row">
           <div class="col-12">
             <div class="breadcrumb-content">
-              <ul class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  Gallery
-                </li>
-              </ul>
               <h2 class="section-title">Gallery</h2>
             </div>
           </div>
@@ -468,858 +205,119 @@
     </section>
     <!-- BREADCRUMB AREA END -->
 
-    <div class="mt--50">
-      <!-- <h1>Pure CSS Tabs With Indicator</h1> -->
-      <div class="tabs">
-        <input type="radio" id="tab1" name="tab-control" checked />
-        <input type="radio" id="tab2" name="tab-control" />
-        <input type="radio" id="tab3" name="tab-control" />
-        <input type="radio" id="tab4" name="tab-control" />
-        <div class="row">
-          <div class="col-md-2"></div>
-          <div class="col-md-8">
-            <ul>
-              <li title="Features">
-                <label for="tab1" role="button"
-                  ><br /><span>Features</span></label
-                >
-              </li>
-              <li title="Delivery Contents">
-                <label for="tab2" role="button"
-                  ><br /><span>Delivery Contents</span></label
-                >
-              </li>
-              <li title="Shipping">
-                <label for="tab3" role="button"
-                  ><br /><span>Shipping</span></label
-                >
-              </li>
-              <li title="Returns">
-                <label for="tab4" role="button"
-                  ><br /><span>Returns</span></label
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-2"></div>
-        </div>
+    <style>
+      /* .card {
+    box-sizing: border-box;
+    border: 2px solid #ddd; 
+    border-radius: 12px; 
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+    width: 500px; 
+  } */
 
-        <!-- <div class="slider">
-    <div class="indicator"></div>
-  </div> -->
+      .slider-box {
+        background: #ffffff; /* Or a light background like #f9f9f9 */
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        border-radius: 16px;
+        padding: 30px 20px;
+        margin: 40px 0;
+      }
+      .card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        display: block;
+      }
 
-        <div class="content">
-          <section>
-            <div class="rts-gallery gal">
-              <div class="container">
-                <div class="row">
-                  <div class="rts-section mb--40 rt-center">
-                    <h2 class="rts-section-title">University Sport Gallery</h2>
-                  </div>
-                </div>
-                <div class="gallery-area">
-                  <div class="row g-5">
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="100"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x1.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/01.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="200"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x2.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/02.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="300"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x3.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/03.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="400"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x4.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/04.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="400"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x5.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/05.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="500"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x6.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/06.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="600"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x6.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/06.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="700"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x6.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/04.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="800"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x6.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/03.webp"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      }
 
-          <section>
-            <div class="rts-gallery gal">
-              <div class="container">
-                <div class="row">
-                  <div class="rts-section mb--40 rt-center">
-                    <h2 class="rts-section-title">University Sport Gallery</h2>
-                  </div>
-                </div>
-                <div class="gallery-area">
-                  <div class="row g-5">
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="100"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x1.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/01.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="200"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x2.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/02.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="300"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x3.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/03.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="400"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x4.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/04.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="400"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x5.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/05.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="500"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x6.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/06.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="600"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x6.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/06.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="700"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x6.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/06.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="800"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x6.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/06.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+      .scroll-track {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+    </style>
 
-          <section>
-            <div class="rts-gallery gal">
-              <div class="container">
-                <div class="row">
-                  <div class="rts-section mb--40 rt-center">
-                    <h2 class="rts-section-title">University Sport Gallery</h2>
-                  </div>
-                </div>
-                <div class="gallery-area">
-                  <div class="row g-5">
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="100"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x1.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/01.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="200"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x2.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/02.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="300"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x3.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/03.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="400"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x4.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/04.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="400"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x5.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/05.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="500"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x6.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/06.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="600"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x6.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/06.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="700"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x6.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/06.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="800"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x6.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/06.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+    <!-- Card start -->
+    <div class="slider-box">
+      <div class="rts_section--wrapper v_5">
+        <h2 class="rts__section--title mt--80">Our Gallery</h2>
+      </div>
 
-          <section>
-            <div class="rts-gallery gal">
-              <div class="container">
-                <div class="row">
-                  <div class="rts-section mb--40 rt-center">
-                    <h2 class="rts-section-title">University Sport Gallery</h2>
-                  </div>
-                </div>
-                <div class="gallery-area">
-                  <div class="row g-5">
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="100"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x1.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/01.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="200"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x2.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/02.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="300"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x3.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/03.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="400"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x4.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/04.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="400"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x5.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/05.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- single gallery item -->
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="500"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x6.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/06.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="600"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x6.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/06.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="700"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x6.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/06.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div
-                      class="col-lg-4 col-md-6"
-                      data-aos="fade-up"
-                      data-aos-delay="800"
-                    >
-                      <div class="single-gallery">
-                        <a
-                          href="assets/images/campus/gallery/2x6.jpg"
-                          class="single-gallery__item"
-                        >
-                          <img
-                            src="assets/images/campus/gallery/06.jpg"
-                            alt="gallery"
-                          />
-                          <div class="single-gallery__icon">
-                            <i class="fa-light fa-circle-plus"></i>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+      <div
+        class="scroll-wrapper left-to-right"
+        style="margin-bottom: 100px; margin-top: 20px"
+      >
+        <div
+          class="scroll-track track-right card-track"
+          id="left-to-right-track"
+        >
+          <!-- Cards will be generated by JavaScript -->
         </div>
       </div>
     </div>
 
+    <div class="slider-box">
+      <div class="rts_section--wrapper v_5">
+        <h2 class="rts__section--title mt--30">Our Gallery</h2>
+      </div>
+
+      <div
+        class="scroll-wrapper right-to-left mt-5"
+        style="margin-bottom: 100px"
+      >
+        <div
+          class="scroll-track track-left card-track"
+          id="right-to-left-track"
+        >
+          <!-- Cards will be generated by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <!-- New Slider Pair -->
+    <div class="slider-box">
+      <div class="rts_section--wrapper v_5">
+        <h2 class="rts__section--title mt--30">Our Gallery</h2>
+      </div>
+      <div
+        class="scroll-wrapper left-to-right"
+        style="margin-bottom: 100px; margin-top: 20px"
+      >
+        <div
+          class="scroll-track track-right card-track"
+          id="left-to-right-track-2"
+        >
+          <!-- Cards will be generated by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <div class="slider-box">
+      <div class="rts_section--wrapper v_5">
+        <h2 class="rts__section--title mt--30">Our Gallery</h2>
+      </div>
+      <div
+        class="scroll-wrapper right-to-left mt-5"
+        style="margin-bottom: 100px"
+      >
+        <div
+          class="scroll-track track-left card-track"
+          id="right-to-left-track-2"
+        >
+          <!-- Cards will be generated by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <!--card-->
     <div class="rts-newsletter v_1 rts-cta-background mt--90">
       <div class="container">
         <div class="row">
@@ -1352,6 +350,7 @@
         </div>
       </div>
     </div>
+
     <!-- footer start -->
     <footer class="rts-footer v_2 pt--100 pb--100">
       <div class="container-fluid" style="max-width: 1500px !important">
@@ -1870,6 +869,80 @@
         duration: 800, // animation duration in ms
         easing: "ease-in-out", // easing function
         once: false, // whether animation should happen only once - while scrolling down
+      });
+    </script>
+
+    <script>
+      // Image data for the galleries
+      const galleryImages = {
+        leftToRight: [
+          "assets/gallery/1.jpg",
+          "assets/gallery/2.jpg",
+          "assets/gallery/3.jpg",
+          "assets/gallery/4.jpg",
+          "assets/gallery/5.jpg",
+          "assets/gallery/6.jpg",
+          "assets/gallery/7.jpg",
+          "assets/gallery/8.jpg",
+          "assets/gallery/9.jpg",
+          "assets/gallery/10.jpg",
+          "assets/gallery/11.jpg",
+          "assets/gallery/12.jpg",
+          "assets/gallery/13.jpg",
+          "assets/gallery/14.jpg",
+          "assets/gallery/15.jpg",
+        ],
+        rightToLeft: [
+          "assets/gallery/16.jpg",
+          "assets/gallery/17.jpg",
+          "assets/gallery/18.jpg",
+          "assets/gallery/19.jpg",
+          "assets/gallery/20.jpg",
+          "assets/gallery/21.jpg",
+          "assets/gallery/22.jpg",
+          "assets/gallery/23.jpg",
+          "assets/gallery/24.jpg",
+          "assets/gallery/25.jpg",
+          "assets/gallery/26.jpg",
+          "assets/gallery/27.jpg",
+          "assets/gallery/28.jpg",
+          "assets/gallery/29.jpg",
+          "assets/gallery/30.jpg",
+        ],
+      };
+
+      // Function to generate gallery cards
+      function generateGalleryCards(containerId, images) {
+        const container = document.getElementById(containerId);
+
+        images.forEach((imageSrc, index) => {
+          const card = document.createElement("div");
+          card.className = "card";
+
+          const img = document.createElement("img");
+          img.src = imageSrc;
+          img.alt = `Gallery image ${index + 1}`;
+          img.loading = "lazy"; // Add lazy loading
+
+          card.appendChild(img);
+          container.appendChild(card);
+        });
+      }
+
+      // Generate galleries when DOM is loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        generateGalleryCards("left-to-right-track", galleryImages.leftToRight);
+        generateGalleryCards("right-to-left-track", galleryImages.rightToLeft);
+        generateGalleryCards(
+          "left-to-right-track-2",
+          galleryImages.leftToRight
+        );
+        generateGalleryCards(
+          "right-to-left-track-2",
+          galleryImages.rightToLeft
+        );
+
+        // Initialize any carousel/slider functionality here if needed
       });
     </script>
   </body>

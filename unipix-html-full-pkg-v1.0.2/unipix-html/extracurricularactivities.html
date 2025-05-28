@@ -48,45 +48,334 @@
   />
 
   <style>
-    .activities-carousel .owl-stage {
-      display: flex;
-      align-items: center;
-      padding: 20px 0;
+    /* Main Section Styling */
+    .extracurricular-section {
+      background: #f9f9f9;
+      padding: 60px 0;
     }
 
-    .activities-carousel .rts__single--member {
+    /* Section Header */
+    .rts__section--wrapper {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .rts__section--title {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .rts__section--title:after {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 4px;
+      background: #3498db;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    /* Two-Column Layout */
+    .activities-container {
+      display: flex;
+      max-width: 1200px;
       margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+
+    /* Left Side - Navigation */
+    .activities-nav {
+      width: 300px;
+      background: #2c3e50;
+      padding: 30px 0;
+    }
+
+    .activities-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 0 20px;
+    }
+
+    .activity-item {
+      padding: 25px 20px;
+      border: none;
+      background: transparent;
+      color: #ecf0f1;
+      text-align: left;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .activity-item:before {
+      content: "";
+      position: absolute;
+      left: -100%;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.1);
       transition: all 0.3s ease;
     }
 
-    .activities-carousel .owl-nav {
-      position: absolute;
-      top: 480px;
-      right: 20px;
+    .activity-item:hover {
+      background: rgba(255, 255, 255, 0.05);
+      transform: translateX(5px);
     }
 
-    .activities-carousel .owl-nav button {
+    .activity-item:hover:before {
+      left: 0;
+    }
+
+    .activity-item.active {
+      background: #3498db;
+      color: white;
+      font-weight: 600;
+    }
+
+    .activity-item i {
+      margin-right: 12px;
+      font-size: 1.2rem;
+      width: 24px;
+      text-align: center;
+    }
+
+    /* Right Side - Gallery */
+    .activities-gallery {
+      flex: 1;
+      padding: 30px;
+      min-height: 500px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .activity-header {
+      margin-bottom: 30px;
+    }
+
+    .activity-title {
+      font-size: 2.8rem;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    .activity-description {
+      color: #7f8c8d;
+      line-height: 1.8;
+      font-size: 2rem;
+      /* max-width: 600px; */
+    }
+
+    .activity-gallery {
+      display: none;
+      flex: 1;
+    }
+
+    .activity-gallery.active {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      aspect-ratio: 1/1;
+      transition: all 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+      color: white;
+      padding: 15px;
+      transform: translateY(100%);
+      transition: all 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-caption {
+      transform: translateY(0);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+      .activities-container {
+        flex-direction: column;
+      }
+
+      .activities-nav {
+        width: 100%;
+        padding: 20px;
+      }
+
+      .activities-list {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 10px;
+      }
+
+      .activity-item {
+        white-space: nowrap;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rts__section--title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+  <style>
+    /* Carousel Styling */
+    .program-carousel {
+      position: relative;
+    }
+
+    .program-carousel .owl-stage-outer {
+      padding: 15px 0; /* Add space for box-shadow */
+    }
+
+    .program-carousel .rts__program--item {
+      height: 350px;
+      border-radius: 10px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      margin: 0 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .program-carousel .rts__program--item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .program-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+      color: white;
+      padding: 25px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .rts__program--item--title {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .rts__program--item--description {
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 0;
+    }
+
+    /* Navigation Arrows */
+    .program-carousel .owl-nav {
+      position: absolute;
+      bottom: 0px;
+      right: 0;
+    }
+
+    .program-carousel .owl-nav button {
       width: 40px;
       height: 40px;
-      border-radius: 50%;
+      background: #2c3e50 !important;
       color: white !important;
-      background: blue !important;
+      border-radius: 50%;
       margin-left: 10px;
       transition: all 0.3s ease;
     }
 
-    .activities-carousel .owl-nav button:hover {
-      background: blue !important;
-      color: black !important;
+    .program-carousel .owl-nav button:hover {
+      background: #3498db !important;
     }
 
-    .activities-carousel .owl-nav button span {
-      font-size: 24px;
-      line-height: 1;
-      position: relative;
-      top: 0px;
+    /* Dots */
+    .program-carousel .owl-dots {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .program-carousel .owl-dot span {
+      width: 12px;
+      height: 12px;
+      margin: 0 5px;
+      background: #ddd;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .program-carousel .owl-dot.active span {
+      background: #3498db;
+      width: 30px;
+      border-radius: 15px;
     }
   </style>
+
   <body class="page">
     <!-- apply start -->
 
@@ -422,377 +711,451 @@
     </section>
     <!-- BREADCRUMB AREA END -->
 
-    <!-- <!- team start -->
-    <section
-      class="rts_section rts_light rts-section-padding extracurricular-section"
-    >
+    <<!-- Program Carousel Section -->
+    <section class="rts_section rts_light rts-section-padding">
       <div class="container">
         <div class="row">
           <div class="rts__section--wrapper">
-            <h2 class="rts__section--title">Extra-Curricular Activities</h2>
+            <h2 class="rts__section--title">Our Programs</h2>
             <div class="rts__section--link">
-              <a href="contact.html" class="rts-nbg-btn btn-arrow">Visit ></a>
+              <a href="program-single.html" class="rts-nbg-btn btn-arrow"
+                >more program<span
+                  ><i class="fa-sharp fa-regular fa-arrow-right"></i></span
+              ></a>
             </div>
           </div>
         </div>
-        <!-- team member area -->
+
         <div class="row">
           <div class="col-12">
-            <div class="activities-carousel owl-carousel owl-theme">
-              <!-- single team -->
-              <div class="rts__single--member">
-                <div class="rts__single--member--thumb">
-                  <img src="assets/silambam.jpg" alt="" />
-                </div>
-                <div class="rts__single--member--meta">
-                  <h5 class="rts__single--member--meta--title">Silambam</h5>
-                  <span class="rts__single--member--meta--designation">
-                    Mastering discipline and agility through traditional martial
-                    arts.
-                  </span>
-                </div>
-              </div>
-              <!-- single team end -->
-              <!-- single team -->
-              <div class="rts__single--member">
-                <div class="rts__single--member--thumb">
-                  <img src="assets/skating.jpg" alt="" />
-                </div>
-                <div class="rts__single--member--meta">
-                  <h5 class="rts__single--member--meta--title">Skating</h5>
-                  <span class="rts__single--member--meta--designation">
-                    Building coordination and perseverance on wheels.
-                  </span>
+            <div class="program-carousel owl-carousel">
+              <!-- Program Item 1 -->
+              <div
+                class="rts__program--item"
+                style="
+                  background-image: url(assets/images/program/program__1.jpg);
+                "
+              >
+                <div class="program-content">
+                  <h5 class="rts__program--item--title">Silambam</h5>
+                  <p class="rts__program--item--description">
+                    Embark on a journey of knowledge discovery, and growth at
+                    Unipix University.
+                  </p>
                 </div>
               </div>
-              <!-- single team end -->
-              <!-- single team -->
-              <div class="rts__single--member">
-                <div class="rts__single--member--thumb">
-                  <img src="assets/chess.jpg" alt="" />
-                </div>
-                <div class="rts__single--member--meta">
-                  <h5 class="rts__single--member--meta--title">Chess</h5>
-                  <span class="rts__single--member--meta--designation">
-                    Sharpening minds with strategy and logic.
-                  </span>
-                </div>
-              </div>
-              <div class="rts__single--member">
-                <div class="rts__single--member--thumb">
-                  <img src="assets/bharathanatiyam.jpg" alt="" />
-                </div>
-                <div class="rts__single--member--meta">
-                  <h5 class="rts__single--member--meta--title">
-                    Bharatanatyam
-                  </h5>
-                  <span class="rts__single--member--meta--designation">
-                    Expressing culture and rhythm through classical dance.
-                  </span>
+
+              <!-- Program Item 2 -->
+              <div
+                class="rts__program--item"
+                style="
+                  background-image: url(assets/images/program/program__2.jpg);
+                "
+              >
+                <div class="program-content">
+                  <h5 class="rts__program--item--title">Skatting</h5>
+                  <p class="rts__program--item--description">
+                    Embark on a journey of knowledge discovery, and growth at
+                    Unipix University.
+                  </p>
                 </div>
               </div>
-              <div class="rts__single--member">
-                <div class="rts__single--member--thumb">
-                  <img src="assets/westerndance.jpg" alt="" />
-                </div>
-                <div class="rts__single--member--meta">
-                  <h5 class="rts__single--member--meta--title">
-                    Western Dance
-                  </h5>
-                  <span class="rts__single--member--meta--designation">
-                    Energetic performances and creative choreography.
-                  </span>
-                </div>
-              </div>
-              <div class="rts__single--member">
-                <div class="rts__single--member--thumb">
-                  <img src="assets/tennis.jpg" alt="" />
-                </div>
-                <div class="rts__single--member--meta">
-                  <h5 class="rts__single--member--meta--title">Tennis</h5>
-                  <span class="rts__single--member--meta--designation">
-                    Training champions for national-level competitions.
-                  </span>
+
+              <!-- Program Item 3 -->
+              <div
+                class="rts__program--item"
+                style="
+                  background-image: url(assets/images/program/program__3.jpg);
+                "
+              >
+                <div class="program-content">
+                  <h5 class="rts__program--item--title">Chess</h5>
+                  <p class="rts__program--item--description">
+                    Embark on a journey of knowledge discovery, and growth at
+                    Unipix University.
+                  </p>
                 </div>
               </div>
-              <div class="rts__single--member">
-                <div class="rts__single--member--thumb">
-                  <img src="assets/yoga.jpg" alt="" />
-                </div>
-                <div class="rts__single--member--meta">
-                  <h5 class="rts__single--member--meta--title">Yoga</h5>
-                  <span class="rts__single--member--meta--designation">
-                    Enhancing focus and well-being with certified training.
-                  </span>
+
+              <!-- Program Item 4 -->
+              <div
+                class="rts__program--item"
+                style="
+                  background-image: url(assets/images/program/program__4.jpg);
+                "
+              >
+                <div class="program-content">
+                  <h5 class="rts__program--item--title">Bharathanatiyam</h5>
+                  <p class="rts__program--item--description">
+                    Embark on a journey of knowledge discovery, and growth at
+                    Unipix University.
+                  </p>
                 </div>
               </div>
-              <!-- single team end -->
+              <!-- Program Item 4 -->
+              <div
+                class="rts__program--item"
+                style="
+                  background-image: url(assets/images/program/program__4.jpg);
+                "
+              >
+                <div class="program-content">
+                  <h5 class="rts__program--item--title">Western Dance</h5>
+                  <p class="rts__program--item--description">
+                    Embark on a journey of knowledge discovery, and growth at
+                    Unipix University.
+                  </p>
+                </div>
+              </div>
+              <!-- Program Item 4 -->
+              <div
+                class="rts__program--item"
+                style="
+                  background-image: url(assets/images/program/program__4.jpg);
+                "
+              >
+                <div class="program-content">
+                  <h5 class="rts__program--item--title">Tennis</h5>
+                  <p class="rts__program--item--description">
+                    Embark on a journey of knowledge discovery, and growth at
+                    Unipix University.
+                  </p>
+                </div>
+              </div>
+              <!-- Program Item 4 -->
+              <div
+                class="rts__program--item"
+                style="
+                  background-image: url(assets/images/program/program__4.jpg);
+                "
+              >
+                <div class="program-content">
+                  <h5 class="rts__program--item--title">Yoga</h5>
+                  <p class="rts__program--item--description">
+                    Embark on a journey of knowledge discovery, and growth at
+                    Unipix University.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <!-- team member area end -->
       </div>
     </section>
+
     <!-- team end -->
 
-    <!---- athletics gallery start-->
-    <div class="rts-gallery section-bg rts-section-padding">
+    <!-- Updated Extracurricular Activities Section -->
+    <section class="extracurricular-section">
       <div class="container">
-        <div class="row">
-          <div class="rts-section mb--40 rt-center">
-            <h2 class="rts-section-title">University Sport Gallery</h2>
-          </div>
+        <div class="rts__section--wrapper">
+          <h2 class="rts__section--title">Extra-Curricular Activities</h2>
+          <p class="section-subtitle">
+            Discover our diverse range of activities that nurture talent beyond
+            the classroom
+          </p>
         </div>
-        <div class="gallery-area">
-          <div class="row g-5">
-            <!-- single gallery item -->
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="single-gallery">
-                <a
-                  href="assets/images/campus/gallery/2x1.jpg"
-                  class="single-gallery__item"
-                >
+
+        <div class="activities-container">
+          <!-- Left Side Navigation -->
+          <div class="activities-nav">
+            <div class="activities-list">
+              <button class="activity-item active" data-target="silambam">
+                <i class="fas fa-staff"></i> Silambam
+              </button>
+              <button class="activity-item" data-target="skating">
+                <i class="fas fa-skating"></i> Skating
+              </button>
+              <button class="activity-item" data-target="chess">
+                <i class="fas fa-chess"></i> Chess
+              </button>
+              <button class="activity-item" data-target="bharathanatiyam">
+                <i class="fas fa-hands"></i> Bharatanatyam
+              </button>
+              <button class="activity-item" data-target="westerndance">
+                <i class="fas fa-music"></i> Western Dance
+              </button>
+              <button class="activity-item" data-target="tennis">
+                <i class="fas fa-tennis-ball"></i> Tennis
+              </button>
+              <button class="activity-item" data-target="yoga">
+                <i class="fas fa-spa"></i> Yoga
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Side Gallery -->
+          <div class="activities-gallery">
+            <!-- Silambam Gallery -->
+            <div class="activity-gallery active" id="silambam">
+              <div class="activity-header">
+                <h3 class="activity-title">Silambam</h3>
+                <p class="activity-description">
+                  Silambam is an ancient Indian martial art originating from
+                  Tamil Nadu. Our students learn discipline, focus, and physical
+                  coordination through this traditional art form.
+                </p>
+              </div>
+              <div class="gallery-grid">
+                <div class="gallery-item">
+                  <img src="assets/silambam1.jpg" alt="Silambam practice" />
+                  <div class="gallery-caption">Training Session</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/silambam2.jpg" alt="Silambam competition" />
+                  <div class="gallery-caption">Inter-school Competition</div>
+                </div>
+                <div class="gallery-item">
                   <img
-                    src="assets/images/campus/gallery/01.jpg"
-                    alt="gallery"
+                    src="assets/silambam3.jpg"
+                    alt="Silambam demonstration"
                   />
-                  <div class="single-gallery__icon">
-                    <i class="fa-light fa-circle-plus"></i>
-                  </div>
-                </a>
+                  <div class="gallery-caption">Annual Day Performance</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/silambam4.jpg" alt="Silambam techniques" />
+                  <div class="gallery-caption">Advanced Techniques</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/silambam5.jpg" alt="Silambam group" />
+                  <div class="gallery-caption">Group Training</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/silambam6.jpg" alt="Silambam awards" />
+                  <div class="gallery-caption">Award Ceremony</div>
+                </div>
               </div>
             </div>
-            <!-- single gallery item -->
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="single-gallery">
-                <a
-                  href="assets/images/campus/gallery/2x2.jpg"
-                  class="single-gallery__item"
-                >
-                  <img
-                    src="assets/images/campus/gallery/02.jpg"
-                    alt="gallery"
-                  />
-                  <div class="single-gallery__icon">
-                    <i class="fa-light fa-circle-plus"></i>
-                  </div>
-                </a>
+
+            <!-- Skating Gallery -->
+            <div class="activity-gallery" id="skating">
+              <div class="activity-header">
+                <h3 class="activity-title">Skating</h3>
+                <p class="activity-description">
+                  Our skating program helps students develop balance,
+                  coordination, and confidence. We offer both inline and roller
+                  skating with professional coaches.
+                </p>
+              </div>
+              <div class="gallery-grid">
+                <div class="gallery-item">
+                  <img src="assets/skating1.jpg" alt="Skating practice" />
+                  <div class="gallery-caption">Beginner's Class</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating2.jpg" alt="Skating competition" />
+                  <div class="gallery-caption">Speed Skating</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating3.jpg" alt="Skating training" />
+                  <div class="gallery-caption">Advanced Techniques</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating4.jpg" alt="Skating demonstration" />
+                  <div class="gallery-caption">Annual Competition</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating5.jpg" alt="Skating students" />
+                  <div class="gallery-caption">Group Practice</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating6.jpg" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
               </div>
             </div>
-            <!-- single gallery item -->
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              <div class="single-gallery">
-                <a
-                  href="assets/images/campus/gallery/2x3.jpg"
-                  class="single-gallery__item"
-                >
-                  <img
-                    src="assets/images/campus/gallery/03.jpg"
-                    alt="gallery"
-                  />
-                  <div class="single-gallery__icon">
-                    <i class="fa-light fa-circle-plus"></i>
-                  </div>
-                </a>
+
+            <!-- Other activity galleries would follow the same pattern -->
+
+            <!-- Chess Gallery -->
+            <div class="activity-gallery" id="chess">
+              <div class="activity-header">
+                <h3 class="activity-title">Skating</h3>
+                <p class="activity-description">
+                  Our skating program helps students develop balance,
+                  coordination, and confidence. We offer both inline and roller
+                  skating with professional coaches.
+                </p>
+              </div>
+              <div class="gallery-grid">
+                <div class="gallery-item">
+                  <img src="assets/skating1.jpg" alt="Skating practice" />
+                  <div class="gallery-caption">Beginner's Class</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating2.jpg" alt="Skating competition" />
+                  <div class="gallery-caption">Speed Skating</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating3.jpg" alt="Skating training" />
+                  <div class="gallery-caption">Advanced Techniques</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating4.jpg" alt="Skating demonstration" />
+                  <div class="gallery-caption">Annual Competition</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating5.jpg" alt="Skating students" />
+                  <div class="gallery-caption">Group Practice</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating6.jpg" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
               </div>
             </div>
-            <!-- single gallery item -->
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="700"
-            >
-              <div class="single-gallery">
-                <a
-                  href="assets/images/campus/gallery/2x4.jpg"
-                  class="single-gallery__item"
-                >
-                  <img
-                    src="assets/images/campus/gallery/04.jpg"
-                    alt="gallery"
-                  />
-                  <div class="single-gallery__icon">
-                    <i class="fa-light fa-circle-plus"></i>
-                  </div>
-                </a>
+            <!-- Bharathanatiyam Gallery -->
+            <div class="activity-gallery" id="bharathanatiyam">
+              <div class="activity-header">
+                <h3 class="activity-title">Skating</h3>
+                <p class="activity-description">
+                  Our skating program helps students develop balance,
+                  coordination, and confidence. We offer both inline and roller
+                  skating with professional coaches.
+                </p>
+              </div>
+              <div class="gallery-grid">
+                <div class="gallery-item">
+                  <img src="assets/skating1.jpg" alt="Skating practice" />
+                  <div class="gallery-caption">Beginner's Class</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating2.jpg" alt="Skating competition" />
+                  <div class="gallery-caption">Speed Skating</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating3.jpg" alt="Skating training" />
+                  <div class="gallery-caption">Advanced Techniques</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating4.jpg" alt="Skating demonstration" />
+                  <div class="gallery-caption">Annual Competition</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating5.jpg" alt="Skating students" />
+                  <div class="gallery-caption">Group Practice</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating6.jpg" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
               </div>
             </div>
-            <!-- single gallery item -->
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="800"
-            >
-              <div class="single-gallery">
-                <a
-                  href="assets/images/campus/gallery/2x5.jpg"
-                  class="single-gallery__item"
-                >
-                  <img
-                    src="assets/images/campus/gallery/05.jpg"
-                    alt="gallery"
-                  />
-                  <div class="single-gallery__icon">
-                    <i class="fa-light fa-circle-plus"></i>
-                  </div>
-                </a>
+            <!-- Western Dance Gallery -->
+            <div class="activity-gallery" id="westerndance">
+              <div class="activity-header">
+                <h3 class="activity-title">Skating</h3>
+                <p class="activity-description">
+                  Our skating program helps students develop balance,
+                  coordination, and confidence. We offer both inline and roller
+                  skating with professional coaches.
+                </p>
+              </div>
+              <div class="gallery-grid">
+                <div class="gallery-item">
+                  <img src="assets/skating1.jpg" alt="Skating practice" />
+                  <div class="gallery-caption">Beginner's Class</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating2.jpg" alt="Skating competition" />
+                  <div class="gallery-caption">Speed Skating</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating3.jpg" alt="Skating training" />
+                  <div class="gallery-caption">Advanced Techniques</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating4.jpg" alt="Skating demonstration" />
+                  <div class="gallery-caption">Annual Competition</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating5.jpg" alt="Skating students" />
+                  <div class="gallery-caption">Group Practice</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating6.jpg" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
               </div>
             </div>
-            <!-- single gallery item -->
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="900"
-            >
-              <div class="single-gallery">
-                <a
-                  href="assets/images/campus/gallery/2x6.jpg"
-                  class="single-gallery__item"
-                >
-                  <img
-                    src="assets/images/campus/gallery/06.jpg"
-                    alt="gallery"
-                  />
-                  <div class="single-gallery__icon">
-                    <i class="fa-light fa-circle-plus"></i>
-                  </div>
-                </a>
+            <!-- Tennis Gallery -->
+            <div class="activity-gallery" id="tennis">
+              <div class="activity-header">
+                <h3 class="activity-title">Skating</h3>
+                <p class="activity-description">
+                  Our skating program helps students develop balance,
+                  coordination, and confidence. We offer both inline and roller
+                  skating with professional coaches.
+                </p>
+              </div>
+              <div class="gallery-grid">
+                <div class="gallery-item">
+                  <img src="assets/skating1.jpg" alt="Skating practice" />
+                  <div class="gallery-caption">Beginner's Class</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating2.jpg" alt="Skating competition" />
+                  <div class="gallery-caption">Speed Skating</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating3.jpg" alt="Skating training" />
+                  <div class="gallery-caption">Advanced Techniques</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating4.jpg" alt="Skating demonstration" />
+                  <div class="gallery-caption">Annual Competition</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating5.jpg" alt="Skating students" />
+                  <div class="gallery-caption">Group Practice</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating6.jpg" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+              </div>
+            </div>
+            <!-- Yoga Gallery -->
+            <div class="activity-gallery" id="yoga">
+              <div class="activity-header">
+                <h3 class="activity-title">Skating</h3>
+                <p class="activity-description">
+                  Our skating program helps students develop balance,
+                  coordination, and confidence. We offer both inline and roller
+                  skating with professional coaches.
+                </p>
+              </div>
+              <div class="gallery-grid">
+                <div class="gallery-item">
+                  <img src="assets/skating1.jpg" alt="Skating practice" />
+                  <div class="gallery-caption">Beginner's Class</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating2.jpg" alt="Skating competition" />
+                  <div class="gallery-caption">Speed Skating</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating3.jpg" alt="Skating training" />
+                  <div class="gallery-caption">Advanced Techniques</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating4.jpg" alt="Skating demonstration" />
+                  <div class="gallery-caption">Annual Competition</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating5.jpg" alt="Skating students" />
+                  <div class="gallery-caption">Group Practice</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/skating6.jpg" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- athletics gallery end -->
-
-    <!-- section three -->
-    <!-- single section -->
-    <div class="rts-campus-section rts-section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="rts-section rt-center mb--90">
-            <h3 class="rts-section-title">Athletics, Recreation, & Wellness</h3>
-          </div>
-        </div>
-        <div class="row g-5">
-          <!-- single item -->
-          <div
-            class="col-lg-4 col-md-6 col-sm-6"
-            data-aos="fade-up"
-            data-aos-delay="500"
-          >
-            <div class="single-item">
-              <div class="single-item__content">
-                <div class="single-item__image">
-                  <img src="assets/images/campus/07.jpg" alt="item-image" />
-                </div>
-                <div class="single-item__meta">
-                  <h5 class="item-title">
-                    <a href="#">Recreation and Wellness</a>
-                  </h5>
-                  <p class="item-description">
-                    Students, faculty, recreational facilities and wellness
-                    programs.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- single item end -->
-          <!-- single item -->
-          <div
-            class="col-lg-4 col-md-6 col-sm-6"
-            data-aos="fade-up"
-            data-aos-delay="700"
-          >
-            <div class="single-item">
-              <div class="single-item__content">
-                <div class="single-item__image">
-                  <img src="assets/images/campus/08.jpg" alt="item-image" />
-                </div>
-                <div class="single-item__meta">
-                  <h5 class="item-title"><a href="#">Cardinal Athletics</a></h5>
-                  <p class="item-description">
-                    Stanford students compete in 36 varsity sports and 43 club
-                    sports.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- single item end -->
-          <!-- single item -->
-          <div
-            class="col-lg-4 col-md-6 col-sm-6"
-            data-aos="fade-up"
-            data-aos-delay="900"
-          >
-            <div class="single-item">
-              <div class="single-item__content">
-                <div class="single-item__image">
-                  <img src="assets/images/campus/09.jpg" alt="item-image" />
-                </div>
-                <div class="single-item__meta">
-                  <h5 class="item-title"><a href="#">BeWell</a></h5>
-                  <p class="item-description">
-                    Offers incentives, programs, and activities that promote
-                    health and wellness.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- single item end -->
-        </div>
-      </div>
-    </div>
-
-    <style>
-      .single-item {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border-radius: 10px;
-        overflow: hidden;
-      }
-
-      .single-item:hover {
-        transform: translateY(-50px);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-      }
-
-      .single-item__image img {
-        width: 100%;
-        transition: transform 0.4s ease;
-      }
-
-      .single-item:hover .single-item__image img {
-        transform: scale(1.05);
-      }
-
-      .single-item__meta {
-        background-color: #fff;
-        padding: 15px;
-        transition: background-color 0.3s ease;
-      }
-
-      .single-item:hover .single-item__meta {
-        background-color: #f9f9f9;
-      }
-    </style>
-    <!-- single section end -->
-
+    </section>
     <!-- newsletter start-->
 
     <div class="rts-newsletter v_1 rts-cta-background">
@@ -1224,6 +1587,97 @@
 
     <script>
       AOS.init();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const items = document.querySelectorAll(".activity-item");
+
+        items.forEach((item) => {
+          item.addEventListener("click", function () {
+            // Remove active class from all items
+            items.forEach((i) => i.classList.remove("active"));
+
+            // Add active class to clicked item
+            this.classList.add("active");
+
+            // Hide all galleries
+            document
+              .querySelectorAll(".activity-gallery")
+              .forEach((gallery) => {
+                gallery.classList.remove("active");
+              });
+
+            // Show corresponding gallery
+            const target = this.getAttribute("data-target");
+            document.getElementById(target).classList.add("active");
+          });
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const items = document.querySelectorAll(".activity-item");
+
+        items.forEach((item) => {
+          item.addEventListener("click", function () {
+            // Remove active class from all items
+            items.forEach((i) => i.classList.remove("active"));
+
+            // Add active class to clicked item
+            this.classList.add("active");
+
+            // Hide all galleries
+            document
+              .querySelectorAll(".activity-gallery")
+              .forEach((gallery) => {
+                gallery.classList.remove("active");
+              });
+
+            // Show corresponding gallery
+            const target = this.getAttribute("data-target");
+            document.getElementById(target).classList.add("active");
+          });
+        });
+
+        // Add hover effects for gallery items
+        const galleryItems = document.querySelectorAll(".gallery-item");
+        galleryItems.forEach((item) => {
+          item.addEventListener("mouseenter", function () {
+            this.querySelector("img").style.transform = "scale(1.05)";
+          });
+
+          item.addEventListener("mouseleave", function () {
+            this.querySelector("img").style.transform = "scale(1)";
+          });
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".program-carousel").owlCarousel({
+          loop: true,
+          margin: 20,
+          nav: true,
+          dots: true,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          autoplayHoverPause: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            576: {
+              items: 2,
+            },
+            768: {
+              items: 3,
+            },
+            992: {
+              items: 4,
+            },
+          },
+        });
+      });
     </script>
   </body>
 </html>

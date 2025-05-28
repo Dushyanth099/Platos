@@ -47,6 +47,80 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+
+  <style>
+    .activities-carousel .owl-stage {
+      display: flex;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .activities-carousel .rts__single--member {
+      margin: 0 auto;
+      transition: all 0.3s ease;
+    }
+
+    .activities-carousel .owl-nav {
+      position: absolute;
+      top: 480px;
+      right: 20px;
+    }
+
+    .activities-carousel .owl-nav button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: black !important;
+      margin-left: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .activities-carousel .owl-nav button:hover {
+      background: blue !important;
+      color: black !important;
+    }
+
+    .activities-carousel .owl-nav button span {
+      font-size: 24px;
+      line-height: 1;
+      position: relative;
+      top: -3px;
+    }
+  </style>
+  <style>
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 45px;
+      height: 45px;
+      background-color: blue;
+      color: white;
+      font-size: 18px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+      background-color: #0000cc;
+      transform: scale(1.1);
+    }
+
+    /* Optional: Remove default Swiper arrows */
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+
 
   <body class="page">
     <!-- header area start -->
@@ -522,7 +596,114 @@ Video Area
     </div>
     <!-- single athletics content end -->
     <!-- content ends  -->
+ <!-- single section -->
+    <!-- Slider section -->
+    <div class="rts-campus-section">
+      <div class="container">
+        <div class="swiper campusSwiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="single-item">
+                <div class="single-item__content">
+                  <div class="single-item__image">
+                    <img src="assets/images/stulifeimg1.JPG" alt="item-image" />
+                  </div>
+                  <div class="single-item__meta">
+                    <h5 class="item-title"><a href="#">Student Affairs</a></h5>
+                    <p class="item-description">
+                      Comprising more than 25 offices & centers, Student Affairs
+                      provides a broad of this services.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="single-item">
+                <div class="single-item__content">
+                  <div class="single-item__image">
+                    <img
+                      src="assets/images/stulifeimg2.jpeg"
+                      alt="item-image"
+                    />
+                  </div>
+                  <div class="single-item__meta">
+                    <h5 class="item-title"><a href="#">Housing & Dining</a></h5>
+                    <p class="item-description">
+                      Nearly all undergraduates and more than 65% graduate
+                      students reside in 81 merit undergraduate
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="single-item">
+                <div class="single-item__content">
+                  <div class="single-item__image">
+                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
+                  </div>
+                  <div class="single-item__meta">
+                    <h5 class="item-title">
+                      <a href="#">Engagement & Diversity</a>
+                    </h5>
+                    <p class="item-description">
+                      Growing up in the Chicago suburbs, Jess found video games
+                      to be a rich portal to alternative.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add more swiper-slide blocks if needed -->
+          </div>
 
+          <!-- Swiper navigation -->
+          <div class="custom-nav-wrapper">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+          <!-- Swiper pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .single-item {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .single-item:hover {
+        transform: translateY(-50px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .single-item__image img {
+        width: 100%;
+        transition: transform 0.4s ease;
+      }
+
+      .single-item:hover .single-item__image img {
+        transform: scale(1.05);
+      }
+
+      .single-item__meta {
+        background-color: #fff;
+        padding: 15px;
+        transition: background-color 0.3s ease;
+      }
+
+      .single-item:hover .single-item__meta {
+        background-color: #f9f9f9;
+      }
+    </style>
     <!--==============================
 About Area  
 ==============================-->
@@ -534,7 +715,11 @@ About Area
     <!-- riffle club gallery  -->
     <div class="gallery-container">
       <div class="gallery-header"></div>
-
+      <div class="gallery-quote">
+        <div class="quote-text">
+          Breathe Focus Trigger <br />Stay Calm
+        </div>
+      </div>
       <section class="gallery-wheel-section">
         <div class="gallery-wheel">
           <!-- Reduced number of images for better performance -->
@@ -1128,6 +1313,27 @@ About Area
         });
       });
     </script>
+      <script>
+        const swiper = new Swiper(".campusSwiper", {
+          loop: true,
+          slidesPerView: 1,
+          spaceBetween: 30,
+          grabCursor: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          },
+        });
+      </script>
     <script src="assets/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   </body>
