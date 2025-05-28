@@ -23410,7 +23410,7 @@ body.index-sc h6 {
   margin-bottom: 0;
 }
 .program-sidebar .program-curriculum .program-menu {
-  border: 1px solid var(--rt-line);
+  /* border: 1px solid var(--rt-line); */
 }
 .program-sidebar .program-curriculum .program-menu ul {
   padding: 0;
