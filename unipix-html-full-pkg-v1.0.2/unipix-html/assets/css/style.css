@@ -21435,8 +21435,9 @@ body.index-sc h6 {
 .campus-life__content .description {
   font-size: 20px;
 }
-.campus-life__content .campus-video {
-  position: relative;
+.campus-life__content img {
+  height: 500px;
+  width: 100%;
   margin-top: 50px;
 }
 .campus-life__content .campus-video span {
@@ -21488,6 +21489,7 @@ body.index-sc h6 {
 }
 
 .rts-campus-section.v_2 {
+  margin-top: 60px;
   background: #f9f8ff;
 }
 .rts-campus-section.v_3 .single-item__meta {
