@@ -15970,9 +15970,9 @@ body.index-sc h6 {
   color: var(--rt-primary-1);
 }
 /*======= Student Feedback ======*/
-.rts__testimonial--active {
+/* .rts__testimonial--active {
   min-width: 850px;
-}
+} */
 @media screen and (max-width: 768px) {
   .rts__testimonial--active {
     min-width: 100%;

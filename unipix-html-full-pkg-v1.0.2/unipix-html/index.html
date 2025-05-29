@@ -41,24 +41,57 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+
   <style>
-    /* Add any necessary styles for the dynamic cards */
-    .card {
-      /* Your existing card styles */
-      transition: transform 0.3s ease;
+    @keyframes scrollLeftToRight {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
     }
 
-    .card:hover {
-      transform: scale(1.05);
+    @keyframes scrollRightToLeft {
+      0% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .scroll-track.track-right {
+      animation: scrollLeftToRight 60s linear infinite;
+    }
+
+    .scroll-track.track-left {
+      animation: scrollRightToLeft 60s linear infinite;
+    }
+
+    .scroll-wrapper {
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    .scroll-track {
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .card {
+      display: inline-block;
+      width: 400px;
+      margin: 0 10px;
     }
 
     .card img {
       width: 100%;
       height: auto;
-      object-fit: cover;
-      border-radius: 8px;
     }
   </style>
+
   <style>
     .activities-carousel .owl-stage {
       display: flex;
@@ -100,7 +133,6 @@
     }
   </style>
   <body class="page">
-    
     <!-- header area start -->
 
     <header class="header header__sticky v__1">
@@ -236,31 +268,64 @@
                         </ul>
                       </li>
 
-
                       <li class="navigation__menu--item has-child has-arrow">
-                        <a href="academics.html" class="navigation__menu--item__link">Academics</a>
+                        <a
+                          href="academics.html"
+                          class="navigation__menu--item__link"
+                          >Academics</a
+                        >
                         <ul class="submenu sub__style">
-                            <li><a href="academics.html">Our Academics</a></li>
-                           
-                            <li class="has-child has-arrow">
-                                <a href="#">Academics Curriculam</a>
-                                <ul class="sub__style">
-                                    <li><a class="mobile-menu-link" href="academics.html">Pre Primary</a></li>
-                                    <li><a class="mobile-menu-link" href="academics.html">Grade 1 To 10</a></li>
-                                    <li><a href="academics.html">Grade 11 & 12</a></li>              
-                                </ul>
-                            </li>
-                            <li class="has-child has-arrow">
-                                <a href="#">Roles & Responsibilities</a>
-                                <ul class="sub__style">
-                                    <li><a class="mobile-menu-link" href="academics.html">Staffs</a></li>
-                                    <li><a class="mobile-menu-link" href="academics.html">Students</a></li>          
-                                </ul>
-                            </li>
-                            <li><a href="academics.html">Academic Calender</a></li>
-                            <li><a href="academics.html">Coaching Programs</a></li>
+                          <li><a href="academics.html">Our Academics</a></li>
+
+                          <li class="has-child has-arrow">
+                            <a href="#">Academics Curriculam</a>
+                            <ul class="sub__style">
+                              <li>
+                                <a
+                                  class="mobile-menu-link"
+                                  href="academics.html"
+                                  >Pre Primary</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="mobile-menu-link"
+                                  href="academics.html"
+                                  >Grade 1 To 10</a
+                                >
+                              </li>
+                              <li>
+                                <a href="academics.html">Grade 11 & 12</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="has-child has-arrow">
+                            <a href="#">Roles & Responsibilities</a>
+                            <ul class="sub__style">
+                              <li>
+                                <a
+                                  class="mobile-menu-link"
+                                  href="academics.html"
+                                  >Staffs</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="mobile-menu-link"
+                                  href="academics.html"
+                                  >Students</a
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="academics.html">Academic Calender</a>
+                          </li>
+                          <li>
+                            <a href="academics.html">Coaching Programs</a>
+                          </li>
                         </ul>
-                    </li>
+                      </li>
 
                       <li class="navigation__menu--item has-child has-arrow">
                         <a
@@ -272,8 +337,11 @@
                           <li>
                             <a href="achievements.html">Achievements</a>
                           </li>
-                          <li><a href="extracurricularactivities.html">Extra Curricular Activities</a></li>
-                          
+                          <li>
+                            <a href="extracurricularactivities.html"
+                              >Extra Curricular Activities</a
+                            >
+                          </li>
                         </ul>
                       </li>
                       <li class="navigation__menu--item">
@@ -298,7 +366,6 @@
                           >Challo</a
                         >
                       </li>
-
                     </ul>
                   </nav>
                 </div>
@@ -317,7 +384,7 @@
                       </ul>
                     </div>
                   </div> -->
-                  
+
                   <div id="menu-btn" class="menu__trigger">
                     <img src="assets/images/icon/bar__line.svg" alt="bar" />
                   </div>
@@ -378,7 +445,9 @@
                           learning, growth, and opportunity.
                         </p>
                         <div class="rts-slider-btn">
-                          <a href="academics.html" class="rts-theme-btn btn-arrow"
+                          <a
+                            href="academics.html"
+                            class="rts-theme-btn btn-arrow"
                             >View Our Program
                             <span><i class="fa-thin fa-arrow-right"></i></span
                           ></a>
@@ -558,9 +627,7 @@
               <div class="banner__content">
                 <div class="banner__content__top">
                   <div class="banner__content__left">
-                    <h5 class="banner__sub__heading mb--60">           
-                      About Us
-                    </h5>
+                    <h5 class="banner__sub__heading mb--60">About Us</h5>
                     <h1
                       class="banner__heading__title animate__animated animate__bounceInLeft animate__delay-2s animate__slow"
                     >
@@ -987,7 +1054,9 @@
           <div class="rts__section--wrapper">
             <h2 class="rts__section--title">Extra-Curricular Activities</h2>
             <div class="rts__section--link">
-              <a href="extracurricularactivities.html" class="rts-nbg-btn btn-arrow"
+              <a
+                href="extracurricularactivities.html"
+                class="rts-nbg-btn btn-arrow"
                 >Learn More Activities ></a
               >
             </div>
@@ -1041,8 +1110,11 @@
                 </div>
                 <div class="rts__single--member--meta">
                   <h5 class="rts__single--member--meta--title">
-                    <a href="extracurricularactivities.html
-                    ">Chess </a>
+                    <a
+                      href="extracurricularactivities.html
+                    "
+                      >Chess
+                    </a>
                   </h5>
                   <span class="rts__single--member--meta--designation">
                     Sharpening minds with strategy and logic.
@@ -1692,8 +1764,6 @@
     <!-- campus time table  end-->
 
     <!-- Gallery starts -->
-
-    <!-- Card start -->
     <div class="rts__section--wrapper v__5">
       <h2
         class="rts__section--title animate__animated animate__bounceInDown animate__delay-2s animate__slow"
@@ -1723,43 +1793,39 @@
     <button class="slider-arrow slider-next">
       <i class="fas fa-arrow-right"></i>
     </button> -->
-  </div>
-</section>
-<div class="rts-newsletter v_1 rts-cta-background">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div
-          class="rts-newsletter-box"
-          style="background-image: url()"
-        >
-          <div class="rts-newsletter-box-content">
-            <h4 class="newsletter-title">
-              Don’t Miss Awesome Story From Our Alumni
-            </h4>
-            <div class="newsletter-form w-530">
-              <form action="#">
-                <input
-                  type="email"
-                  name="subscription"
-                  id="subscription"
-                  placeholder="Enter Your mail"
-                  required
-                />
-                <button type="submit" class="rts-nbg-btn btn-arrow">
-                  Subscribe
-                  <span
-                    ><i class="fa-sharp fa-regular fa-arrow-right"></i
-                  ></span>
-                </button>
-              </form>
+
+    <div class="rts-newsletter v_1 rts-cta-background">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="rts-newsletter-box" style="background-image: url()">
+              <div class="rts-newsletter-box-content">
+                <h4 class="newsletter-title">
+                  Don’t Miss Awesome Story From Our Alumni
+                </h4>
+                <div class="newsletter-form w-530">
+                  <form action="#">
+                    <input
+                      type="email"
+                      name="subscription"
+                      id="subscription"
+                      placeholder="Enter Your mail"
+                      required
+                    />
+                    <button type="submit" class="rts-nbg-btn btn-arrow">
+                      Subscribe
+                      <span
+                        ><i class="fa-sharp fa-regular fa-arrow-right"></i
+                      ></span>
+                    </button>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
     <!-- footer start -->
     <footer class="rts-footer v_2 pt--100 pb--100">
       <div class="container-fluid" style="max-width: 1500px !important">
@@ -2198,21 +2264,38 @@
         ],
       };
 
-      // Function to generate gallery cards
+      // Function to generate gallery cards with duplicates for seamless looping
       function generateGalleryCards(containerId, images) {
         const container = document.getElementById(containerId);
 
-        images.forEach((imageSrc, index) => {
+        // Create two copies of the images for seamless looping
+        const duplicatedImages = [...images, ...images];
+
+        duplicatedImages.forEach((imageSrc, index) => {
           const card = document.createElement("div");
           card.className = "card";
 
           const img = document.createElement("img");
           img.src = imageSrc;
-          img.alt = `Gallery image ${index + 1}`;
-          img.loading = "lazy"; // Add lazy loading
+          img.alt = `Gallery image ${(index % images.length) + 1}`;
+          img.loading = "lazy";
 
           card.appendChild(img);
           container.appendChild(card);
+        });
+      }
+
+      // Function to handle the infinite scroll effect
+      function setupInfiniteScroll() {
+        const tracks = document.querySelectorAll(".scroll-track");
+
+        tracks.forEach((track) => {
+          track.addEventListener("animationiteration", () => {
+            // When animation completes one iteration, reset position
+            track.style.animation = "none";
+            track.offsetHeight; // Trigger reflow
+            track.style.animation = null;
+          });
         });
       }
 
@@ -2220,8 +2303,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         generateGalleryCards("left-to-right-track", galleryImages.leftToRight);
         generateGalleryCards("right-to-left-track", galleryImages.rightToLeft);
-
-        // Initialize any carousel/slider functionality here if needed
+        setupInfiniteScroll();
       });
     </script>
   </body>

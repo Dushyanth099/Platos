@@ -41,7 +41,54 @@
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
   <!-- AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-</head>
+  <!-- Add Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>  
+<style>
+  .faq-section {
+    transition: all 0.5s ease;
+  }
+  
+  .accordion-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .accordion-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    box-shadow: none !important;
+  }
+  .accordion-button .titleaccordion{
+color: white !important;
+    font-weight: 500;
+    font-size: 2rem;
+  }
+  .accordion-button::after {
+    filter: brightness(0) invert(1);
+  }
+  
+  .program-item {
+    padding: 10px 15px;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .program-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .accordion-button:focus {
+    box-shadow: none !important;
+  }
+</style>
 <style>
   #schoolCalendar {
     max-width: 900px;
@@ -352,7 +399,7 @@
 
   <!-- staff roles -->
   <h2 class=" text-center fw-bold mb-5 display-5 mt--80" data-aos="fade-up">Staff Roles</h2>
-  <section class="rts__section rts-section-padding rts__primary__bg mt--50" data-aos="fade-up">
+  <section class="container rts__section rts-section-padding rts__primary__bg mt--50" data-aos="fade-up">
     <div class="container">
       <div class="row">
         <div class="col-lg-5">
@@ -424,10 +471,10 @@
                     <div class="listpoints">
                       <ul>
                         <li>
-                          Collaborate on curriculum innovation and safety protocols.
+                          Collaborate on curriculum innovation and safety.
                         </li>
                         <li>
-                          Support students' emotional well-being and personal growth.
+                          Support students' emotional well-being and personal.
                         </li>
 
                       </ul>
@@ -446,10 +493,10 @@
                       <ul>
 
                         <li>
-                          Collaborate on curriculum innovation and safety protocols.
+                          Collaborate on curriculum innovation and safety.
                         </li>
                         <li>
-                          Support students' emotional well-being and personal growth.
+                          Support students' emotional well-being and personal.
                         </li>
 
                       </ul>
@@ -471,7 +518,7 @@
 
   <!-- student roles start -->
   <h2 class="text-center fw-bold mb-5 display-5 mt--80" data-aos="fade-up">Student Roles</h2>
-  <section class="rts__section rts-section-padding rts__primary__bg mt--50" data-aos="fade-up">
+  <section class="container rts__section rts-section-padding rts__primary__bg mt--50" data-aos="fade-up">
     <div class="container">
       <div class="row">
         <div class="col-lg-5">
@@ -588,81 +635,134 @@
   </section>
   <!-- student roles end -->
  <!---damic AcaFAQ--->
+ <div class="faq-section mt--80" 
+ style="background:  url('assets/faq.jpeg') center/cover no-repeat; 
+ padding: 60px 20px;
+ border-radius: 30px; 
+ box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
+ max-width: 1000px; 
+ margin: 0 auto;
+ color: white;">
+ 
+   <div class="container mt--50" data-aos="fade-up">
+     <h2 class="text-center fw-bold mb-5 display-5 mt--30" style="color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Platos Coaching</h2>
+     
+     <div class="accordion" id="accordionExample">
+       <!-- Engineering/Medical Section -->
+       <div class="mt-5">
+         <div class="accordion-item" style="border: none !important; margin-bottom: 30px; 
+               box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+               border-radius: 15px !important;
+               overflow: hidden;
+               transition: all 0.3s ease;">
+           <h2 class="accordion-header">
+             <button class="accordion-button" 
+               style="background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%) !important;
+               color: white !important;
+               border-radius: 15px 15px 0 0 !important;  
+               border: none !important;
+               padding: 20px;
+               font-weight: 600;" 
+               type="button" 
+               data-bs-toggle="collapse" 
+               data-bs-target="#collapseOne"
+               aria-expanded="false" 
+               aria-controls="collapseOne">
+               <i class="fas fa-atom me-3"></i>
+               <h6 class="mb-0 titleaccordion">Engineering/Medical</h6>
+             </button>
+           </h2>
+           <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+             <div class="accordion-body" style="background-color: #f8f9fa !important; border-radius: 0 0 15px 15px;">
+               <div class="program-item mb-3">
+                 <h6 style="color: #2575fc; font-weight: 600;">NEET</h6>
+                 <p style="color: #555;">PCB mastery with clinical exposure and All-India mock tests</p>
+               </div>
+               <div class="program-item mb-3">
+                 <h6 style="color: #2575fc; font-weight: 600;">JEE</h6>
+                 <p style="color: #555;">Advanced problem-solving techniques with IIT alumni mentors</p>
+               </div>
+               <div class="program-item">
+                 <h6 style="color: #2575fc; font-weight: 600;">IIT</h6>
+                 <p style="color: #555;">Olympiad-level challenge sessions and doubt resolution</p>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
 
-  <div class="faq-section mt--80" 
-  style="background-image: url(assets/faq.jpeg); 
-  padding: 40px 20px;
-  border-radius: 30px; 
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1); 
-  max-width: 1000px; margin: 0 auto;">
-    <div class="container mt--50" data-aos="fade-up">
-      <h2 class="text-center fw-bold mb-5 display-5 mt--30">Platos Coaching</h2>
-      <div class="accordion 0" id="accordionExample">
-        <div class="mt-5">
-          <div class="accordion-item" style="border: none !important; margin-bottom: 40px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-                border-radius: 25px !important;">
-            <h2 class="accordion-header">
-              <button class="accordion-button" style="background-color: rgb(252, 251, 251) !important;border-radius: 20px;  
-               border: none !important;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                aria-expanded="false" aria-controls="collapseOne">
-                <h6 class=" fw-bold mb-10">Engineering/Medical</h6>
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body" style="background-color: white !important;">
-                <h6>NEET</h6>
-                <p>PCB mastery with clinical exposure and All-India mock tests</p>
-                <h6>JEE</h6>
-                <p>Advanced problem-solving techniques with IIT alumni mentors</p>
-                <h6>IIT</h6>
-                <p>Olympiad-level challenge sessions and doubt resolution</p>
-              </div>
-            </div>
-          </div>
-        </div>
+       <!-- Civil Services Section -->
+       <div class="accordion-item" style="border: none !important; margin-bottom: 30px; 
+             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+             border-radius: 15px !important;
+             overflow: hidden;
+             transition: all 0.3s ease;">
+         <h2 class="accordion-header">
+           <button class="accordion-button collapsed"
+             style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%) !important;
+             color: white !important;
+             border-radius: 15px 15px 0 0 !important;
+             border: none !important;
+             padding: 20px;
+             font-weight: 600;" 
+             type="button"
+             data-bs-toggle="collapse" 
+             data-bs-target="#collapseTwo" 
+             aria-expanded="false" 
+             aria-controls="collapseTwo">
+             <i class="fas fa-landmark me-3"></i>
+             <h6 class="mb-0 titleaccordion">Civil Services</h6>
+           </button>
+         </h2>
+         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+           <div class="accordion-body" style="background-color: #f8f9fa !important; border-radius: 0 0 15px 15px;">
+             <div class="program-item mb-3">
+               <h6 style="color: #11998e; font-weight: 600;">UPSC</h6>
+               <p style="color: #555;">GS/CSAT preparation with ex-bureaucrat mentors</p>
+             </div>
+             <div class="program-item">
+               <h6 style="color: #11998e; font-weight: 600;">NDA</h6>
+               <p style="color: #555;">SSB interview prep with leadership labs</p>
+             </div>
+           </div>
+         </div>
+       </div>
 
-        <div class="accordion-item" style="border: none !important; margin-bottom: 40px; 
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);border-radius: 25px !important;">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed"
-              style="background-color: white !important; border: none !important; border-radius: 20px;" type="button"
-              data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-
-              <h6 class=" fw-bold mb-10"> Civil Services</h6>
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body" style="background-color: white !important;">
-              <h6>UPSC</h6>
-              <p>GS/CSAT preparation with ex-bureaucrat mentors</p>
-              <h6>NDA</h6>
-              <p>SSB interview prep with leadership labs</p>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item" style="border: none !important; margin-bottom: 40px; 
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);border-radius: 25px !important;">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed"
-              style="background-color: white !important; border: none !important; border-radius: 20px;" type="button"
-              data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-              aria-controls="collapseThree">
-              <h6 class=" fw-bold mb-10">Commerce</h6>
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body" style="background-color: white !important;">
-              <h6>CA</h6>
-              <p>Practical accounting, GST simulations, and articleship support</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
+       <!-- Commerce Section -->
+       <div class="accordion-item" style="border: none !important; margin-bottom: 30px; 
+             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+             border-radius: 15px !important;
+             overflow: hidden;
+             transition: all 0.3s ease;">
+         <h2 class="accordion-header">
+           <button class="accordion-button collapsed"
+             style="background: linear-gradient(135deg, #f12711 0%, #f5af19 100%) !important;
+             color: white !important;
+             border-radius: 15px 15px 0 0 !important;
+             border: none !important;
+             padding: 20px;
+             font-weight: 600;" 
+             type="button"
+             data-bs-toggle="collapse" 
+             data-bs-target="#collapseThree" 
+             aria-expanded="false"
+             aria-controls="collapseThree">
+             <i class="fas fa-calculator me-3"></i>
+             <h6 class="mb-0 titleaccordion">Commerce</h6>
+           </button>
+         </h2>
+         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+           <div class="accordion-body" style="background-color: #f8f9fa !important; border-radius: 0 0 15px 15px;">
+             <div class="program-item">
+               <h6 style="color: #f12711; font-weight: 600;">CA</h6>
+               <p style="color: #555;">Practical accounting, GST simulations, and articleship support</p>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+</div>
 
 
 
