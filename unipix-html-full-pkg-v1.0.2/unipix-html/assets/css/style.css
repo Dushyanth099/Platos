@@ -28094,13 +28094,14 @@ h1 {
 }
 
 .box-title {
-  font-size: 18px;
+  font-size: 25px;
+  font-weight: 400;
   margin-bottom: 5px;
 }
 
 .team-desig {
   color: #777;
-  font-size: 14px;
+  font-size: 25px;
 }
 .slider-area {
   position: relative;
@@ -28136,14 +28137,14 @@ h1 {
 }
 .th-slider {
   position: relative;
-  padding: 0 40px; /* Add padding to prevent arrows overlapping content */
+  /* padding: 0 40px; */
 }
 .slider-prev {
   left: -60px;
 }
 
 .slider-next {
-  right: -20px;
+  right: -60px;
 }
 
 /* fascilitators ends */
