@@ -83,7 +83,7 @@
     /* Two-Column Layout */
     .activities-container {
       display: flex;
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
       background: white;
       border-radius: 12px;
@@ -203,7 +203,8 @@
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
       gap: 20px;
     }
 
@@ -323,27 +324,70 @@
     }
 
     .rts__program--item--title {
-      font-size: 2rem;
-      margin-bottom: 10px;
+      /* font-size: 2rem;
+      margin-bottom: 10px; */
       color: white;
     }
 
     .rts__program--item--description {
       color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 0;
+      /* margin-bottom: 0; */
     }
+
+    /* fade up start */
+
+    .rts__program--item {
+      position: relative;
+
+      background-position: center;
+      height: 350px; /* Adjust as needed */
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    /* Content container */
+
+    /* Static placement at bottom */
+    .rts__program--item--title,
+    .rts__program--item--description {
+      text-align: center;
+      transform: translateY(0);
+      transition: all 0.5s ease;
+      opacity: 1;
+    }
+
+    /* Description hidden initially */
+    .rts__program--item--description {
+      opacity: 0;
+      transform: translateY(10px);
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    /* On hover — both fade up */
+    .rts__program--item:hover .rts__program--item--title {
+      transform: translateY(-80px);
+    }
+
+    .rts__program--item:hover .rts__program--item--description {
+      opacity: 1;
+      transform: translateY(-90px);
+    }
+
+    /* fade up end */
 
     /* Navigation Arrows */
     .program-carousel .owl-nav {
       position: absolute;
       bottom: 0px;
-      right: 0;
+      right: 30px;
     }
 
     .program-carousel .owl-nav button {
       width: 40px;
       height: 40px;
-      background: #2c3e50 !important;
+      background: #0f0dae !important;
       color: white !important;
       border-radius: 50%;
       margin-left: 10px;
@@ -778,18 +822,18 @@
     </section>
     <!-- BREADCRUMB AREA END -->
 
-    <<!-- Program Carousel Section -->
+    <!-- Program Carousel Section -->
     <section class="rts_section rts_light rts-section-padding">
       <div class="container">
         <div class="row">
           <div class="rts__section--wrapper">
             <h2 class="rts__section--title">Our Programs</h2>
-            <div class="rts__section--link">
+            <!-- <div class="rts__section--link">
               <a href="program-single.html" class="rts-nbg-btn btn-arrow"
                 >more program<span
                   ><i class="fa-sharp fa-regular fa-arrow-right"></i></span
               ></a>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -914,9 +958,15 @@
 
     <!-- Updated Extracurricular Activities Section -->
     <section class="extracurricular-section">
-      <div class="container">
+      <div class="container-fluid">
         <div class="rts__section--wrapper">
-          <h2 class="rts__section--title">Extra-Curricular Activities</h2>
+          <h2 class="rts__section--title ml--90">
+            Extra-Curricular Activities
+          </h2>
+          <p class="section-subtitle">
+            Discover our diverse range of activities that nurture talent beyond
+            the classroom
+          </p>
         </div>
 
         <div class="activities-container">
@@ -961,30 +1011,51 @@
               </div>
               <div class="gallery-grid">
                 <div class="gallery-item">
-                  <img src="assets/silambam1.jpg" alt="Silambam practice" />
+                  <img src="assets/gal1.png" alt="Silambam practice" />
                   <div class="gallery-caption">Training Session</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/silambam2.jpg" alt="Silambam competition" />
+                  <img src="assets/gal2.png" alt="Silambam competition" />
                   <div class="gallery-caption">Inter-school Competition</div>
                 </div>
                 <div class="gallery-item">
-                  <img
-                    src="assets/silambam3.jpg"
-                    alt="Silambam demonstration"
-                  />
+                  <img src="assets/gal2.png" alt="Silambam demonstration" />
                   <div class="gallery-caption">Annual Day Performance</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/silambam4.jpg" alt="Silambam techniques" />
+                  <img src="assets/gal3.png" alt="Silambam techniques" />
                   <div class="gallery-caption">Advanced Techniques</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/silambam5.jpg" alt="Silambam group" />
+                  <img src="assets/gal4.png" alt="Silambam group" />
                   <div class="gallery-caption">Group Training</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/silambam6.jpg" alt="Silambam awards" />
+                  <img src="assets/gal5.png" alt="Silambam awards" />
+                  <div class="gallery-caption">Award Ceremony</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/gal6.png" alt="Silambam awards" />
+                  <div class="gallery-caption">Award Ceremony</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/gal8.png" alt="Silambam awards" />
+                  <div class="gallery-caption">Award Ceremony</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/gal3.png" alt="Silambam awards" />
+                  <div class="gallery-caption">Award Ceremony</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/gal21.jpg" alt="Silambam awards" />
+                  <div class="gallery-caption">Award Ceremony</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/gal22.jpg" alt="Silambam awards" />
+                  <div class="gallery-caption">Award Ceremony</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/gal23.jpg" alt="Silambam awards" />
                   <div class="gallery-caption">Award Ceremony</div>
                 </div>
               </div>
@@ -1002,27 +1073,51 @@
               </div>
               <div class="gallery-grid">
                 <div class="gallery-item">
-                  <img src="assets/skating1.jpg" alt="Skating practice" />
+                  <img src="assets/gal24.jpg" alt="Skating practice" />
                   <div class="gallery-caption">Beginner's Class</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating2.jpg" alt="Skating competition" />
+                  <img src="assets/gal25.jpg" alt="Skating competition" />
                   <div class="gallery-caption">Speed Skating</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating3.jpg" alt="Skating training" />
+                  <img src="assets/gal26.jpg" alt="Skating training" />
                   <div class="gallery-caption">Advanced Techniques</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating4.jpg" alt="Skating demonstration" />
+                  <img src="assets/gal27.jpg" alt="Skating demonstration" />
                   <div class="gallery-caption">Annual Competition</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating5.jpg" alt="Skating students" />
+                  <img src="assets/gal28.jpg" alt="Skating students" />
                   <div class="gallery-caption">Group Practice</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating6.jpg" alt="Skating event" />
+                  <img src="assets/gal29.jpg" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/gal30.jpg" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl10.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl11.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl12.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl14.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl15.JPG" alt="Skating event" />
                   <div class="gallery-caption">State Championship</div>
                 </div>
               </div>
@@ -1042,27 +1137,51 @@
               </div>
               <div class="gallery-grid">
                 <div class="gallery-item">
-                  <img src="assets/skating1.jpg" alt="Skating practice" />
+                  <img src="assets/scl16.JPG" alt="Skating practice" />
                   <div class="gallery-caption">Beginner's Class</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating2.jpg" alt="Skating competition" />
+                  <img src="assets/scl18.png" alt="Skating competition" />
                   <div class="gallery-caption">Speed Skating</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating3.jpg" alt="Skating training" />
+                  <img src="assets/scl22.jpg" alt="Skating training" />
                   <div class="gallery-caption">Advanced Techniques</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating4.jpg" alt="Skating demonstration" />
+                  <img src="assets/scl23.jpg" alt="Skating demonstration" />
                   <div class="gallery-caption">Annual Competition</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating5.jpg" alt="Skating students" />
+                  <img src="assets/scl25.jpg" alt="Skating students" />
                   <div class="gallery-caption">Group Practice</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating6.jpg" alt="Skating event" />
+                  <img src="assets/scl4.png" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl3.png" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl4.png" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl8.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl6.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
                   <div class="gallery-caption">State Championship</div>
                 </div>
               </div>
@@ -1079,27 +1198,51 @@
               </div>
               <div class="gallery-grid">
                 <div class="gallery-item">
-                  <img src="assets/skating1.jpg" alt="Skating practice" />
+                  <img src="assets/scl16.JPG" alt="Skating event" />
                   <div class="gallery-caption">Beginner's Class</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating2.jpg" alt="Skating competition" />
+                  <img src="assets/scl16.JPG" alt="Skating event" />
                   <div class="gallery-caption">Speed Skating</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating3.jpg" alt="Skating training" />
+                  <img src="assets/scl16.JPG" alt="Skating event" />
                   <div class="gallery-caption">Advanced Techniques</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating4.jpg" alt="Skating demonstration" />
+                  <img src="assets/scl16.JPG" alt="Skating event" />
                   <div class="gallery-caption">Annual Competition</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating5.jpg" alt="Skating students" />
+                  <img src="assets/scl16.JPG" alt="Skating event" />
                   <div class="gallery-caption">Group Practice</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating6.jpg" alt="Skating event" />
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
                   <div class="gallery-caption">State Championship</div>
                 </div>
               </div>
@@ -1116,27 +1259,51 @@
               </div>
               <div class="gallery-grid">
                 <div class="gallery-item">
-                  <img src="assets/skating1.jpg" alt="Skating practice" />
+                  <img src="assets/scl16.JPG" alt="Skating event" />
                   <div class="gallery-caption">Beginner's Class</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating2.jpg" alt="Skating competition" />
+                  <img src="assets/scl16.JPG" alt="Skating event" />
                   <div class="gallery-caption">Speed Skating</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating3.jpg" alt="Skating training" />
+                  <img src="assets/scl16.JPG" alt="Skating event" />
                   <div class="gallery-caption">Advanced Techniques</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating4.jpg" alt="Skating demonstration" />
+                  <img src="assets/scl16.JPG" alt="Skating event" />
                   <div class="gallery-caption">Annual Competition</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating5.jpg" alt="Skating students" />
+                  <img src="assets/scl16.JPG" alt="Skating event" />
                   <div class="gallery-caption">Group Practice</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating6.jpg" alt="Skating event" />
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
                   <div class="gallery-caption">State Championship</div>
                 </div>
               </div>
@@ -1153,7 +1320,7 @@
               </div>
               <div class="gallery-grid">
                 <div class="gallery-item">
-                  <img src="assets/skating1.jpg" alt="Skating practice" />
+                  <img src="assets/scl16.JPG" alt="Skating event" />
                   <div class="gallery-caption">Beginner's Class</div>
                 </div>
                 <div class="gallery-item">
@@ -1173,7 +1340,31 @@
                   <div class="gallery-caption">Group Practice</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating6.jpg" alt="Skating event" />
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
                   <div class="gallery-caption">State Championship</div>
                 </div>
               </div>
@@ -1190,27 +1381,51 @@
               </div>
               <div class="gallery-grid">
                 <div class="gallery-item">
-                  <img src="assets/skating1.jpg" alt="Skating practice" />
+                  <img src="assets/scl16.JPG" alt="Skating event" />
                   <div class="gallery-caption">Beginner's Class</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating2.jpg" alt="Skating competition" />
+                  <img src="assets/scl16.JPG" alt="Skating event" />
                   <div class="gallery-caption">Speed Skating</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating3.jpg" alt="Skating training" />
+                  <img src="assets/scl16.JPG" alt="Skating event" />
                   <div class="gallery-caption">Advanced Techniques</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating4.jpg" alt="Skating demonstration" />
+                  <img src="assets/scl16.JPG" alt="Skating event" />
                   <div class="gallery-caption">Annual Competition</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating5.jpg" alt="Skating students" />
+                  <img src="assets/scl16.JPG" alt="Skating event" />
                   <div class="gallery-caption">Group Practice</div>
                 </div>
                 <div class="gallery-item">
-                  <img src="assets/skating6.jpg" alt="Skating event" />
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
+                  <div class="gallery-caption">State Championship</div>
+                </div>
+                <div class="gallery-item">
+                  <img src="assets/scl16.JPG" alt="Skating event" />
                   <div class="gallery-caption">State Championship</div>
                 </div>
               </div>

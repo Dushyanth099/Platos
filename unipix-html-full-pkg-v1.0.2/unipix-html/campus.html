@@ -92,8 +92,25 @@
     }
   </style>
   <style>
+    .rts-campus-section {
+      position: relative;
+      padding: 60px 0;
+      background-color: #f9f9f9;
+      /* overflow: visible; */
+    }
+    .custom-nav-wrapper {
+      position: absolute;
+      right: 250px; /* Adjust this to position outside container */
+      bottom: 0%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: row; /* Ensure buttons are side by side */
+      gap: 10px;
+      z-index: 10;
+    }
     .swiper-button-next,
     .swiper-button-prev {
+      position: static; /* Remove absolute positioning */
       width: 45px;
       height: 45px;
       background-color: blue;
@@ -105,6 +122,7 @@
       justify-content: center;
       transition: background-color 0.3s ease, transform 0.2s ease;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      margin: 0; /* Remove any default margins */
     }
 
     .swiper-button-next:hover,
@@ -384,6 +402,12 @@
     <!-- Slider section -->
     <div class="rts-campus-section">
       <div class="container">
+        <!-- Swiper navigation -->
+        <div class="custom-nav-wrapper">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
         <div class="swiper campusSwiper">
           <div class="swiper-wrapper">
             <!-- Slide 1 -->
@@ -481,14 +505,8 @@
             </div>
           </div>
 
-          <!-- Swiper navigation -->
-          <div class="custom-nav-wrapper">
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
-
           <!-- Swiper pagination -->
-          <div class="swiper-pagination"></div>
+          <!-- <div class="swiper-pagination"></div> -->
         </div>
       </div>
     </div>
@@ -755,194 +773,237 @@
 
     <!-- section three -->
     <!-- single section -->
-    <div class="rts-campus-section rts-section-padding" id="campus">
+    <!-- Slider section -->
+    <div class="row">
+      <div class="rts-section rt-center mt--60 mb--40">
+        <h3 class="rts-section-title">Campus Safety</h3>
+      </div>
+    </div>
+    <div class="rts-campus-section">
       <div class="container">
-        <div class="row">
-          <div class="rts-section rt-center mb--80">
-            <h3 class="rts-section-title">Campus Safety</h3>
-          </div>
+        <!-- Swiper navigation -->
+        <div class="custom-nav-wrapper">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
-        <!-- Slider section -->
-        <div class="rts-campus-section">
-          <div class="container">
-            <div class="swiper campusSwiper">
-              <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                  <div class="single-item">
-                    <div class="single-item__content">
-                      <div class="single-item__image">
-                        <img
-                          src="assets/images/stulifeimg1.JPG"
-                          alt="item-image"
-                        />
-                      </div>
-                      <div class="single-item__meta">
-                        <h5 class="item-title">
-                          <a href="#">Student Affairs</a>
-                        </h5>
-                        <p class="item-description">
-                          Comprising more than 25 offices & centers, Student
-                          Affairs provides a broad of this services.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="swiper-slide">
-                  <div class="single-item">
-                    <div class="single-item__content">
-                      <div class="single-item__image">
-                        <img
-                          src="assets/images/stulifeimg2.jpeg"
-                          alt="item-image"
-                        />
-                      </div>
-                      <div class="single-item__meta">
-                        <h5 class="item-title">
-                          <a href="#">Housing & Dining</a>
-                        </h5>
-                        <p class="item-description">
-                          Nearly all undergraduates and more than 65% graduate
-                          students reside in 81 merit undergraduate
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="swiper-slide">
-                  <div class="single-item">
-                    <div class="single-item__content">
-                      <div class="single-item__image">
-                        <img
-                          src="assets/images/stulifeimg3.JPG"
-                          alt="item-image"
-                        />
-                      </div>
-                      <div class="single-item__meta">
-                        <h5 class="item-title">
-                          <a href="#">Engagement & Diversity</a>
-                        </h5>
-                        <p class="item-description">
-                          Growing up in the Chicago suburbs, Jess found video
-                          games to be a rich portal to alternative.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Add more swiper-slide blocks if needed -->
-              </div>
 
-              <!-- Swiper navigation -->
-              <div class="custom-nav-wrapper">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+        <div class="swiper campusSwiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="single-item">
+                <div class="single-item__content">
+                  <div class="single-item__image">
+                    <img src="assets/images/stulifeimg1.JPG" alt="item-image" />
+                  </div>
+                  <div class="single-item__meta">
+                    <h5 class="item-title"><a href="#">Student Affairs</a></h5>
+                    <p class="item-description">
+                      Comprising more than 25 offices & centers, Student Affairs
+                      provides a broad of this services.
+                    </p>
+                  </div>
+                </div>
               </div>
-
-              <!-- Swiper pagination -->
-              <div class="swiper-pagination"></div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="single-item">
+                <div class="single-item__content">
+                  <div class="single-item__image">
+                    <img
+                      src="assets/images/stulifeimg2.jpeg"
+                      alt="item-image"
+                    />
+                  </div>
+                  <div class="single-item__meta">
+                    <h5 class="item-title"><a href="#">Housing & Dining</a></h5>
+                    <p class="item-description">
+                      Nearly all undergraduates and more than 65% graduate
+                      students reside in 81 merit undergraduate
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="single-item">
+                <div class="single-item__content">
+                  <div class="single-item__image">
+                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
+                  </div>
+                  <div class="single-item__meta">
+                    <h5 class="item-title">
+                      <a href="#">Engagement & Diversity</a>
+                    </h5>
+                    <p class="item-description">
+                      Growing up in the Chicago suburbs, Jess found video games
+                      to be a rich portal to alternative.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add more swiper-slide blocks if needed -->
+            <div class="swiper-slide">
+              <div class="single-item">
+                <div class="single-item__content">
+                  <div class="single-item__image">
+                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
+                  </div>
+                  <div class="single-item__meta">
+                    <h5 class="item-title">
+                      <a href="#">Engagement & Diversity</a>
+                    </h5>
+                    <p class="item-description">
+                      Growing up in the Chicago suburbs, Jess found video games
+                      to be a rich portal to alternative.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="single-item">
+                <div class="single-item__content">
+                  <div class="single-item__image">
+                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
+                  </div>
+                  <div class="single-item__meta">
+                    <h5 class="item-title">
+                      <a href="#">Engagement & Diversity</a>
+                    </h5>
+                    <p class="item-description">
+                      Growing up in the Chicago suburbs, Jess found video games
+                      to be a rich portal to alternative.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+
+          <!-- Swiper pagination -->
+          <!-- <div class="swiper-pagination"></div> -->
         </div>
       </div>
     </div>
 
-    <!-- section four -->
-    <!-- single section -->
-    <div class="rts-campus-section mb--80 mt--20" id="transport">
+    <!-- TRANSPORT SECTION -->
+    <div class="row">
+      <div class="rts-section rt-center mt--60 mb--40">
+        <h3 class="rts-section-title">Transport</h3>
+      </div>
+    </div>
+    <!-- Slider section -->
+    <div class="rts-campus-section">
       <div class="container">
-        <div class="row">
-          <div class="rts-section rt-center mb--80">
-            <h3 class="rts-section-title">Transport</h3>
-          </div>
+        <!-- Swiper navigation -->
+        <div class="custom-nav-wrapper">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
-        <!-- Slider section -->
-        <div class="rts-campus-section">
-          <div class="container">
-            <div class="swiper campusSwiper">
-              <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                  <div class="single-item">
-                    <div class="single-item__content">
-                      <div class="single-item__image">
-                        <img
-                          src="assets/images/stulifeimg1.JPG"
-                          alt="item-image"
-                        />
-                      </div>
-                      <div class="single-item__meta">
-                        <h5 class="item-title">
-                          <a href="#">Student Affairs</a>
-                        </h5>
-                        <p class="item-description">
-                          Comprising more than 25 offices & centers, Student
-                          Affairs provides a broad of this services.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="swiper-slide">
-                  <div class="single-item">
-                    <div class="single-item__content">
-                      <div class="single-item__image">
-                        <img
-                          src="assets/images/stulifeimg2.jpeg"
-                          alt="item-image"
-                        />
-                      </div>
-                      <div class="single-item__meta">
-                        <h5 class="item-title">
-                          <a href="#">Housing & Dining</a>
-                        </h5>
-                        <p class="item-description">
-                          Nearly all undergraduates and more than 65% graduate
-                          students reside in 81 merit undergraduate
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="swiper-slide">
-                  <div class="single-item">
-                    <div class="single-item__content">
-                      <div class="single-item__image">
-                        <img
-                          src="assets/images/stulifeimg3.JPG"
-                          alt="item-image"
-                        />
-                      </div>
-                      <div class="single-item__meta">
-                        <h5 class="item-title">
-                          <a href="#">Engagement & Diversity</a>
-                        </h5>
-                        <p class="item-description">
-                          Growing up in the Chicago suburbs, Jess found video
-                          games to be a rich portal to alternative.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Add more swiper-slide blocks if needed -->
-              </div>
 
-              <!-- Swiper navigation -->
-              <div class="custom-nav-wrapper">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+        <div class="swiper campusSwiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="single-item">
+                <div class="single-item__content">
+                  <div class="single-item__image">
+                    <img src="assets/images/stulifeimg1.JPG" alt="item-image" />
+                  </div>
+                  <div class="single-item__meta">
+                    <h5 class="item-title"><a href="#">Student Affairs</a></h5>
+                    <p class="item-description">
+                      Comprising more than 25 offices & centers, Student Affairs
+                      provides a broad of this services.
+                    </p>
+                  </div>
+                </div>
               </div>
-
-              <!-- Swiper pagination -->
-              <div class="swiper-pagination"></div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="single-item">
+                <div class="single-item__content">
+                  <div class="single-item__image">
+                    <img
+                      src="assets/images/stulifeimg2.jpeg"
+                      alt="item-image"
+                    />
+                  </div>
+                  <div class="single-item__meta">
+                    <h5 class="item-title"><a href="#">Housing & Dining</a></h5>
+                    <p class="item-description">
+                      Nearly all undergraduates and more than 65% graduate
+                      students reside in 81 merit undergraduate
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="single-item">
+                <div class="single-item__content">
+                  <div class="single-item__image">
+                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
+                  </div>
+                  <div class="single-item__meta">
+                    <h5 class="item-title">
+                      <a href="#">Engagement & Diversity</a>
+                    </h5>
+                    <p class="item-description">
+                      Growing up in the Chicago suburbs, Jess found video games
+                      to be a rich portal to alternative.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add more swiper-slide blocks if needed -->
+            <div class="swiper-slide">
+              <div class="single-item">
+                <div class="single-item__content">
+                  <div class="single-item__image">
+                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
+                  </div>
+                  <div class="single-item__meta">
+                    <h5 class="item-title">
+                      <a href="#">Engagement & Diversity</a>
+                    </h5>
+                    <p class="item-description">
+                      Growing up in the Chicago suburbs, Jess found video games
+                      to be a rich portal to alternative.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="single-item">
+                <div class="single-item__content">
+                  <div class="single-item__image">
+                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
+                  </div>
+                  <div class="single-item__meta">
+                    <h5 class="item-title">
+                      <a href="#">Engagement & Diversity</a>
+                    </h5>
+                    <p class="item-description">
+                      Growing up in the Chicago suburbs, Jess found video games
+                      to be a rich portal to alternative.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+
+          <!-- Swiper pagination -->
+          <!-- <div class="swiper-pagination"></div> -->
         </div>
       </div>
     </div>

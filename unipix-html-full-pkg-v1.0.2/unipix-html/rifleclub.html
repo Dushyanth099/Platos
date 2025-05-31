@@ -92,8 +92,25 @@
     }
   </style>
   <style>
+    .rts-campus-section {
+      position: relative;
+      padding: 60px 0;
+      background-color: #f9f9f9;
+      /* overflow: visible; */
+    }
+    .custom-nav-wrapper {
+      position: absolute;
+      right: 250px; /* Adjust this to position outside container */
+      bottom: 0%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: row; /* Ensure buttons are side by side */
+      gap: 10px;
+      z-index: 10;
+    }
     .swiper-button-next,
     .swiper-button-prev {
+      position: static; /* Remove absolute positioning */
       width: 45px;
       height: 45px;
       background-color: blue;
@@ -105,6 +122,7 @@
       justify-content: center;
       transition: background-color 0.3s ease, transform 0.2s ease;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      margin: 0; /* Remove any default margins */
     }
 
     .swiper-button-next:hover,
@@ -662,10 +680,15 @@ Video Area
     </div>
     <!-- single athletics content end -->
     <!-- content ends  -->
-    <!-- single section -->
     <!-- Slider section -->
     <div class="rts-campus-section">
       <div class="container">
+        <!-- Swiper navigation -->
+        <div class="custom-nav-wrapper">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
         <div class="swiper campusSwiper">
           <div class="swiper-wrapper">
             <!-- Slide 1 -->
@@ -725,16 +748,46 @@ Video Area
               </div>
             </div>
             <!-- Add more swiper-slide blocks if needed -->
-          </div>
-
-          <!-- Swiper navigation -->
-          <div class="custom-nav-wrapper">
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-slide">
+              <div class="single-item">
+                <div class="single-item__content">
+                  <div class="single-item__image">
+                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
+                  </div>
+                  <div class="single-item__meta">
+                    <h5 class="item-title">
+                      <a href="#">Engagement & Diversity</a>
+                    </h5>
+                    <p class="item-description">
+                      Growing up in the Chicago suburbs, Jess found video games
+                      to be a rich portal to alternative.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="single-item">
+                <div class="single-item__content">
+                  <div class="single-item__image">
+                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
+                  </div>
+                  <div class="single-item__meta">
+                    <h5 class="item-title">
+                      <a href="#">Engagement & Diversity</a>
+                    </h5>
+                    <p class="item-description">
+                      Growing up in the Chicago suburbs, Jess found video games
+                      to be a rich portal to alternative.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Swiper pagination -->
-          <div class="swiper-pagination"></div>
+          <!-- <div class="swiper-pagination"></div> -->
         </div>
       </div>
     </div>

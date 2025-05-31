@@ -47,156 +47,185 @@
     rel="stylesheet"
   />
   <style>
-    .academic-slider {
+    .rts-campus-section {
       position: relative;
-      overflow: hidden;
+      padding: 80px 0;
+      background-color: #f9f9f9;
+      /* overflow: visible; */
     }
-    .academic-slider img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .swiper-pagination-bullet-active {
-      background: #000;
+    .custom-nav-wrapper {
+      position: absolute;
+      right: 250px; /* Adjust this to position outside container */
+      bottom: 0%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: row; /* Ensure buttons are side by side */
+      gap: 10px;
+      z-index: 10;
     }
     .swiper-button-next,
     .swiper-button-prev {
-      color: #000;
-    }
-    /* Custom Navigation Buttons */
-    .swiper-button-next,
-    .swiper-button-prev {
-      width: 48px;
-      height: 48px;
-      background: white;
-      border-radius: 50%;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: static; /* Remove absolute positioning */
+      width: 45px;
+      height: 45px;
+      background-color: blue;
+      color: white;
+      font-size: 18px;
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 10;
-      cursor: pointer;
-      opacity: 0.9;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      margin: 0; /* Remove any default margins */
     }
 
     .swiper-button-next:hover,
     .swiper-button-prev:hover {
-      transform: translateY(-50%) scale(1.1);
-      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
-      opacity: 1;
-      background: #0f0dae; /* Darker background on hover */
+      background-color: #0000cc;
+      transform: scale(1.1);
     }
 
+    /* Optional: Remove default Swiper arrows */
     .swiper-button-next::after,
     .swiper-button-prev::after {
-      content: "";
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      background: transparent;
-      border: 2px solid #2c3e50;
-      border-width: 2px 2px 0 0;
-      transition: all 0.3s ease;
-    }
-
-    .swiper-button-next::after {
-      transform: rotate(45deg) translate(-2px, -2px);
-      margin-left: -4px;
-    }
-
-    .swiper-button-prev::after {
-      transform: rotate(-135deg) translate(-2px, -2px);
-      margin-right: -4px;
-    }
-
-    .swiper-button-next:hover::after,
-    .swiper-button-prev:hover::after {
-      border-color: white;
-    }
-
-    .swiper-button-next {
-      right: 30px;
-    }
-
-    .swiper-button-prev {
-      left: 30px;
-    }
-
-    /* Hide buttons when slider reaches beginning/end (unless loop is true) */
-    .swiper-button-disabled {
-      opacity: 0.35 !important;
-      transform: translateY(-50%) !important;
-      cursor: auto;
-      pointer-events: none;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .swiper-button-next,
-      .swiper-button-prev {
-        width: 44px;
-        height: 44px;
-      }
-
-      .swiper-button-next::after,
-      .swiper-button-prev::after {
-        width: 18px;
-        height: 18px;
-      }
-
-      .swiper-button-next {
-        right: 15px;
-      }
-
-      .swiper-button-prev {
-        left: 15px;
-      }
+      font-size: 18px;
+      font-weight: bold;
     }
   </style>
+
+  <!-- Add this CSS in your head section -->
   <style>
-    .activities-carousel .owl-stage {
+    /* Custom Achievements Slider */
+    .achievements-slider-container {
+      position: relative;
+      padding: 0 100px;
+      /* margin: 60px 0; */
+      height: 700px;
+    }
+
+    .achievements-slider {
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .achievement-slide {
+      height: 600px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+
+    .achievement-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .achievement-slide:hover img {
+      transform: scale(1.05);
+    }
+
+    .achievement-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 30px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .achievement-slide:hover .achievement-caption {
+      transform: translateY(0);
+    }
+
+    .achievement-title {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .achievement-desc {
+      font-size: 2rem;
+      line-height: 1.5;
+    }
+
+    .achievement-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 60px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 50%;
       display: flex;
       align-items: center;
-      padding: 20px 0;
-    }
-
-    .activities-carousel .rts__single--member {
-      margin: 0 auto;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
       transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
-    .activities-carousel .owl-nav {
-      position: absolute;
-      top: 480px;
+    .achievement-nav:hover {
+      background: #0f0dae;
+      color: white;
+    }
+
+    .achievement-prev {
+      left: 20px;
+    }
+
+    .achievement-next {
       right: 20px;
     }
 
-    .activities-carousel .owl-nav button {
-      width: 40px;
-      height: 40px;
+    .achievement-pagination {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .achievement-bullet {
+      width: 12px;
+      height: 12px;
+      background: rgba(255, 255, 255, 0.5);
       border-radius: 50%;
-      color: white !important;
-      background: blue !important;
-      margin-left: 10px;
+      margin: 0 5px;
+      cursor: pointer;
       transition: all 0.3s ease;
     }
 
-    .activities-carousel .owl-nav button:hover {
-      background: blue !important;
-      color: black !important;
+    .achievement-bullet-active {
+      background: white;
+      transform: scale(1.2);
     }
 
-    .activities-carousel .owl-nav button span {
-      font-size: 24px;
-      line-height: 1;
-      position: relative;
-      top: 0px;
+    @media (max-width: 768px) {
+      .achievements-slider-container {
+        padding: 0 20px;
+      }
+
+      .achievement-slide {
+        height: 300px;
+      }
+
+      .achievement-nav {
+        width: 40px;
+        height: 40px;
+      }
     }
   </style>
+
   <body class="page">
     <!-- apply start -->
 
@@ -600,7 +629,7 @@
     <!-- BREADCRUMB AREA END -->
 
     <!-- about university -->
-    <section class="rts-about-university pt--100 pb--80">
+    <section class="rts-about-university pt--100 pb--10">
       <div class="container">
         <div class="row">
           <div class="rts-section">
@@ -617,36 +646,51 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="academic-slider">
-              <div
-                class="swiper-container academic-slider-container"
-                data-loop="true"
-              >
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="assets/scl11.JPG" alt="academic" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="assets/scl10.JPG" alt="academic" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="assets/scl11.JPG" alt="academic" />
-                  </div>
-                </div>
-                <!-- Add pagination -->
-                <!-- <div class="swiper-pagination"></div> -->
-                <!-- Add navigation buttons -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-              </div>
+      </div>
+    </section>
+
+    <!-- Replace your slider section with this HTML -->
+    <div class="achievements-slider-container">
+      <div class="achievements-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide achievement-slide">
+            <img src="assets/scl11.JPG" alt="Academic Achievement" />
+            <div class="achievement-caption">
+              <h3 class="achievement-title">Academic Excellence 2023</h3>
+              <p class="achievement-desc">
+                Our students secured top ranks in CBSE board examinations with
+                98% pass rate.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide achievement-slide">
+            <img src="assets/scl10.JPG" alt="Sports Achievement" />
+            <div class="achievement-caption">
+              <h3 class="achievement-title">State Sports Champions</h3>
+              <p class="achievement-desc">
+                Won 15 gold medals in inter-school athletics championship.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide achievement-slide">
+            <img src="assets/scl11.JPG" alt="Cultural Achievement" />
+            <div class="achievement-caption">
+              <h3 class="achievement-title">Cultural Fest Winners</h3>
+              <p class="achievement-desc">
+                Awarded best school in state-level cultural competition.
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- about university end -->
+
+      <div class="achievement-nav achievement-prev">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <div class="achievement-nav achievement-next">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
 
     <!-- multi row item -->
     <div class="rts-multi-row-section pt--100">
@@ -694,7 +738,7 @@
 
     <div
       class="row"
-      style="margin-top: 80px; margin-bottom: 80px; text-align: center"
+      style="margin-top: 60px; margin-bottom: 40px; text-align: center"
     >
       <div class="rts-section">
         <h3 class="rts-section-title">Academic Achievements</h3>
@@ -702,8 +746,15 @@
     </div>
 
     <!-- Slider section -->
+
     <div class="rts-campus-section">
       <div class="container">
+        <!-- Swiper navigation -->
+        <div class="custom-nav-wrapper">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
         <div class="swiper campusSwiper">
           <div class="swiper-wrapper">
             <!-- Slide 1 -->
@@ -763,54 +814,186 @@
               </div>
             </div>
             <!-- Add more swiper-slide blocks if needed -->
-          </div>
-
-          <!-- Swiper navigation -->
-          <div class="custom-nav-wrapper">
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-slide">
+              <div class="single-item">
+                <div class="single-item__content">
+                  <div class="single-item__image">
+                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
+                  </div>
+                  <div class="single-item__meta">
+                    <h5 class="item-title">
+                      <a href="#">Engagement & Diversity</a>
+                    </h5>
+                    <p class="item-description">
+                      Growing up in the Chicago suburbs, Jess found video games
+                      to be a rich portal to alternative.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="single-item">
+                <div class="single-item__content">
+                  <div class="single-item__image">
+                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
+                  </div>
+                  <div class="single-item__meta">
+                    <h5 class="item-title">
+                      <a href="#">Engagement & Diversity</a>
+                    </h5>
+                    <p class="item-description">
+                      Growing up in the Chicago suburbs, Jess found video games
+                      to be a rich portal to alternative.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Swiper pagination -->
-          <div class="swiper-pagination"></div>
+          <!-- <div class="swiper-pagination"></div> -->
         </div>
       </div>
     </div>
-
-    <style>
-      .single-item {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border-radius: 10px;
-        overflow: hidden;
-      }
-
-      .single-item:hover {
-        transform: translateY(-50px);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-      }
-
-      .single-item__image img {
-        width: 100%;
-        transition: transform 0.4s ease;
-      }
-
-      .single-item:hover .single-item__image img {
-        transform: scale(1.05);
-      }
-
-      .single-item__meta {
-        background-color: #fff;
-        padding: 15px;
-        transition: background-color 0.3s ease;
-      }
-
-      .single-item:hover .single-item__meta {
-        background-color: #f9f9f9;
-      }
-    </style>
-
     <!---images end----->
-
+    <!-- marque style -->
+    <div class="marquee mt--50 mb--30">
+      <div class="single__marque__item">
+        <ul class="single__marque__item__list">
+          <li class="single__marque__item__list__text">
+            NEET
+            <span
+              ><img src="assets/images/icon/marquee__vector.svg" alt=""
+            /></span>
+          </li>
+          <li class="single__marque__item__list__text">
+            JEE
+            <span
+              ><img src="assets/images/icon/marquee__vector.svg" alt=""
+            /></span>
+          </li>
+          <li class="single__marque__item__list__text">
+            IITT
+            <span
+              ><img src="assets/images/icon/marquee__vector.svg" alt=""
+            /></span>
+          </li>
+          <li class="single__marque__item__list__text">
+            UPSC
+            <span
+              ><img src="assets/images/icon/marquee__vector.svg" alt=""
+            /></span>
+          </li>
+          <li class="single__marque__item__list__text">
+            NDA
+            <span
+              ><img src="assets/images/icon/marquee__vector.svg" alt=""
+            /></span>
+          </li>
+        </ul>
+        <ul class="single__marque__item__list">
+          <li class="single__marque__item__list__text">
+            NEET
+            <span
+              ><img src="assets/images/icon/marquee__vector.svg" alt=""
+            /></span>
+          </li>
+          <li class="single__marque__item__list__text">
+            JEE
+            <span
+              ><img src="assets/images/icon/marquee__vector.svg" alt=""
+            /></span>
+          </li>
+          <li class="single__marque__item__list__text">
+            IITT
+            <span
+              ><img src="assets/images/icon/marquee__vector.svg" alt=""
+            /></span>
+          </li>
+          <li class="single__marque__item__list__text">
+            UPSC
+            <span
+              ><img src="assets/images/icon/marquee__vector.svg" alt=""
+            /></span>
+          </li>
+          <li class="single__marque__item__list__text">
+            NDA
+            <span
+              ><img src="assets/images/icon/marquee__vector.svg" alt=""
+            /></span>
+          </li>
+        </ul>
+      </div>
+      <div class="single__marque__item v__2">
+        <ul class="single__marque__item__list">
+          <li class="single__marque__item__list__text">
+            Sports
+            <span
+              ><img src="assets/images/icon/marquee__vector.svg" alt=""
+            /></span>
+          </li>
+          <li class="single__marque__item__list__text">
+            Discipline
+            <span
+              ><img src="assets/images/icon/marquee__vector.svg" alt=""
+            /></span>
+          </li>
+          <li class="single__marque__item__list__text">
+            General Knowledge
+            <span
+              ><img src="assets/images/icon/marquee__vector.svg" alt=""
+            /></span>
+          </li>
+          <li class="single__marque__item__list__text">
+            Health And Wellness
+            <span
+              ><img src="assets/images/icon/marquee__vector.svg" alt=""
+            /></span>
+          </li>
+          <li class="single__marque__item__list__text">
+            Personal Developments
+            <span
+              ><img src="assets/images/icon/marquee__vector.svg" alt=""
+            /></span>
+          </li>
+        </ul>
+        <ul class="single__marque__item__list">
+          <li class="single__marque__item__list__text">
+            Sports
+            <span
+              ><img src="assets/images/icon/marquee__vector.svg" alt=""
+            /></span>
+          </li>
+          <li class="single__marque__item__list__text">
+            Discipline
+            <span
+              ><img src="assets/images/icon/marquee__vector.svg" alt=""
+            /></span>
+          </li>
+          <li class="single__marque__item__list__text">
+            General Knowledge
+            <span
+              ><img src="assets/images/icon/marquee__vector.svg" alt=""
+            /></span>
+          </li>
+          <li class="single__marque__item__list__text">
+            Health And Wellness
+            <span
+              ><img src="assets/images/icon/marquee__vector.svg" alt=""
+            /></span>
+          </li>
+          <li class="single__marque__item__list__text">
+            Personal Developments
+            <span
+              ><img src="assets/images/icon/marquee__vector.svg" alt=""
+            /></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- marque style end -->
     <div class="rts-multi-row-section pt--100">
       <div class="container">
         <!-- second -->
@@ -858,13 +1041,18 @@
       style="margin-top: 60px; margin-bottom: 40px; text-align: center"
     >
       <div class="rts-section">
-        <h3 class="rts-section-title mb--50">Sports Achievements</h3>
+        <h3 class="rts-section-title">Sports Achievements</h3>
       </div>
     </div>
 
-    <!-- Slider section -->
-    <div class="rts-campus-section pb--100">
+    <div class="rts-campus-section">
       <div class="container">
+        <!-- Swiper navigation -->
+        <div class="custom-nav-wrapper">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
         <div class="swiper campusSwiper">
           <div class="swiper-wrapper">
             <!-- Slide 1 -->
@@ -924,20 +1112,49 @@
               </div>
             </div>
             <!-- Add more swiper-slide blocks if needed -->
-          </div>
-
-          <!-- Swiper navigation -->
-          <div class="custom-nav-wrapper">
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-slide">
+              <div class="single-item">
+                <div class="single-item__content">
+                  <div class="single-item__image">
+                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
+                  </div>
+                  <div class="single-item__meta">
+                    <h5 class="item-title">
+                      <a href="#">Engagement & Diversity</a>
+                    </h5>
+                    <p class="item-description">
+                      Growing up in the Chicago suburbs, Jess found video games
+                      to be a rich portal to alternative.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="single-item">
+                <div class="single-item__content">
+                  <div class="single-item__image">
+                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
+                  </div>
+                  <div class="single-item__meta">
+                    <h5 class="item-title">
+                      <a href="#">Engagement & Diversity</a>
+                    </h5>
+                    <p class="item-description">
+                      Growing up in the Chicago suburbs, Jess found video games
+                      to be a rich portal to alternative.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Swiper pagination -->
-          <div class="swiper-pagination"></div>
+          <!-- <div class="swiper-pagination"></div> -->
         </div>
       </div>
     </div>
-
     <!-- newsletter start-->
 
     <div class="rts-newsletter v_1 rts-cta-background">
@@ -1386,29 +1603,31 @@
     <script>
       AOS.init();
     </script>
+    <!-- Add this JavaScript at the end of your body -->
+
+    <!-- Add this JavaScript at the end of your body -->
     <script>
-      // Initialize Swiper
       document.addEventListener("DOMContentLoaded", function () {
-        var swiper = new Swiper(".academic-slider-container", {
+        const achievementSwiper = new Swiper(".achievements-slider", {
           loop: true,
+          speed: 1000,
           autoplay: {
-            delay: 3000,
+            delay: 4000,
             disableOnInteraction: false,
           },
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
           navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".achievement-next",
+            prevEl: ".achievement-prev",
           },
+          effect: "fade",
+          grabCursor: true,
+          loopAdditionalSlides: 2,
+          watchSlidesProgress: true,
+          watchSlidesVisibility: true,
         });
       });
     </script>
-    <script>
-      AOS.init();
-    </script>
+    <!-- about university end -->
     <script>
       const swiper = new Swiper(".campusSwiper", {
         loop: true,
