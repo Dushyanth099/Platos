@@ -45,6 +45,80 @@
 />
 </head>
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+
+<style>
+       
+
+  .palette-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+  }
+
+  .palette-subtitle {
+      letter-spacing: 0.2rem;
+      font-size: 1.1rem;
+      color: #444;
+  }
+
+ .color-box {
+width: 100%;
+/* height: 50px ; */
+border-radius: 8px;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+}
+
+  .color-swatch {
+      top: 100px;
+      right: 10px;
+      bottom: 30px; 
+      left: 10px;
+      border-radius: 4px 4px 0 0    
+
+  }
+
+  .hex-code {
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+      font-weight: 500;
+      color: #333;
+  }
+
+
+
+  .pin-image {
+      position: absolute;
+      top: -16px;
+      left: 150px;
+      width: 25px;
+      height: auto;
+      z-index: 10;
+  }
+
+
+  
+.club-description {
+
+color: #333;
+text-align: center;
+padding: 0.5rem;
+}
+
+.color-card {
+width: 307px;
+margin-left: 15px;
+text-align: center;
+position: relative;
+background-color: white;
+border-radius: 12px;
+padding: 15px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+</style>
 <style>
   .faq-section {
     transition: all 0.5s ease;
@@ -143,6 +217,172 @@
 
 
 <body>
+  <div class="rts-application-form">
+    <!-- Application Popup (hidden by default) -->
+    <div
+      id="application-popup"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(40, 33, 33, 0.7);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        padding: 40px;
+        display: none;
+      "
+    >
+      <!-- Close Button -->
+      <button id="close-popup" class="close-popup-btn">✕</button>
+
+      <section class="rts-application-area moving rts-section-padding v_1">
+        <div class="container">
+          <!-- application form -->
+          <div class="row justify-content-md-center">
+            <div class="col-md-11 col-lg-6 col-xl-5">
+              <div class="rts-admission-form-image">
+                <h5
+                  class="rts__section--title mb--25 mt-2"
+                  style="color: white; margin-left: 20px !important"
+                >
+                  Welcome to Platos Academy
+                </h5>
+                <img src="assets/popup.JPG" alt="" />
+              </div>
+              <div class="rts-section-big-text">Admission Now</div>
+            </div>
+            <div class="col-md-11 col-lg-6 col-xl-5">
+              <div class="rts-application-form">
+                <div class="rts-application-form-content">
+                  <h5 class="heading-title mb--25">Application Form</h5>
+                  <form action="#" class="rts-form">
+                    <div class="rts-input rt-flex">
+                      <div class="single-input">
+                        <input
+                          type="text"
+                          name="fname"
+                          id="fname"
+                          placeholder="First Name"
+                          required
+                        />
+                      </div>
+                      <div class="single-input">
+                        <input
+                          type="text"
+                          name="lname"
+                          id="lname"
+                          placeholder="Last Name"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="rts-input rt-flex">
+                      <div class="single-input">
+                        <input
+                          type="email"
+                          name="email"
+                          id="email2"
+                          placeholder="Email.."
+                          required
+                        />
+                      </div>
+                      <div class="single-input">
+                        <input
+                          type="number"
+                          name="Phone"
+                          id="Phone"
+                          placeholder="Phone"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div class="rts-input rt-flex">
+                      <div class="single-input">
+                        <input
+                          type="text"
+                          name="address"
+                          id="address"
+                          placeholder="address"
+                          required
+                        />
+                      </div>
+                      <div class="single-input">
+                        <input
+                          type="text"
+                          name="city"
+                          id="city"
+                          placeholder="City"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div class="rts-input rt-flex">
+                      <div class="single-input">
+                        <input
+                          type="text"
+                          name="country"
+                          id="country"
+                          placeholder="Country"
+                          required
+                        />
+                      </div>
+                      <div class="single-input">
+                        <input
+                          type="number"
+                          name="zip"
+                          id="zip"
+                          placeholder="Zip Code"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="rts-input w-full">
+                      <div class="single-input">
+                        <input
+                          type="text"
+                          name="data"
+                          id="datepicker"
+                          placeholder="dd/mm/yy"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="rts-input w-full">
+                      <div class="single-input">
+                        <textarea
+                          name="msg"
+                          id="msg"
+                          placeholder="Enter Your Comments"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <button
+                      type="submit"
+                      class="rts-theme-btn rts-nbg-btn btn-arrow v2 full-btn"
+                    >
+                      Apply Now
+                      <span
+                        ><i class="fa-sharp fa-regular fa-arrow-right"></i
+                      ></span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- apply end -->
   <!-- header area start -->
 
   <header class="header header__sticky v__1">
@@ -812,7 +1052,150 @@
 
 
 <!---COACHING PROGRAM ENDS--->
+<!-- CLUB STARTS -->
+   <div class="container py-5 text-center">
+        <h1 class="palette-title">CLUB SECTIONS</h1>
+        <p class="palette-subtitle mb-5">Detailed below</p>
 
+        <div class="row g-5 justify-content-center">
+            <!-- Color swatch 1 -->
+    <div class="col-6 col-sm-4 col-md-3 lg-4 color-card">
+  <img src="assets/pushpin_9522486.png" alt="pin" class="pin-image" />
+  <div class="color-box">
+    <img class="color-swatch" style="background-image: url(assets/gal27.jpg) ; height: 230px; border-radius: 8px 8px 0 0;" />
+    <div class="club-description p-2">
+      <h4>Grammarian Galaxy Club:</h4>
+     <p>
+        Our vibrant English club fosters students’ language skills through a variety of engaging 
+     activities such as debates, quizzes,
+      Just A Minute (JAM) sessions, oration, compering, singing, and other English-centric disciplines. 
+      It aims to build confidence,
+       communication, and creativity among students.
+     </p> 
+    </div>
+  </div>
+</div>
+
+            <!-- Color swatch 2 -->
+      <div class="col-6 col-sm-4 col-md-3 lg-4 color-card">
+  <img src="assets/pushpin_9522486.png" alt="pin" class="pin-image" />
+  <div class="color-box">
+    <img class="color-swatch" style="background-image: url(assets/gal27.jpg) ; height: 230px; border-radius: 8px 8px 0 0;" />
+    <div class="club-description p-2">
+      <h4>Earth Beat Club:</h4>
+     <p>
+        Functioning as the Science Club, Earth Beat Club inspires scientific thinking and innovation. 
+        It conducts awareness programs on environmental conservation and introduces students to modern scientific 
+        techniques and advancements to promote eco-conscious and science-savvy minds.
+
+
+     </p> 
+    </div>
+  </div>
+</div>
+
+            <!-- Color swatch 3 -->
+    <div class="col-6 col-sm-4 col-md-3 lg-4 color-card">
+  <img src="assets/pushpin_9522486.png" alt="pin" class="pin-image" />
+  <div class="color-box">
+    <img class="color-swatch" style="background-image: url(assets/gal27.jpg) ; height: 230px; border-radius: 8px 8px 0 0;" />
+    <div class="club-description p-2">
+      <h4>Grammarian Galaxy Club:</h4>
+     <p>
+        Dedicated to Tamil literature, this club nurtures a love for the Tamil language and its rich literary heritage. 
+        It encourages students to explore classical  and contemporary works through various literary activities,
+         making Tamil learning a joyful and cultural experience.joyful and cultural experience.
+     </p> 
+     </p> 
+    </div>
+  </div>
+</div>
+
+            <!-- Color swatch 4 -->
+            <!-- Color swatch 4 with club description -->
+<!-- Color swatch 4 with full visible description -->
+<div class="col-6 col-sm-4 col-md-3 lg-4 color-card">
+  <img src="assets/pushpin_9522486.png" alt="pin" class="pin-image" />
+  <div class="color-box">
+    <img class="color-swatch" style="background-image: url(assets/gal27.jpg) ; height: 230px; border-radius: 8px 8px 0 0;" />
+    <div class="club-description p-2">
+      <h4>Grammarian Galaxy Club:</h4>
+     <p>
+        Dedicated to Tamil literature, this club nurtures a love for the Tamil language and its rich literary heritage. 
+        It encourages students to explore classical  and contemporary works through various literary activities,
+         making Tamil learning a joyful and cultural experience.joyful and cultural experience.
+     </p> 
+     </p> 
+    </div>
+  </div>
+</div>
+
+
+        </div>
+
+
+        <div class="row g-4 justify-content-center " style="margin-top: 70px;">
+            <!-- Color swatch 5 -->
+      <div class="col-6 col-sm-4 col-md-3 color-card">
+  <img src="assets/pushpin_9522486.png" alt="pin" class="pin-image" />
+  <div class="color-box">
+    <img class="color-swatch" style="background-image: url(assets/gal27.jpg) ; height: 230px; border-radius: 8px 8px 0 0;" />
+    <div class="club-description p-2">
+      <h4>Grammarian Galaxy Club:</h4>
+     <p>
+        Our vibrant English club fosters students’ language skills through a variety of engaging 
+     activities such as debates, quizzes,
+      Just A Minute (JAM) sessions, oration, compering, singing, and other English-centric disciplines. 
+      It aims to build confidence,
+       communication, and creativity among students.
+     </p> 
+    </div>
+  </div>
+</div>
+
+
+<div class="col-6 col-sm-4 col-md-3 color-card">
+  <img src="assets/pushpin_9522486.png" alt="pin" class="pin-image" />
+  <div class="color-box">
+    <img class="color-swatch" style="background-image: url(assets/gal27.jpg) ; height: 230px; border-radius: 8px 8px 0 0;" />
+    <div class="club-description p-2">
+      <h4>Grammarian Galaxy Club:</h4>
+     <p>
+        Our vibrant English club fosters students’ language skills through a variety of engaging 
+     activities such as debates, quizzes,
+      Just A Minute (JAM) sessions, oration, compering, singing, and other English-centric disciplines. 
+      It aims to build confidence,
+       communication, and creativity among students.
+     </p> 
+    </div>
+  </div>
+</div>
+
+
+
+<div class="col-6 col-sm-4 col-md-3 color-card">
+  <img src="assets/pushpin_9522486.png" alt="pin" class="pin-image" />
+  <div class="color-box">
+    <img class="color-swatch" style="background-image: url(assets/gal27.jpg) ; height: 230px; border-radius: 8px 8px 0 0;" />
+    <div class="club-description p-2">
+      <h4>Grammarian Galaxy Club:</h4>
+     <p>
+        Our vibrant English club fosters students’ language skills through a variety of engaging 
+     activities such as debates, quizzes,
+      Just A Minute (JAM) sessions, oration, compering, singing, and other English-centric disciplines. 
+      It aims to build confidence,
+       communication, and creativity among students.
+     </p> 
+    </div>
+  </div>
+</div>
+        </div>
+
+
+
+
+    </div>
+<!-- CLUB ENDS -->
   
  <!--card-->
     <div class="rts-newsletter v_1 rts-cta-background mt--90">
