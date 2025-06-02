@@ -28329,6 +28329,7 @@ h1 {
 }
 /* video riffle */
 .video-box1 {
+  background-image: url(../riflevideoimg.png);
   height: 500px;
   margin-top: 60px;
   position: relative;
