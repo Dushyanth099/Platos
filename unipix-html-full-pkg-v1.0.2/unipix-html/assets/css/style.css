@@ -85,6 +85,9 @@
   box-sizing: border-box;
 }
 
+section[id] {
+  scroll-margin-top: 100px; /* Adjust based on your header height */
+}
 html {
   margin: 0;
   padding: 0;
@@ -15257,6 +15260,7 @@ body.index-sc h6 {
 .stroke__text.v__1 {
   font-size: 96px;
   font-weight: 500;
+  color:#0f0dae;
   line-height: 80px;
 }
 
@@ -15410,7 +15414,10 @@ body.index-sc h6 {
   margin-bottom: 40px;
 }
 .rts__section--wrapper.v__5 .rts__section--title {
-  text-transform: capitalize;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 1.5;
+  color: var(--rt-primary);
 }
 .rts__section--wrapper.v__6 {
   justify-content: center;
@@ -16816,7 +16823,7 @@ body.index-sc h6 {
 .navigation__menu ul {
   display: flex;
   max-width: max-content;
-  gap: 60px;
+  gap: 51px;
   position: relative;
   padding: 0;
   margin: 0;
@@ -17553,6 +17560,7 @@ body.index-sc h6 {
 }
 .rts-breadcrumb .breadcrumb-content .section-title {
   color: var(--rt-white);
+  text-transform: uppercase;
 }
 .rts-breadcrumb.sc__version {
   height: 460px;
@@ -18503,10 +18511,10 @@ body.index-sc h6 {
   position: relative;
   top: -45px;
 }
-.banner.v__5 .banner__content {
+/* .banner.v__5 .banner__content {
   padding-top: 120px;
   padding-bottom: 80px;
-}
+} */
 @media screen and (max-width: 992px) {
   .banner.v__5 .banner__content {
     padding-top: 80px;
@@ -27701,8 +27709,8 @@ h1 {
 }
 
 .cream-card {
-  background-color: #fdf6ef;
-  color: #333;
+  background-color: #D83A30;
+  color:white;
   cursor: pointer;
 }
 
@@ -27723,6 +27731,7 @@ h1 {
 }
 
 .card-title {
+  color: white;
   font-size: 2.5rem;
   margin-bottom: 1rem;
   font-weight: 900;
@@ -28600,3 +28609,7 @@ h1 {
     font-size: 2rem;
   }
 }
+/* .banner.v__5 .banner__content {
+  padding-top: 120px;
+  padding-bottom: 80px;
+} */
