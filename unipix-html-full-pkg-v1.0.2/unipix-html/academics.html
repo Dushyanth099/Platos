@@ -61,6 +61,7 @@
   }
 
  .color-box {
+  
 width: 100%;
 /* height: 50px ; */
 border-radius: 8px;
@@ -68,15 +69,30 @@ overflow: hidden;
 display: flex;
 flex-direction: column;
 }
+.color-card:hover {
+  background-color: #8B1A1A;  /* Slightly darker shade on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
 
-  .color-swatch {
-      top: 100px;
-      right: 10px;
-      bottom: 30px; 
-      left: 10px;
-      border-radius: 4px 4px 0 0    
+.club-description h6,
+.club-description p {
+  transition: color 0.3s ease;
+}
 
-  }
+.color-card:hover .club-description h6,
+.color-card:hover .club-description p {
+  color: #fff; /* Keep text white on hover */
+}
+.color-swatch {
+    width: 100%;
+    height: 230px;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover; /* This ensures the image covers the entire container */
+    display: block; /* Removes any default spacing */
+    margin: 0; /* Removes any default margins */
+    padding: 0; /* Removes any default padding */
+}
 
   .hex-code {
       position: absolute;
@@ -99,22 +115,30 @@ flex-direction: column;
   }
 
 
-  
+  .club-container{
+    max-width: 1500px;
+  }
 .club-description {
-
 color: #333;
 text-align: center;
 padding: 0.5rem;
+}
+.club-description h6{
+  color: #fff;
+}
+.club-description p{
+  color: #fff;
 }
 /* .club-description h2 {
 font-size: 0.5rem;
 } */
 .color-card {
 width: 307px;
-margin-left: 15px;
+margin-left: 53px;
 text-align: center;
 position: relative;
 background-color: white;
+background-color: #D83A30;
 border-radius: 12px;
 padding: 15px;
 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
@@ -124,11 +148,12 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 <style>
   .faq-section {
     transition: all 0.5s ease;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    border-radius: 1rem;
-    max-width: 1200px;
+    /* border: 1px solid #ddd; */
+    background-color: #f6f6f6;
+    /* border-radius: 1rem; */
+    max-width: 1300px;
     margin: 0 auto;
+    padding: 0;
   }
   
   .faq-section h2 {
@@ -139,8 +164,9 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   
   .faq-item {
     margin-top: 25px;
-    padding: 20px;
-    background-color: #fff;
+    padding: 15px;
+    background-color:#0f0dae ;
+    
     border-radius: 10px;
     border: 1px solid #eaeaea;
     transition: all 0.3s ease;
@@ -148,10 +174,11 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   }
-  
+
   .faq-question strong {
     font-size: 20px;
-    color: #333;
+    color:white;
+    padding: 0 20px;
   }
   
   .faq-item.active {
@@ -159,13 +186,13 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   }
   
   .faq-item:hover {
-    background-color: #f9f9f9;
+    background-color: black;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   }
   
   .toggle-icon {
     font-size: 2rem;
-    color: #0d6efd;
+    color: white;
     transition: transform 0.3s ease;
   }
   
@@ -568,12 +595,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
           </div>
           <div class="col-lg-8 col-md-9 col-sm-12" data-aos="fade-up">
             <p class="rts-section-description">
-              Plato’s Academy delivers a transformative educational experience,
-              blending ICSE, CBSE, Cambridge, Oxford, and STEM frameworks to
-              foster intellectual agility, innovation, and global competence.
-              Our rigorous curriculum is supported by distinguished faculty,
-              personalized attention, and a commitment to holistic
-              development—ensuring students excel academically and beyond.
+              At Plato’s Academy, we offer a robust academic programme aligned with CBSE standards, ensuring national-level excellence in education. Our students are guided by a team of highly qualified and experienced mentors who are deeply committed to nurturing intellectual growth and personal development. We provide individual attention to every learner, recognising their unique potential and learning pace. Our curriculum is carefully balanced to promote both academic excellence and sporting achievement, fostering discipline, teamwork, and confidence. 
             </p>
           </div>
         </div>
@@ -594,11 +616,19 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 
 
   <!-- multi row item -->
-  <div class="rts-multi-row-section pt--100">
+  <div class="row rt-center ">
+    <div class="col-sm-12" data-aos="fade-up">
+      <div class="rts__section--wrapper v__5">
+        <h2 class="rts__section--title">Academics Curriculam</h2>
+      </div>
+    </div>
+  </div>
+  <div class="rts-multi-row-section">
+
     <div class="container">
-      <h2 class="text-center fw-bold mb-5 display-5" data-aos="fade-up">Academics Curriculum</h2>
+      
       <!-- first -->
-      <div class="row g-5 justify-content-center justify-content-start align-items-center mt--60">
+      <div class="row g-5 justify-content-center justify-content-start align-items-center ">
         <div class="col-lg-6 col-md-11" data-aos="fade-up">
           <div class="rts-multi-row-image">
             <img src="assets/preschool.jpg" alt="undergraduate education">
@@ -692,9 +722,8 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
       <div class="row">
         <div class="col-lg-5">
           <div class="rts__section--wrapper v__4">
-            <h2 class="rts__section--title">Staff Roles</h2>
-            <p class="rts__section--description">Your opinion matters, and by providing feedback, you contribute to the
-              continuous enhancement of our academic programs, and campus life</p>
+            <h2 class="rts__section--title">STUDENT ROLES</h2>
+            <p class="rts__section--description">Students at Plato’s Academy are nurtured to become autonomous thinkers and compassionate leaders. Our educational approach emphasizes holistic development, integrating academic excellence with emotional intelligence and ethical grounding . Through experiential learning, community engagement, and interdisciplinary projects, students are encouraged to explore, question and contribute meaningfully to society. <br/>At Plato’s Academy, we don’t just aim high—we aim right.  </p>
             <div class="rts__slider--arrow">
               <div class="rts__pre slider__btn"><i class="fa-light fa-arrow-left"></i></div>
               <div class="rts__nex slider__btn"><i class="fa-light fa-arrow-right"></i></div>
@@ -740,8 +769,8 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
                   <div class="listpoints">
 
                     <ul>
-                      <li>Deliver high-impact, student-centric pedagogy.</li>
-                      <li>Mentor students in academics and co-curriculars.</li>
+                      <li>Students take on roles like house captains and club leaders, building confidence and responsibility.</li>
+                      <li>They actively participate in lessons, projects, and exams to enhance their learning experience.</li>
 
                     </ul>
                   </div>
@@ -759,10 +788,10 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
                     <div class="listpoints">
                       <ul>
                         <li>
-                          Collaborate on curriculum innovation and safety protocols.
+                          Students join sports, arts, and clubs to develop talents beyond the classroom.
                         </li>
                         <li>
-                          Support students' emotional well-being and personal growth.
+                          They engage in volunteering and outreach programs to foster social responsibility.
                         </li>
 
                       </ul>
@@ -781,10 +810,12 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
                       <ul>
 
                         <li>
-                          Collaborate on curriculum innovation and safety protocols.
+                          Students are taught to use digital tools safely and responsibly for learning and communication.
                         </li>
                         <li>
-                          Support students' emotional well-being and personal growth.
+                          They work in teams for group projects, helping each other and building teamwork skills.
+
+
                         </li>
 
                       </ul>
@@ -806,14 +837,15 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 
   <!-- student roles start -->
   
-  <section class="rts__section rts-section-padding" data-aos="fade-up" style="background-color:#928f8f">
+  <section class="rts__section rts-section-padding" data-aos="fade-up" style="background-color:  #657d79">
     <div class="container">
       <div class="row">
         <div class="col-lg-5">
           <div class="rts__section--wrapper v__4">
-            <h2 class="rts__section--title">Student Roles</h2>
-            <p class="rts__section--description">Your opinion matters, and by providing feedback, you contribute to the
-              continuous enhancement of our academic programs, support services, and campus life</p>
+            <h2 class="rts__section--title">Staff Roles</h2>
+            <p class="rts__section--description">At Plato’s Academy, educators are envisioned as catalysts for transformation, fostering a learning environment that transcends conventional pedagogy . Our faculty members are empowered to innovate, mentor and lead with purpose . Continuous professional development is integral, ensuring that teachers remain at the forefront of educational advancements . <br/>“We don’t just teach students; we ignite curiosity, cultivate resilience and shape the future.”
+
+            </p>
             <div class="rts__slider--arrow">
               <div class="rts__prev slider__btn"><i class="fa-light fa-arrow-left"></i></div>
               <div class="rts__next slider__btn"><i class="fa-light fa-arrow-right"></i></div>
@@ -860,11 +892,10 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 
                      <ul>
                         <li>
-                          Adhere to school values and disciplinary guidelines.
-
+                          Teachers deliver lessons, assess progress, and support students academically.
                         </li>
                         <li>
-                          Foster a respectful and inclusive school community.
+                          Staff manage records, schedules, and help organize school events and operations.
                         </li>
 
                       </ul>
@@ -883,11 +914,11 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
                     <div class="listpoints">
                       <ul>
                         <li>
-                          Adhere to school values and disciplinary guidelines.
+                          Teachers guide student behavior, offer emotional support, and ensure a safe environment.
 
                         </li>
                         <li>
-                          Foster a respectful and inclusive school community.
+                          Teachers attend workshops and training to improve skills and stay updated.
                         </li>
 
                       </ul>
@@ -906,10 +937,10 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
                       <ul>
 
                         <li>
-                          Take initiative in learning and personal development.
+                          Staff regularly communicate with parents to share updates and address concerns about student progress.
                         </li>
                         <li>
-                          Foster a respectful and inclusive school community.
+                          Teachers and staff help plan and run school events, trips, and celebrations smoothly.
                         </li>
 
                       </ul>
@@ -949,17 +980,17 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     </div>
   </div>
 </div>
-<section class="faq-section py-5 px-5">
+<section class="faq-section "data-aos="fade-left">
   <div class="container">
     <div class="row align-items-center">
       <!-- Left Content -->
-      <div class="col-lg-6">
+      <div class="col-lg-4">
         <!-- FAQ List -->
         <div class="faq-list">
           <!-- Engineering/Medical Section -->
           <div class="faq-item mb-3">
             <div class="faq-question d-flex justify-content-between align-items-center">
-              <strong>Engineering/Medical Section</strong>
+              <strong>Medical/Engineering</strong>
               <span class="toggle-icon">+</span>
             </div>
             <div class="faq-answer mt-2">
@@ -1044,27 +1075,124 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
       </div>
 
       <!-- Right Illustration - Fixed Position -->
-      <div class="col-lg-6 text-center mt-5 mt-lg-0 position-sticky" style="top: 20px; height: fit-content;">
-        <img src="assets/scl11.JPG" alt="FAQ Illustration" class="img-fluid" style="height:400px; object-fit: cover; border-radius: 10px;" />
+      <div class="col-lg-4 text-center mt-5 mt-lg-0 position-sticky" style="top: 20px; height: fit-content;">
+        <img src="assets/scl11.JPG" alt="FAQ Illustration" class="img-fluid" style="height:400px;width:500px; object-fit: cover;" />
       </div>
+       <!-- Left Content -->
+       <div class="col-lg-4">
+        <!-- FAQ List -->
+        <div class="faq-list">
+          <!-- Engineering/Medical Section -->
+          <div class="faq-item mb-3">
+            <div class="faq-question d-flex justify-content-between align-items-center">
+              <strong>Medical/Engineering</strong>
+              <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer mt-2">
+              <div class="sub-item mb-2 ps-3">
+                <div class="sub-question d-flex justify-content-between align-items-center">
+                  <span>NEET</span>
+                </div>
+              </div>
+              <div class="sub-item mb-2 ps-3">
+                <div class="sub-question d-flex justify-content-between align-items-center">
+                  <span>JEE</span>
+                </div>
+              </div>
+              <div class="sub-item mb-2 ps-3">
+                <div class="sub-question d-flex justify-content-between align-items-center">
+                  <span>IIT</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Civil Services Section -->
+          <div class="faq-item mb-3">
+            <div class="faq-question d-flex justify-content-between align-items-center">
+              <strong>Civil Services</strong>
+              <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer mt-2">
+              <div class="sub-item mb-2 ps-3">
+                <div class="sub-question d-flex justify-content-between align-items-center">
+                  <span>UPSC</span>
+                </div>
+              </div>
+              <div class="sub-item mb-2 ps-3">
+                <div class="sub-question d-flex justify-content-between align-items-center">
+                  <span>GS/CSAT</span>
+                </div>
+              </div>
+              <div class="sub-item mb-2 ps-3">
+                <div class="sub-question d-flex justify-content-between align-items-center">
+                  <span>NDA</span>
+                </div>
+              </div>
+              <div class="sub-item mb-2 ps-3">
+                <div class="sub-question d-flex justify-content-between align-items-center">
+                  <span>SSB Interview Prep</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Commerce Section -->
+          <div class="faq-item mb-3">
+            <div class="faq-question d-flex justify-content-between align-items-center">
+              <strong>Commerce</strong>
+              <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer mt-2">
+              <div class="sub-item mb-2 ps-3">
+                <div class="sub-question d-flex justify-content-between align-items-center">
+                  <span>CA</span>
+                </div>
+              </div>
+              <div class="sub-item mb-2 ps-3">
+                <div class="sub-question d-flex justify-content-between align-items-center">
+                  <span>Practical Accounting</span>
+                </div>
+              </div>
+              <div class="sub-item mb-2 ps-3">
+                <div class="sub-question d-flex justify-content-between align-items-center">
+                  <span>GST Simulations</span>
+                </div>
+              </div>
+              <div class="sub-item mb-2 ps-3">
+                <div class="sub-question d-flex justify-content-between align-items-center">
+                  <span>Articleship Support</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
+    
   </div>
 </section>
 
 
 
 <!---COACHING PROGRAM ENDS--->
+<div class="row rt-center mt--60 ">
+  <div class="col-sm-12" data-aos="fade-up">
+    <div class="rts__section--wrapper v__5">
+      <h2 class="rts__section--title">CLUBS</h2>
+    </div>
+  </div>
+</div>
 <!-- CLUB STARTS -->
-   <div class="container py-5 text-center">
-        <h1 class="palette-title">CLUB SECTIONS</h1>
-        <p class="palette-subtitle mb-5">Detailed below</p>
+   <div class="container club-container py-5 text-center" data-aos="fade-up">
 
         <div class="row g-5 justify-content-center">
             <!-- Color swatch 1 -->
     <div class="col-6 col-sm-4 col-md-3 lg-4 color-card">
   <img src="assets/pushpin_9522486.png" alt="pin" class="pin-image" />
   <div class="color-box">
-    <img class="color-swatch" style="background-image: url(assets/gal27.jpg) ; height: 230px; border-radius: 8px 8px 0 0;" />
+    <img class="color-swatch" src="assets/gal27.jpg" alt="Club Image" style="height: 230px; border-radius: 8px 8px 0 0;" />
     <div class="club-description p-2 mt--10">
       <h6>Grammarian Galaxy Club</h6>
      <p>
@@ -1082,7 +1210,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
       <div class="col-6 col-sm-4 col-md-3 lg-4 color-card">
   <img src="assets/pushpin_9522486.png" alt="pin" class="pin-image" />
   <div class="color-box">
-    <img class="color-swatch" style="background-image: url(assets/gal27.jpg) ; height: 230px; border-radius: 8px 8px 0 0;" />
+    <img class="color-swatch" src="assets/gal27.jpg" alt="Club Image" style="height: 230px; border-radius: 8px 8px 0 0;" />
     <div class="club-description p-2 mt--10">
       <h6>Earth Beat Club</h6>
      <p>
@@ -1098,7 +1226,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     <div class="col-6 col-sm-4 col-md-3 lg-4 color-card">
   <img src="assets/pushpin_9522486.png" alt="pin" class="pin-image" />
   <div class="color-box">
-    <img class="color-swatch" style="background-image: url(assets/gal27.jpg) ; height: 230px; border-radius: 8px 8px 0 0;" />
+    <img class="color-swatch" src="assets/gal27.jpg" alt="Club Image" style="height: 230px; border-radius: 8px 8px 0 0;" />
     <div class="club-description p-2 mt--10">
       <h6>Bharathi Tamil Saral Mandram
       </h6>
@@ -1117,7 +1245,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 <div class="col-6 col-sm-4 col-md-3 lg-4 color-card">
   <img src="assets/pushpin_9522486.png" alt="pin" class="pin-image" />
   <div class="color-box">
-    <img class="color-swatch" style="background-image: url(assets/gal27.jpg) ; height: 230px; border-radius: 8px 8px 0 0;" />
+    <img class="color-swatch" src="assets/gal27.jpg" alt="Club Image" style="height: 230px; border-radius: 8px 8px 0 0;" />
     <div class="club-description p-2 mt--10">
       <h6>Infinity Math Club
       </h6>
@@ -1132,12 +1260,12 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
         </div>
 
 
-        <div class="row g-4 justify-content-center " style="margin-top: 70px;">
+        <div class="row g-5 justify-content-center " style="margin-top: 70px;">
             <!-- Color swatch 5 -->
       <div class="col-6 col-sm-4 col-md-3 color-card">
   <img src="assets/pushpin_9522486.png" alt="pin" class="pin-image" />
   <div class="color-box">
-    <img class="color-swatch" style="background-image: url(assets/gal27.jpg) ; height: 230px; border-radius: 8px 8px 0 0;" />
+    <img class="color-swatch" src="assets/gal27.jpg" alt="Club Image" style="height: 230px; border-radius: 8px 8px 0 0;" />
     <div class="club-description p-2 mt--10">
       <h6>Grammarian Galaxy Club</h6>
      <p>
@@ -1155,7 +1283,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 <div class="col-6 col-sm-4 col-md-3 color-card">
   <img src="assets/pushpin_9522486.png" alt="pin" class="pin-image" />
   <div class="color-box">
-    <img class="color-swatch" style="background-image: url(assets/gal27.jpg) ; height: 230px; border-radius: 8px 8px 0 0;" />
+    <img class="color-swatch" src="assets/gal27.jpg" alt="Club Image" style="height: 230px; border-radius: 8px 8px 0 0;" />
     <div class="club-description p-2 mt--10">
       <h6>Grammarian Galaxy Club</h6>
      <p>
@@ -1174,8 +1302,24 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 <div class="col-6 col-sm-4 col-md-3 color-card">
   <img src="assets/pushpin_9522486.png" alt="pin" class="pin-image" />
   <div class="color-box">
-    <img class="color-swatch" style="background-image: url(assets/gal27.jpg) ; height: 230px; border-radius: 8px 8px 0 0;" />
+    <img class="color-swatch" src="assets/gal27.jpg" alt="Club Image" style="height: 230px; border-radius: 8px 8px 0 0;" />
     <div class="club-description p-2 mt--10">
+      <h6>Grammarian Galaxy Club</h6>
+     <p>
+        Our vibrant English club fosters students’ language skills through a variety of engaging 
+     activities such as debates, quizzes,
+      Just A Minute (JAM) sessions, oration, compering, singing, and other English-centric disciplines. 
+      It aims to build confidence,
+       communication, and creativity among students.
+     </p> 
+    </div>
+  </div>
+</div>
+<div class="col-6 col-sm-4 col-md-3 color-card">
+  <img src="assets/pushpin_9522486.png" alt="pin" class="pin-image" />
+  <div class="color-box">
+    <img class="color-swatch" src="assets/gal27.jpg" alt="Club Image" style="height: 230px; border-radius: 8px 8px 0 0;" />
+     <div class="club-description p-2 mt--10">
       <h6>Grammarian Galaxy Club</h6>
      <p>
         Our vibrant English club fosters students’ language skills through a variety of engaging 
@@ -1188,10 +1332,6 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   </div>
 </div>
         </div>
-
-
-
-
     </div>
 <!-- CLUB ENDS -->
   

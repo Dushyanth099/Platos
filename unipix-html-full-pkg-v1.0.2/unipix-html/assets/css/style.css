@@ -26287,7 +26287,7 @@ body.index-sc h6 {
   }
 }
 .rts-newsletter.v_1.rts-cta-background {
-  background: var(--light-white);
+  /* background: var(--light-white); */
   position: relative;
 }
 .rts-newsletter.v_1.rts-cta-background::before {
