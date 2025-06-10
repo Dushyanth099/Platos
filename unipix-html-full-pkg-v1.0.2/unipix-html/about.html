@@ -47,6 +47,19 @@
   </head>
   
   <style>
+    /* Add this to your style section */
+.equal-height {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.program-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
     .palette-title {
       font-size: 2.5rem;
       font-weight: bold;
@@ -180,6 +193,7 @@
     <!-- header area start -->
 
     <header class="header header__sticky v__1">
+     
       <div class="container-fluid">
         <div class="row">
           <div class="col-xl-12">
@@ -211,7 +225,11 @@
                           <li>
                             <a href="about.html#whychooseus">Why Choose us</a>
                           </li>
-                          <li><a href="about.html#visionmission">Vision</a></li>
+                          <li>
+                            <a href="about.html#visionmission"
+                              >Vision & Mission</a
+                            >
+                          </li>
                           <!-- <li class="has-child has-arrow">
                             <a href="#">Faculty</a>
                             <ul class="sub__style">
@@ -231,17 +249,17 @@
                               </li>
                             </ul>
                           </li> -->
-                          <li>
+                          <!-- <li>
                             <a href="about.html#visionmission">Mission</a>
-                          </li>
+                          </li> -->
                           <li>
                             <a href="about.html#foundersTrustee"
                               >Founders & Trustee</a
                             >
                           </li>
-                          <li>
+                          <!-- <li>
                             <a href="about.html#fascilitators">Fascilitators</a>
-                          </li>
+                          </li> -->
                         </ul>
                       </li>
                       <li class="navigation__menu--item has-child has-arrow">
@@ -252,11 +270,17 @@
                         >
                         <ul class="submenu sub__style">
                           <li>
-                            <a href="admissions.html">Admission Process</a>
+                            <a href="admissions.html#admissionprocess"
+                              >Admission Process</a
+                            >
                           </li>
-                          <li><a href="admissions.html">Admission Form</a></li>
                           <li>
-                            <a href="admissions.html">Admission Enquiry</a>
+                            <a href="admissions.html#form">Admission Form</a>
+                          </li>
+                          <li>
+                            <a href="admissions.html#enquiry"
+                              >Admission Enquiry</a
+                            >
                           </li>
                         </ul>
                       </li>
@@ -267,10 +291,17 @@
                           >Campus</a
                         >
                         <ul class="submenu sub__style">
-                          <li><a href="campus.html">Campus Life</a></li>
-                          <li><a href="campus.html">Infrastructure</a></li>
-                          <li><a href="campus.html">Campus Safety</a></li>
-                          <li><a href="campus.html">Transport</a></li>
+                          <li>
+                            <a href="campus.html#campusresources"
+                              >Campus Resources</a
+                            >
+                          </li>
+                          <li><a href="campus.html#aminities">Aminities</a></li>
+                          <li>
+                            <a href="campus.html#campussafety">Campus Safety</a>
+                          </li>
+                          <li><a href="campus.html#transport">Transport</a></li>
+                          <li><a href="campus.html#houses">Houses</a></li>
                         </ul>
                       </li>
 
@@ -281,54 +312,71 @@
                           >Academics</a
                         >
                         <ul class="submenu sub__style">
-                          <li><a href="academics.html">Our Academics</a></li>
+                          <li>
+                            <a href="academics.html#ouracademics"
+                              >Our Academics</a
+                            >
+                          </li>
 
                           <li class="has-child has-arrow">
-                            <a href="#">Academics Curriculam</a>
+                            <a href="academics.html#academicscurriculam"
+                              >Academics Curriculam</a
+                            >
                             <ul class="sub__style">
                               <li>
                                 <a
                                   class="mobile-menu-link"
-                                  href="academics.html"
+                                  href="academics.html#preprimary"
                                   >Pre Primary</a
                                 >
                               </li>
                               <li>
                                 <a
                                   class="mobile-menu-link"
-                                  href="academics.html"
+                                  href="academics.html#grade"
                                   >Grade 1 To 10</a
                                 >
                               </li>
                               <li>
-                                <a href="academics.html">Grade 11 & 12</a>
+                                <a href="academics.html#supergrade"
+                                  >Grade 11 & 12</a
+                                >
                               </li>
                             </ul>
                           </li>
                           <li class="has-child has-arrow">
-                            <a href="#">Roles & Responsibilities</a>
+                            <a href="academics.html#staffroles"
+                              >Roles & Responsibilities</a
+                            >
                             <ul class="sub__style">
                               <li>
                                 <a
                                   class="mobile-menu-link"
-                                  href="academics.html"
+                                  href="academics.html#staffroles"
                                   >Staffs</a
                                 >
                               </li>
                               <li>
                                 <a
                                   class="mobile-menu-link"
-                                  href="academics.html"
+                                  href="academics.html#studentroles"
                                   >Students</a
                                 >
                               </li>
                             </ul>
                           </li>
                           <li>
-                            <a href="academics.html">Academic Calender</a>
+                            <a href="academics.html#academiccalender"
+                              >Academic Calender</a
+                            >
                           </li>
                           <li>
-                            <a href="academics.html">Coaching Programs</a>
+                            <a href="academics.html#coachingprograms"
+                              >Coaching Programs</a
+                            >
+                          </li>
+                          <li>
+                            <a href="academics.html#club">Clubs</a>
                           </li>
                         </ul>
                       </li>
@@ -340,15 +388,32 @@
                           >Achievements</a
                         >
                         <ul class="submenu sub__style">
+                          <!-- <li>
+                            <a href="achievements.html#academicexcellence">Academic Excellence</a>
+                          </li> -->
                           <li>
-                            <a href="achievements.html">Achievements</a>
+                            <a href="achievements.html#academicachievements"
+                              >Academic Achievements</a
+                            >
                           </li>
+                          <!-- <li>
+                            <a href="achievements.html#sportsexcellence"
+                              >Sports Excellence</a
+                            >
+                          </li> -->
                           <li>
-                            <a href="extracurricularactivities.html"
-                              >Extra Curricular Activities</a
+                            <a href="achievements.html#sportsachievements"
+                              >Sports Achievements</a
                             >
                           </li>
                         </ul>
+                      </li>
+                      <li class="navigation__menu--item">
+                        <a
+                          href="extracurricularactivities.html"
+                          class="navigation__menu--item__link"
+                          >Activities</a
+                        >
                       </li>
                       <li class="navigation__menu--item">
                         <a
@@ -705,7 +770,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="tution__single--box">
               <h6 class="tution__single--box--faculty">
-                Internationally Aligned
+                Internationally Aligned Curriculam
               </h6>
               <p>
                 A rigorous, inquiry-driven framework fostering intellectual
@@ -761,10 +826,7 @@
 
  
     <!-- program start -->
-    <section
-      class="rts-program v_2 rts-section-padding animate__animated animate__bounceInRight animate__delay-2s animate__slow"
-      id="visionmission"
-    >
+    <section class="rts-program v_2 rts-section-padding" id="visionmission">
       <div class="container">
         <div class="row rt-center">
           <div class="col-sm-12">
@@ -773,19 +835,16 @@
             </div>
           </div>
         </div>
-
+    
         <!-- program content -->
         <div class="row justify-content-center g-0">
           <!-- Vision -->
           <div class="col-lg-4 col-md-10">
             <div class="rts-program-single equal-height">
-              <div class="rts-program-single__content">
-                <div class="rts-program-hover">
+              <div class="rts-program-single__content h-100">
+                <div class="rts-program-hover h-100">
                   <div class="icon">
-                    <img
-                      src="assets/images/program/icon/03.svg"
-                      alt="education"
-                    />
+                    <img src="assets/images/program/icon/03.svg" alt="education" />
                   </div>
                   <a href="program-single.html" class="program-link">Vision</a>
                   <p>
@@ -799,29 +858,27 @@
               </div>
             </div>
           </div>
-
+    
           <!-- Image Section (Middle) -->
           <div class="col-lg-4 col-md-10">
             <div class="rts-program-single equal-height">
-              <div
-                class="rts-program-single__content d-flex align-items-center justify-content-center"
-              >
+              <div class="rts-program-single__content h-100 d-flex align-items-center">
                 <a href="program-single.html">
                   <img
                     src="assets/scl25.jpg"
                     alt="Major Programs"
-                    class="img-fluid program-image"
+                    class="img-fluid program-image h-100"
                   />
                 </a>
               </div>
             </div>
           </div>
-
+    
           <!-- Mission -->
           <div class="col-lg-4 col-md-10">
             <div class="rts-program-single equal-height">
-              <div class="rts-program-single__content">
-                <div class="rts-program-hover">
+              <div class="rts-program-single__content h-100">
+                <div class="rts-program-hover h-100">
                   <div class="icon">
                     <img
                       src="assets/images/program/icon/01.svg"
@@ -1019,173 +1076,7 @@
       </div>
     </section>
 
-    <div class="rts-application-form">
-      <!-- Application Popup (hidden by default) -->
-      <div
-        id="application-popup"
-        style="
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100vw;
-          height: 100vh;
-          background: rgba(40, 33, 33, 0.7);
-          z-index: 9999;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          overflow: auto;
-          padding: 40px;
-          display: none;
-        "
-      >
-        <!-- Close Button -->
-        <button id="close-popup" class="close-popup-btn">✕</button>
-
-        <section class="rts-application-area moving rts-section-padding v_1">
-          <div class="container">
-            <!-- application form -->
-            <div class="row justify-content-md-center">
-              <div class="col-md-11 col-lg-6 col-xl-5">
-                <div class="rts-admission-form-image">
-                  <h5
-                    class="rts__section--title mb--25 mt-2"
-                    style="color: white; margin-left: 20px !important"
-                  >
-                    Welcome to Plato's Academy
-                  </h5>
-                  <img src="assets/popup.JPG" alt="" />
-                </div>
-                <div class="rts-section-big-text">Admission Now</div>
-              </div>
-              <div class="col-md-11 col-lg-6 col-xl-5">
-                <div class="rts-application-form">
-                  <div class="rts-application-form-content">
-                    <h5 class="heading-title mb--25">Application Form</h5>
-                    <form action="#" class="rts-form">
-                      <div class="rts-input rt-flex">
-                        <div class="single-input">
-                          <input
-                            type="text"
-                            name="fname"
-                            id="fname"
-                            placeholder="First Name"
-                            required
-                          />
-                        </div>
-                        <div class="single-input">
-                          <input
-                            type="text"
-                            name="lname"
-                            id="lname"
-                            placeholder="Last Name"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="rts-input rt-flex">
-                        <div class="single-input">
-                          <input
-                            type="email"
-                            name="email"
-                            id="email2"
-                            placeholder="Email.."
-                            required
-                          />
-                        </div>
-                        <div class="single-input">
-                          <input
-                            type="number"
-                            name="Phone"
-                            id="Phone"
-                            placeholder="Phone"
-                            required
-                          />
-                        </div>
-                      </div>
-
-                      <div class="rts-input rt-flex">
-                        <div class="single-input">
-                          <input
-                            type="text"
-                            name="address"
-                            id="address"
-                            placeholder="address"
-                            required
-                          />
-                        </div>
-                        <div class="single-input">
-                          <input
-                            type="text"
-                            name="city"
-                            id="city"
-                            placeholder="City"
-                            required
-                          />
-                        </div>
-                      </div>
-
-                      <div class="rts-input rt-flex">
-                        <div class="single-input">
-                          <input
-                            type="text"
-                            name="country"
-                            id="country"
-                            placeholder="Country"
-                            required
-                          />
-                        </div>
-                        <div class="single-input">
-                          <input
-                            type="number"
-                            name="zip"
-                            id="zip"
-                            placeholder="Zip Code"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="rts-input w-full">
-                        <div class="single-input">
-                          <input
-                            type="text"
-                            name="data"
-                            id="datepicker"
-                            placeholder="dd/mm/yy"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="rts-input w-full">
-                        <div class="single-input">
-                          <textarea
-                            name="msg"
-                            id="msg"
-                            placeholder="Enter Your Comments"
-                          ></textarea>
-                        </div>
-                      </div>
-                      <button
-                        type="submit"
-                        class="rts-theme-btn rts-nbg-btn btn-arrow v2 full-btn"
-                      >
-                        Apply Now
-                        <span
-                          ><i class="fa-sharp fa-regular fa-arrow-right"></i
-                        ></span>
-                      </button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-
-    <!-- apply end -->
-
+   
     <!-- Club starts -->
 
     <!-- Club Ends -->
@@ -1299,7 +1190,8 @@
             <div class="rts-newsletter-box" style="background-image: url()">
               <div class="rts-newsletter-box-content">
                 <h4 class="newsletter-title">
-                  Don’t Miss Awesome Story From Our Alumni
+                  " Nurtured Here , <br />
+                  Shining Worldwide "
                 </h4>
                 <div class="newsletter-form w-530">
                   <form action="#">
@@ -1328,7 +1220,7 @@
     <footer class="rts-footer v_2 pt--100 pb--100">
       <div class="container-fluid" style="max-width: 1500px !important">
         <div class="row gy-5 gy-lg-0">
-          <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="col-lg-5 col-md-6 col-sm-6">
             <div class="row">
               <div class="col-md-6">
                 <a href="index.html" class="d-block rts-footer-logo mb--20">
@@ -1340,16 +1232,19 @@
                 </p>
               </div>
 
-              <div class="col-md-6 text-center">
+              <div class="col-md-6">
                 <h6 class="rt-semi">Address</h6>
                 <div class="rts-contact-link">
                   <a href="mailto:Plato'sacademy.com"
-                    ><i class="fa-sharp fa-light fa-location-dot"></i>
-                    Tiruppu,4/317, Paramankadu, Chinniyagoundan pudur,
-                    Chinnandipalayam, (Iduvampalayam Po), Tiruppur-641667
+                    ><i class="fa-sharp fa-light fa-location-dot"></i> 4/317,
+                    Paramankadu, Chinniyagoundan pudur, Chinnandipalayam,<br />
+                    (Iduvampalayam Po),<br />
+                    Tirupur-641667
                   </a>
                   <br />
-                  <a href="callto:+91 7200076653"
+                  <a
+                    href="callto:+91 7200076653"
+                    style="display: block; margin-top: 14px"
                     ><i class="fa-thin fa-phone"></i>+91 7200076653
                   </a>
                 </div>
@@ -1358,16 +1253,13 @@
             <div class="rts-footer-widget w-320"></div>
           </div>
           <div class="col-lg-2 col-md-6 col-sm-6">
-            <div
-              class="rts-footer-widget"
-              style="text-align: center !important"
-            >
+            <div class="rts-footer-widget">
               <h6 class="rt-semi">Our Campus</h6>
               <div class="rts-footer-menu">
                 <ul>
-                  <li><a href=".html">Academics</a></li>
-                  <li><a href="campus.html">Campus life</a></li>
-                  <li><a href=".html">Achievements</a></li>
+                  <li><a href="academics.html">Academics</a></li>
+                  <li><a href="campus.html">Campus</a></li>
+                  <li><a href="achievements.html">Achievements</a></li>
                   <li><a href="rifleclub.html">Rifle Club</a></li>
                   <li>
                     <a href="extracurricularactivities.html"
@@ -1379,30 +1271,27 @@
             </div>
           </div>
           <div class="col-lg-2 col-md-6 col-sm-4">
-            <div
-              class="rts-footer-widget ml--30"
-              style="text-align: center !important"
-            >
+            <div class="rts-footer-widget ml--30">
               <h6 class="rt-semi">Admission Policy</h6>
               <div class="rts-footer-menu">
                 <ul>
                   <li><a href="admissions.html">Admission Process </a></li>
-                  <li><a href="admissions.html">Form</a></li>
-                  <li><a href="admissions.html">Enquiry</a></li>
+                  <li><a href="admissions.html"> Admission Form</a></li>
+                  <li><a href="policy.html">Policy</a></li>
                   <li><a href="about.html">About</a></li>
                   <li><a href="contact.html">Contact Us</a></li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-8">
+          <div class="col-lg-3 col-md-6 col-sm-8">
             <div class="rts-footer-widget ml--30">
-              <h6 class="rt-semi">Challo App</h6>
+              <h6 class="rt-semi">Chalo App</h6>
               <div class="rts-post-widget">
                 <ul class="list-unstyled">
                   <li class="single-post">
                     <div class="post-content">
-                      <a href="#">
+                      <a href="challoapp.html">
                         <strong>Student, Teacher & Parent Portal</strong>
                       </a>
                       <p style="margin-top: 5px">
@@ -1427,7 +1316,7 @@
           <div class="rt-center">
             <p class="--p-xs">
               Copyright &copy; <span id="year"></span>
-              <a href="#">Plato's Academy</a> All Rights Reserved by
+              <a href="#"></a> All Rights Reserved by
               <a href="#">Palette Production</a>
             </p>
           </div>
@@ -1435,11 +1324,6 @@
       </div>
     </div>
     <!-- footer end -->
-    <!-- footer end -->
-    <!-- footer copyright -->
-
-    <!-- footer copyright end -->
-
     <!-- offcanvase menu -->
     <!-- header style two -->
     <div id="side-bar" class="side-bar">
@@ -1496,41 +1380,41 @@
               <a href="javascript:void(0);" class="main">About</a>
               <ul class="submenu mm-collapse">
                 <li>
-                  <a class="mobile-menu-link" href="about.html"
+                  <a class="mobile-menu-link" href="about.html#whychooseus"
                     >Why Choose Us</a
                   >
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="about.html">Vision</a>
+                  <a class="mobile-menu-link" href="about.html#visionmission">Vision</a>
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="about.html">Mission</a>
+                  <a class="mobile-menu-link" href="about.html#visionmission">Mission</a>
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="about.html"
+                  <a class="mobile-menu-link" href="about.html#foundersTrustee"
                     >Founders & Trustee</a
                   >
                 </li>
-                <li>
+                <!-- <li>
                   <a class="mobile-menu-link" href="about.html"
                     >Fascilitators</a
                   >
-                </li>
+                </li> -->
               </ul>
             </li>
             <li class="has-droupdown">
               <a href="javascript:void(0);" class="main">Admissions</a>
               <ul class="submenu mm-collapse">
                 <li>
-                  <a class="mobile-menu-link" href="admissions.html"
+                  <a class="mobile-menu-link" href="admissions.html#admissionprocess"
                     >Admission Process</a
                   >
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="admissions.html">Form</a>
+                  <a class="mobile-menu-link" href="admissions.html#form">Form</a>
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="admissions.html">Enquiry</a>
+                  <a class="mobile-menu-link" href="admissions.html#enquiry">Enquiry</a>
                 </li>
               </ul>
             </li>
@@ -1539,25 +1423,87 @@
               <a href="javascript:void(0);" class="main">Campus</a>
               <ul class="submenu mm-collapse">
                 <li>
-                  <a class="mobile-menu-link" href="campus.html">Campus Life</a>
+                  <a class="mobile-menu-link" href="campus.html#campusresources">Campus resources</a>
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="campus.html"
-                    >Infrastructure</a
+                  <a class="mobile-menu-link" href="campus.html#aminities"
+                    >Aminities</a
                   >
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="academic-area.html"
+                  <a class="mobile-menu-link" href="campus.html#campussafety"
                     >Campus Safety</a
                   >
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="campus-life.html"
+                  <a class="mobile-menu-link" href="campus.html.html#transport"
                     >Transport</a
                   >
                 </li>
               </ul>
             </li>
+
+
+
+ <li class="has-droupdown">
+              <a href="javascript:void(0);" class="main">Academics</a>
+              <ul class="submenu mm-collapse">
+                <li>
+                  <a class="mobile-menu-link" href="academics.html#ouracademics">Our Academics</a>
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="academics.html#academicscurriculam"
+                    >Academics Curriculam</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="academics.html#staffroles"
+                    >Roles & Responsibilities</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="academics.html#academiccalender"
+                    >Academic Calender</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="academics.html#coachingprograms"
+                    >Coaching Programs</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+
+
+
+ <li class="has-droupdown">
+              <a href="javascript:void(0);" class="main">Achievements</a>
+              <ul class="submenu mm-collapse">
+                <li>
+                  <a class="mobile-menu-link" href="achievements.html#academicexcellence">Academic Excellence</a>
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="achievements.html#academicachievements"
+                    >Academic Achievements</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="achievements.html#sportsexcellence"
+                    >Sports Excellence</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="achievements.html#sportsachievements"
+                    >Sports Achievements</a
+                  >
+                </li>
+                
+              </ul>
+            </li>
+
+
+
             <li>
               <a href="rifleclub.html" class="main">Riffle Club</a>
             </li>
@@ -1761,6 +1707,32 @@
 
     updateCount();
   });
+    </script>
+    <script>
+      // Add this to your script section
+document.addEventListener("DOMContentLoaded", function() {
+  // Handle hash changes
+  window.addEventListener('hashchange', function() {
+    if (window.location.hash === '#visionmission') {
+      setTimeout(function() {
+        const section = document.querySelector('#visionmission');
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  });
+
+  // Initial load check
+  if (window.location.hash === '#visionmission') {
+    setTimeout(function() {
+      const section = document.querySelector('#visionmission');
+      if (section) {
+        section.scrollIntoView({ behavior: 'auto' });
+      }
+    }, 300);
+  }
+});
     </script>
   </body>
 </html>

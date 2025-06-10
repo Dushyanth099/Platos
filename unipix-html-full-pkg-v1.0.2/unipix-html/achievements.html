@@ -227,174 +227,6 @@
   </style>
 
   <body class="page">
-    <!-- apply start -->
-
-    <div class="rts-application-form">
-      <!-- Application Popup (hidden by default) -->
-      <div
-        id="application-popup"
-        style="
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100vw;
-          height: 100vh;
-          background: rgba(40, 33, 33, 0.7);
-          z-index: 9999;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          overflow: auto;
-          padding: 40px;
-          display: none;
-        "
-      >
-        <!-- Close Button -->
-        <button id="close-popup" class="close-popup-btn">✕</button>
-
-        <section class="rts-application-area moving rts-section-padding v_1">
-          <div class="container">
-            <!-- application form -->
-            <div class="row justify-content-md-center">
-              <div class="col-md-11 col-lg-6 col-xl-5">
-                <div class="rts-admission-form-image">
-                  <h5
-                    class="rts__section--title mb--25 mt-2"
-                    style="color: white; margin-left: 20px !important"
-                  >
-                    Welcome to Plato's Academy
-                  </h5>
-                  <img src="assets/popup.JPG" alt="" />
-                </div>
-                <div class="rts-section-big-text">Admission Now</div>
-              </div>
-              <div class="col-md-11 col-lg-6 col-xl-5">
-                <div class="rts-application-form">
-                  <div class="rts-application-form-content">
-                    <h5 class="heading-title mb--25">Application Form</h5>
-                    <form action="#" class="rts-form">
-                      <div class="rts-input rt-flex">
-                        <div class="single-input">
-                          <input
-                            type="text"
-                            name="fname"
-                            id="fname"
-                            placeholder="First Name"
-                            required
-                          />
-                        </div>
-                        <div class="single-input">
-                          <input
-                            type="text"
-                            name="lname"
-                            id="lname"
-                            placeholder="Last Name"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="rts-input rt-flex">
-                        <div class="single-input">
-                          <input
-                            type="email"
-                            name="email"
-                            id="email2"
-                            placeholder="Email.."
-                            required
-                          />
-                        </div>
-                        <div class="single-input">
-                          <input
-                            type="number"
-                            name="Phone"
-                            id="Phone"
-                            placeholder="Phone"
-                            required
-                          />
-                        </div>
-                      </div>
-
-                      <div class="rts-input rt-flex">
-                        <div class="single-input">
-                          <input
-                            type="text"
-                            name="address"
-                            id="address"
-                            placeholder="address"
-                            required
-                          />
-                        </div>
-                        <div class="single-input">
-                          <input
-                            type="text"
-                            name="city"
-                            id="city"
-                            placeholder="City"
-                            required
-                          />
-                        </div>
-                      </div>
-
-                      <div class="rts-input rt-flex">
-                        <div class="single-input">
-                          <input
-                            type="text"
-                            name="country"
-                            id="country"
-                            placeholder="Country"
-                            required
-                          />
-                        </div>
-                        <div class="single-input">
-                          <input
-                            type="number"
-                            name="zip"
-                            id="zip"
-                            placeholder="Zip Code"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="rts-input w-full">
-                        <div class="single-input">
-                          <input
-                            type="text"
-                            name="data"
-                            id="datepicker"
-                            placeholder="dd/mm/yy"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="rts-input w-full">
-                        <div class="single-input">
-                          <textarea
-                            name="msg"
-                            id="msg"
-                            placeholder="Enter Your Comments"
-                          ></textarea>
-                        </div>
-                      </div>
-                      <button
-                        type="submit"
-                        class="rts-theme-btn rts-nbg-btn btn-arrow v2 full-btn"
-                      >
-                        Apply Now
-                        <span
-                          ><i class="fa-sharp fa-regular fa-arrow-right"></i
-                        ></span>
-                      </button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-
-    <!-- apply end -->
     <!-- header area start -->
 
     <header class="header header__sticky v__1">
@@ -426,30 +258,44 @@
                           >About</a
                         >
                         <ul class="submenu sub__style">
-                          <li><a href="about.html">Why Choose us</a></li>
-                          <li><a href="about.html">Vision</a></li>
+                          <li>
+                            <a href="about.html#whychooseus">Why Choose us</a>
+                          </li>
+                          <li>
+                            <a href="about.html#visionmission"
+                              >Vision & Mission</a
+                            >
+                          </li>
                           <!-- <li class="has-child has-arrow">
-                          <a href="#">Faculty</a>
-                          <ul class="sub__style">
-                            <li>
-                              <a class="mobile-menu-link" href=".html"
-                                >Faculty</a
-                              >
-                            </li>
-                            <li>
-                              <a class="mobile-menu-link" href=".html"
-                                >Faculty Details</a
-                              >
-                            </li>
-                            <li><a href=".html">Faculty Staff</a></li>
-                            <li class="has-child">
-                              <a href=".html">Faculty Staff details</a>
-                            </li>
-                          </ul>
-                        </li> -->
-                          <li><a href="about.html">Mission</a></li>
-                          <li><a href="about.html">Founders & Trustee</a></li>
-                          <li><a href="about.html">Fascilitators</a></li>
+                            <a href="#">Faculty</a>
+                            <ul class="sub__style">
+                              <li>
+                                <a class="mobile-menu-link" href=".html"
+                                  >Faculty</a
+                                >
+                              </li>
+                              <li>
+                                <a class="mobile-menu-link" href=".html"
+                                  >Faculty Details</a
+                                >
+                              </li>
+                              <li><a href=".html">Faculty Staff</a></li>
+                              <li class="has-child">
+                                <a href=".html">Faculty Staff details</a>
+                              </li>
+                            </ul>
+                          </li> -->
+                          <!-- <li>
+                            <a href="about.html#visionmission">Mission</a>
+                          </li> -->
+                          <li>
+                            <a href="about.html#foundersTrustee"
+                              >Founders & Trustee</a
+                            >
+                          </li>
+                          <!-- <li>
+                            <a href="about.html#fascilitators">Fascilitators</a>
+                          </li> -->
                         </ul>
                       </li>
                       <li class="navigation__menu--item has-child has-arrow">
@@ -460,11 +306,17 @@
                         >
                         <ul class="submenu sub__style">
                           <li>
-                            <a href="admissions.html">Admission Process</a>
+                            <a href="admissions.html#admissionprocess"
+                              >Admission Process</a
+                            >
                           </li>
-                          <li><a href="admissions.html">Admission Form</a></li>
                           <li>
-                            <a href="admissions.html">Admission Enquiry</a>
+                            <a href="admissions.html#form">Admission Form</a>
+                          </li>
+                          <li>
+                            <a href="admissions.html#enquiry"
+                              >Admission Enquiry</a
+                            >
                           </li>
                         </ul>
                       </li>
@@ -475,10 +327,17 @@
                           >Campus</a
                         >
                         <ul class="submenu sub__style">
-                          <li><a href="campus.html">Campus Life</a></li>
-                          <li><a href="campus.html">Infrastructure</a></li>
-                          <li><a href="campus.html">Campus Safety</a></li>
-                          <li><a href="campus.html">Transport</a></li>
+                          <li>
+                            <a href="campus.html#campusresources"
+                              >Campus Resources</a
+                            >
+                          </li>
+                          <li><a href="campus.html#aminities">Aminities</a></li>
+                          <li>
+                            <a href="campus.html#campussafety">Campus Safety</a>
+                          </li>
+                          <li><a href="campus.html#transport">Transport</a></li>
+                          <li><a href="campus.html#houses">Houses</a></li>
                         </ul>
                       </li>
 
@@ -489,54 +348,71 @@
                           >Academics</a
                         >
                         <ul class="submenu sub__style">
-                          <li><a href="academics.html">Our Academics</a></li>
+                          <li>
+                            <a href="academics.html#ouracademics"
+                              >Our Academics</a
+                            >
+                          </li>
 
                           <li class="has-child has-arrow">
-                            <a href="#">Academics Curriculam</a>
+                            <a href="academics.html#academicscurriculam"
+                              >Academics Curriculam</a
+                            >
                             <ul class="sub__style">
                               <li>
                                 <a
                                   class="mobile-menu-link"
-                                  href="academics.html"
+                                  href="academics.html#preprimary"
                                   >Pre Primary</a
                                 >
                               </li>
                               <li>
                                 <a
                                   class="mobile-menu-link"
-                                  href="academics.html"
+                                  href="academics.html#grade"
                                   >Grade 1 To 10</a
                                 >
                               </li>
                               <li>
-                                <a href="academics.html">Grade 11 & 12</a>
+                                <a href="academics.html#supergrade"
+                                  >Grade 11 & 12</a
+                                >
                               </li>
                             </ul>
                           </li>
                           <li class="has-child has-arrow">
-                            <a href="#">Roles & Responsibilities</a>
+                            <a href="academics.html#staffroles"
+                              >Roles & Responsibilities</a
+                            >
                             <ul class="sub__style">
                               <li>
                                 <a
                                   class="mobile-menu-link"
-                                  href="academics.html"
+                                  href="academics.html#staffroles"
                                   >Staffs</a
                                 >
                               </li>
                               <li>
                                 <a
                                   class="mobile-menu-link"
-                                  href="academics.html"
+                                  href="academics.html#studentroles"
                                   >Students</a
                                 >
                               </li>
                             </ul>
                           </li>
                           <li>
-                            <a href="academics.html">Academic Calender</a>
+                            <a href="academics.html#academiccalender"
+                              >Academic Calender</a
+                            >
                           </li>
                           <li>
-                            <a href="academics.html">Coaching Programs</a>
+                            <a href="academics.html#coachingprograms"
+                              >Coaching Programs</a
+                            >
+                          </li>
+                          <li>
+                            <a href="academics.html#club">Clubs</a>
                           </li>
                         </ul>
                       </li>
@@ -548,15 +424,32 @@
                           >Achievements</a
                         >
                         <ul class="submenu sub__style">
+                          <!-- <li>
+                            <a href="achievements.html#academicexcellence">Academic Excellence</a>
+                          </li> -->
                           <li>
-                            <a href="achievements.html">Achievements</a>
+                            <a href="achievements.html#academicachievements"
+                              >Academic Achievements</a
+                            >
                           </li>
+                          <!-- <li>
+                            <a href="achievements.html#sportsexcellence"
+                              >Sports Excellence</a
+                            >
+                          </li> -->
                           <li>
-                            <a href="extracurricularactivities.html"
-                              >Extra Curricular Activities</a
+                            <a href="achievements.html#sportsachievements"
+                              >Sports Achievements</a
                             >
                           </li>
                         </ul>
+                      </li>
+                      <li class="navigation__menu--item">
+                        <a
+                          href="extracurricularactivities.html"
+                          class="navigation__menu--item__link"
+                          >Activities</a
+                        >
                       </li>
                       <li class="navigation__menu--item">
                         <a
@@ -587,17 +480,17 @@
               <div class="header__right">
                 <div class="header__right--item">
                   <!-- <div id="langSwitcher" class="lang__trigger">
-                  <span class="selected__lang">English</span>
-                  <i class="fa-light fa-globe"></i>
-                  <div class="translate__lang">
-                    <ul>
-                      <li><a href="#" class="active">English</a></li>
-                      <li><a href="#">French</a></li>
-                      <li><a href="#">Spanish</a></li>
-                      <li><a href="#">Romanian</a></li>
-                    </ul>
-                  </div>
-                </div> -->
+                    <span class="selected__lang">English</span>
+                    <i class="fa-light fa-globe"></i>
+                    <div class="translate__lang">
+                      <ul>
+                        <li><a href="#" class="active">English</a></li>
+                        <li><a href="#">French</a></li>
+                        <li><a href="#">Spanish</a></li>
+                        <li><a href="#">Romanian</a></li>
+                      </ul>
+                    </div>
+                  </div> -->
 
                   <div id="menu-btn" class="menu__trigger">
                     <img src="assets/images/icon/bar__line.svg" alt="bar" />
@@ -629,7 +522,7 @@
     <!-- BREADCRUMB AREA END -->
 
     <!-- about university -->
-    <section class="rts-about-university pt--100 pb--10">
+    <section class="rts-about-university pt--100 pb--10" id="mainachievements">
       <div class="container">
         <div class="row">
           <div class="rts-section">
@@ -656,28 +549,38 @@
           <div class="swiper-slide achievement-slide">
             <img src="assets/scl11.JPG" alt="Academic Achievement" />
             <div class="achievement-caption">
-              <h3 class="achievement-title">Academic Excellence 2023</h3>
+              <h3 class="achievement-title">100% achievement in academics</h3>
               <p class="achievement-desc">
-                Our students secured top ranks in CBSE board examinations with
-                98% pass rate.
+                Plato's stands consistent in producing 100% result in Grade-10,
+                11 and 12 Board Exams.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide achievement-slide">
+            <img src="assets/scl11.JPG" alt="Academic Achievement" />
+            <div class="achievement-caption">
+              <h3 class="achievement-title">Above 198 in Cut-off</h3>
+              <p class="achievement-desc">
+                Plato's assures shining cut-off above 198 over and over.
               </p>
             </div>
           </div>
           <div class="swiper-slide achievement-slide">
             <img src="assets/scl10.JPG" alt="Sports Achievement" />
             <div class="achievement-caption">
-              <h3 class="achievement-title">State Sports Champions</h3>
+              <h3 class="achievement-title">Bronze in CM Trophy</h3>
               <p class="achievement-desc">
-                Won 15 gold medals in inter-school athletics championship.
+                Prema. V clinched Bronze medal in 100M in CM Trophy.
               </p>
             </div>
           </div>
           <div class="swiper-slide achievement-slide">
             <img src="assets/scl11.JPG" alt="Cultural Achievement" />
             <div class="achievement-caption">
-              <h3 class="achievement-title">Cultural Fest Winners</h3>
+              <h3 class="achievement-title">Silver in Khelo India 2025</h3>
               <p class="achievement-desc">
-                Awarded best school in state-level cultural competition.
+                Tanisska Senthilkumar clinched Silver in Rifle shooting in Khelo
+                India 2025.
               </p>
             </div>
           </div>
@@ -693,200 +596,220 @@
     </div>
 
     <!-- multi row item -->
-    <div class="rts-multi-row-section pt--100">
-      <div class="container">
-        <!-- first -->
-        <div
-          class="row g-5 justify-content-center justify-content-start align-items-center"data-aos="fade-up"
-        >
-          <div class="col-lg-6 col-md-11">
-            <div class="rts-multi-row-image">
-              <img
-                src="assets/academicexcellence.jpg"
-                alt="undergraduate education"
-              />
+    <section id="academicexcellence">
+      <div class="rts-multi-row-section pt--100">
+        <div class="container">
+          <!-- first -->
+          <div
+            class="row g-5 justify-content-center justify-content-start align-items-center"
+            data-aos="fade-up"
+          >
+            <div class="col-lg-6 col-md-11">
+              <div class="rts-multi-row-image">
+                <img
+                  src="assets/academicexcellence.jpg"
+                  alt="undergraduate education"
+                />
+              </div>
             </div>
-          </div>
-          <div class="col-lg-6 col-md-11">
-            <div class="rts-multi-row-content">
-              <h4 class="row-title">Academic Excellence</h4>
-              <p>
-                At our school, academic excellence is at the heart of everything
-                we do. We strive to create a stimulating learning environment
-                where students are encouraged to reach their full potential.
-                Through a well-rounded curriculum, dedicated teachers and
-                innovative teaching methods, we foster critical thinking,
-                creativity and a lifelong love for learning. Our commitment to
-                high academic standards ensures that every student is equipped
-                with the knowledge and skills needed for future success. We
-                celebrate hard work, curiosity and perseverance, empowering
-                students to achieve excellence not just in exams, but in all
-                aspects of their intellectual development. We also offer
-                enrichment programs, personalized support and regular
-                assessments to monitor progress and maintain high performance.
-                Our goal is to nurture confident, competent learners who are
-                prepared to face global challenges with knowledge, integrity,
-                and leadership.
-              </p>
+            <div class="col-lg-6 col-md-11">
+              <div class="rts-multi-row-content">
+                <h4 class="row-title">Academic Excellence</h4>
+                <p>
+                  At our school, academic excellence is at the heart of
+                  everything we do. We strive to create a stimulating learning
+                  environment where students are encouraged to reach their full
+                  potential. Through a well-rounded curriculum, dedicated
+                  teachers and innovative teaching methods, we foster critical
+                  thinking, creativity and a lifelong love for learning. Our
+                  commitment to high academic standards ensures that every
+                  student is equipped with the knowledge and skills needed for
+                  future success. We celebrate hard work, curiosity and
+                  perseverance, empowering students to achieve excellence not
+                  just in exams, but in all aspects of their intellectual
+                  development. We also offer enrichment programs, personalized
+                  support and regular assessments to monitor progress and
+                  maintain high performance. Our goal is to nurture confident,
+                  competent learners who are prepared to face global challenges
+                  with knowledge, integrity, and leadership.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!---images start----->
+    <section id="academicachievements" class="rts-section-padding">
+      <!-- Slider section -->
 
-    <div class="row rt-center mt--60 ">
-      <div class="col-sm-12" data-aos="fade-up">
-        <div class="rts__section--wrapper v__5">
-          <h2 class="rts__section--title">Academic Achievements</h2>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slider section -->
-
-    <div class="rts-campus-section">
-      <div class="container">
-        <!-- Swiper navigation -->
-        <div class="custom-nav-wrapper">
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-
-        <div class="swiper campusSwiper">
-          <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide">
-              <div class="single-item">
-                <div class="single-item__content">
-                  <div class="single-item__image">
-                    <img src="assets/images/stulifeimg1.JPG" alt="item-image" />
-                  </div>
-                  <div class="single-item__meta">
-                    <h5 class="item-title"><a href="#">Student Affairs</a></h5>
-                    <p class="item-description">
-                      Comprising more than 25 offices & centers, Student Affairs
-                      provides a broad of this services.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Slide 2 -->
-            <div class="swiper-slide">
-              <div class="single-item">
-                <div class="single-item__content">
-                  <div class="single-item__image">
-                    <img
-                      src="assets/images/stulifeimg2.jpeg"
-                      alt="item-image"
-                    />
-                  </div>
-                  <div class="single-item__meta">
-                    <h5 class="item-title"><a href="#">Housing & Dining</a></h5>
-                    <p class="item-description">
-                      Nearly all undergraduates and more than 65% graduate
-                      students reside in 81 merit undergraduate
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Slide 3 -->
-            <div class="swiper-slide">
-              <div class="single-item">
-                <div class="single-item__content">
-                  <div class="single-item__image">
-                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
-                  </div>
-                  <div class="single-item__meta">
-                    <h5 class="item-title">
-                      <a href="#">Engagement & Diversity</a>
-                    </h5>
-                    <p class="item-description">
-                      Growing up in the Chicago suburbs, Jess found video games
-                      to be a rich portal to alternative.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Add more swiper-slide blocks if needed -->
-            <div class="swiper-slide">
-              <div class="single-item">
-                <div class="single-item__content">
-                  <div class="single-item__image">
-                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
-                  </div>
-                  <div class="single-item__meta">
-                    <h5 class="item-title">
-                      <a href="#">Engagement & Diversity</a>
-                    </h5>
-                    <p class="item-description">
-                      Growing up in the Chicago suburbs, Jess found video games
-                      to be a rich portal to alternative.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="single-item">
-                <div class="single-item__content">
-                  <div class="single-item__image">
-                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
-                  </div>
-                  <div class="single-item__meta">
-                    <h5 class="item-title">
-                      <a href="#">Engagement & Diversity</a>
-                    </h5>
-                    <p class="item-description">
-                      Growing up in the Chicago suburbs, Jess found video games
-                      to be a rich portal to alternative.
-                    </p>
-                  </div>
-                </div>
+      <div class="rts-campus-section">
+        <div class="container">
+          <div class="row rt-center">
+            <div class="col-sm-12" data-aos="fade-up">
+              <div class="rts__section--wrapper v__5">
+                <h2 class="rts__section--title">Academic Achievements</h2>
               </div>
             </div>
           </div>
+          <!-- Swiper navigation -->
+          <div class="custom-nav-wrapper">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
 
-          <!-- Swiper pagination -->
-          <!-- <div class="swiper-pagination"></div> -->
+          <div class="swiper campusSwiper">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div class="single-item">
+                  <div class="single-item__content">
+                    <div class="single-item__image">
+                      <img
+                        src="assets/images/stulifeimg1.JPG"
+                        alt="item-image"
+                      />
+                    </div>
+                    <div class="single-item__meta">
+                      <h5 class="item-title">
+                        <a href="#">100% achievement in academics</a>
+                      </h5>
+                      <p class="item-description">
+                        Plato's stands consistent in producing 100% result in
+                        Grade-10, 11 and 12 Board Exams.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div class="single-item">
+                  <div class="single-item__content">
+                    <div class="single-item__image">
+                      <img
+                        src="assets/images/stulifeimg2.jpeg"
+                        alt="item-image"
+                      />
+                    </div>
+                    <div class="single-item__meta">
+                      <h5 class="item-title">
+                        <a href="#">Above 198 in Cut-off</a>
+                      </h5>
+                      <p class="item-description">
+                        Plato's assures shining cut-off above 198 over and over.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <div class="single-item">
+                  <div class="single-item__content">
+                    <div class="single-item__image">
+                      <img
+                        src="assets/images/stulifeimg3.JPG"
+                        alt="item-image"
+                      />
+                    </div>
+                    <div class="single-item__meta">
+                      <h5 class="item-title">
+                        <a href="#">Above 98% in top score</a>
+                      </h5>
+                      <p class="item-description">
+                        Board exam top scores reach above 98% consistently.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Add more swiper-slide blocks if needed -->
+              <div class="swiper-slide">
+                <div class="single-item">
+                  <div class="single-item__content">
+                    <div class="single-item__image">
+                      <img
+                        src="assets/images/stulifeimg3.JPG"
+                        alt="item-image"
+                      />
+                    </div>
+                    <div class="single-item__meta">
+                      <h5 class="item-title">
+                        <a href="#">Achievers in all domains</a>
+                      </h5>
+                      <p class="item-description">
+                        We are proud to announce that Plato's has created
+                        citizens in all domains of designation.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="single-item">
+                  <div class="single-item__content">
+                    <div class="single-item__image">
+                      <img
+                        src="assets/images/stulifeimg3.JPG"
+                        alt="item-image"
+                      />
+                    </div>
+                    <div class="single-item__meta">
+                      <h5 class="item-title">
+                        <a href="#"
+                          >Excellent Communication and Accent Training</a
+                        >
+                      </h5>
+                      <p class="item-description">
+                        We reassure to create polyglots and ensure to train them
+                        gain expertise in accent.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Swiper pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+
     <!---images end----->
     <!-- marque style -->
     <div class="marquee mt--50 mb--30">
       <div class="single__marque__item">
         <ul class="single__marque__item__list">
           <li class="single__marque__item__list__text">
-            NEET
+            Olympiads
             <span
               ><img src="assets/images/icon/marquee__vector.svg" alt=""
             /></span>
           </li>
           <li class="single__marque__item__list__text">
-            JEE
+            Science Fair
             <span
               ><img src="assets/images/icon/marquee__vector.svg" alt=""
             /></span>
           </li>
           <li class="single__marque__item__list__text">
-            IITT
+            Spell Bee
             <span
               ><img src="assets/images/icon/marquee__vector.svg" alt=""
             /></span>
           </li>
           <li class="single__marque__item__list__text">
-            UPSC
+            Art & Craft
             <span
               ><img src="assets/images/icon/marquee__vector.svg" alt=""
             /></span>
           </li>
           <li class="single__marque__item__list__text">
-            NDA
+            Leadership Training
             <span
               ><img src="assets/images/icon/marquee__vector.svg" alt=""
             /></span>
@@ -894,31 +817,31 @@
         </ul>
         <ul class="single__marque__item__list">
           <li class="single__marque__item__list__text">
-            NEET
+            Olympiads
             <span
               ><img src="assets/images/icon/marquee__vector.svg" alt=""
             /></span>
           </li>
           <li class="single__marque__item__list__text">
-            JEE
+            Science Fair
             <span
               ><img src="assets/images/icon/marquee__vector.svg" alt=""
             /></span>
           </li>
           <li class="single__marque__item__list__text">
-            IITT
+            Spell Bee
             <span
               ><img src="assets/images/icon/marquee__vector.svg" alt=""
             /></span>
           </li>
           <li class="single__marque__item__list__text">
-            UPSC
+            Art & Craft
             <span
               ><img src="assets/images/icon/marquee__vector.svg" alt=""
             /></span>
           </li>
           <li class="single__marque__item__list__text">
-            NDA
+            Leadership Training
             <span
               ><img src="assets/images/icon/marquee__vector.svg" alt=""
             /></span>
@@ -993,166 +916,189 @@
       </div>
     </div>
     <!-- marque style end -->
-    <div class="rts-multi-row-section pt--100">
-      <div class="container">
-        <!-- second -->
-        <div
-          class="row g-5 justify-content-center justify-content-start align-items-center mb--90"data-aos="fade-up"
-        >
-          <div class="col-lg-6 col-md-11">
-            <div class="rts-multi-row-content left-side">
-              <h3 class="row-title">Sports Excellence</h3>
-              <p>
-                At our school, sports excellence is a vital pillar of our
-                holistic education approach. We believe that participation in
-                sports instills discipline, teamwork, resilience and leadership
-                skills in students. Our well-structured sports program offers a
-                wide range of activities, including athletics, team sports and
-                individual events, allowing every student to discover and
-                develop their talents. With professional coaches, modern
-                facilities and regular training sessions, we provide the
-                perfect environment for students to pursue sporting excellence
-                alongside academic growth.We encourage healthy competition
-                through inter-house and inter-school tournaments, helping
-                students build confidence and sportsmanship. Our athletes have
-                proudly represented the school at district, state and national
-                levels, bringing home numerous accolades.
-              </p>
+    <section id="sportsexcellence">
+      <div class="rts-multi-row-section pt--100">
+        <div class="container">
+          <!-- second -->
+          <div
+            class="row g-5 justify-content-center justify-content-start align-items-center mb--90"
+            data-aos="fade-up"
+          >
+            <div class="col-lg-6 col-md-11">
+              <div class="rts-multi-row-content left-side">
+                <h3 class="row-title">Sports Excellence</h3>
+                <p>
+                  At our school, sports excellence is a vital pillar of our
+                  holistic education approach. We believe that participation in
+                  sports instills discipline, teamwork, resilience and
+                  leadership skills in students. Our well-structured sports
+                  program offers a wide range of activities, including
+                  athletics, team sports and individual events, allowing every
+                  student to discover and develop their talents. With
+                  professional coaches, modern facilities and regular training
+                  sessions, we provide the perfect environment for students to
+                  pursue sporting excellence alongside academic growth.We
+                  encourage healthy competition through inter-house and
+                  inter-school tournaments, helping students build confidence
+                  and sportsmanship. Our athletes have proudly represented the
+                  school at district, state and national levels, bringing home
+                  numerous accolades.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="col-lg-6 col-md-11">
-            <div class="rts-multi-row-image">
-              <img
-                src="assets/sportsexcellence.jpg"
-                alt="undergraduate education"
-              />
+            <div class="col-lg-6 col-md-11">
+              <div class="rts-multi-row-image">
+                <img
+                  src="assets/sportsexcellence.jpg"
+                  alt="undergraduate education"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
     <!-- multi row item end -->
 
     <!---images start----->
-
-    <div class="row rt-center ">
-      <div class="col-sm-12" data-aos="fade-up">
-        <div class="rts__section--wrapper v__5">
-          <h2 class="rts__section--title">Sports Achievements</h2>
-        </div>
-      </div>
-    </div>
-
-    <div class="rts-campus-section">
-      <div class="container">
-        <!-- Swiper navigation -->
-        <div class="custom-nav-wrapper">
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-
-        <div class="swiper campusSwiper">
-          <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide">
-              <div class="single-item">
-                <div class="single-item__content">
-                  <div class="single-item__image">
-                    <img src="assets/images/stulifeimg1.JPG" alt="item-image" />
-                  </div>
-                  <div class="single-item__meta">
-                    <h5 class="item-title"><a href="#">Student Affairs</a></h5>
-                    <p class="item-description">
-                      Comprising more than 25 offices & centers, Student Affairs
-                      provides a broad of this services.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Slide 2 -->
-            <div class="swiper-slide">
-              <div class="single-item">
-                <div class="single-item__content">
-                  <div class="single-item__image">
-                    <img
-                      src="assets/images/stulifeimg2.jpeg"
-                      alt="item-image"
-                    />
-                  </div>
-                  <div class="single-item__meta">
-                    <h5 class="item-title"><a href="#">Housing & Dining</a></h5>
-                    <p class="item-description">
-                      Nearly all undergraduates and more than 65% graduate
-                      students reside in 81 merit undergraduate
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Slide 3 -->
-            <div class="swiper-slide">
-              <div class="single-item">
-                <div class="single-item__content">
-                  <div class="single-item__image">
-                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
-                  </div>
-                  <div class="single-item__meta">
-                    <h5 class="item-title">
-                      <a href="#">Engagement & Diversity</a>
-                    </h5>
-                    <p class="item-description">
-                      Growing up in the Chicago suburbs, Jess found video games
-                      to be a rich portal to alternative.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Add more swiper-slide blocks if needed -->
-            <div class="swiper-slide">
-              <div class="single-item">
-                <div class="single-item__content">
-                  <div class="single-item__image">
-                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
-                  </div>
-                  <div class="single-item__meta">
-                    <h5 class="item-title">
-                      <a href="#">Engagement & Diversity</a>
-                    </h5>
-                    <p class="item-description">
-                      Growing up in the Chicago suburbs, Jess found video games
-                      to be a rich portal to alternative.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="single-item">
-                <div class="single-item__content">
-                  <div class="single-item__image">
-                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
-                  </div>
-                  <div class="single-item__meta">
-                    <h5 class="item-title">
-                      <a href="#">Engagement & Diversity</a>
-                    </h5>
-                    <p class="item-description">
-                      Growing up in the Chicago suburbs, Jess found video games
-                      to be a rich portal to alternative.
-                    </p>
-                  </div>
-                </div>
+    <section id="sportsachievements" class="rts-section-padding">
+      <div class="rts-campus-section">
+        <div class="container">
+          <div class="row rt-center">
+            <div class="col-sm-12" data-aos="fade-up">
+              <div class="rts__section--wrapper v__5">
+                <h2 class="rts__section--title">Sports Achievements</h2>
               </div>
             </div>
           </div>
+          <!-- Swiper navigation -->
+          <div class="custom-nav-wrapper">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
 
-          <!-- Swiper pagination -->
-          <!-- <div class="swiper-pagination"></div> -->
+          <div class="swiper campusSwiper">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div class="single-item">
+                  <div class="single-item__content">
+                    <div class="single-item__image">
+                      <img
+                        src="assets/images/stulifeimg1.JPG"
+                        alt="item-image"
+                      />
+                    </div>
+                    <div class="single-item__meta">
+                      <h5 class="item-title">
+                        <a href="#">Silver in Khelo India 2025</a>
+                      </h5>
+                      <p class="item-description">
+                        Tanisska Senthilkumar clinched Silver in Rifle shooting
+                        in Khelo India 2025.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div class="single-item">
+                  <div class="single-item__content">
+                    <div class="single-item__image">
+                      <img
+                        src="assets/images/stulifeimg2.jpeg"
+                        alt="item-image"
+                      />
+                    </div>
+                    <div class="single-item__meta">
+                      <h5 class="item-title">
+                        <a href="#">Bronze in CM Trophy</a>
+                      </h5>
+                      <p class="item-description">
+                        Prema. V clinched Bronze medal in 100M in CM Trophy.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <div class="single-item">
+                  <div class="single-item__content">
+                    <div class="single-item__image">
+                      <img
+                        src="assets/images/stulifeimg3.JPG"
+                        alt="item-image"
+                      />
+                    </div>
+                    <div class="single-item__meta">
+                      <h5 class="item-title">
+                        <a href="#"
+                          >Silver in Tamilnadu Open Athletic Championship</a
+                        >
+                      </h5>
+                      <p class="item-description">
+                        Netra. S. S. grabbed Silver in 400M in Tamilnadu Open
+                        Athletic Championship.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Add more swiper-slide blocks if needed -->
+              <div class="swiper-slide">
+                <div class="single-item">
+                  <div class="single-item__content">
+                    <div class="single-item__image">
+                      <img
+                        src="assets/images/stulifeimg3.JPG"
+                        alt="item-image"
+                      />
+                    </div>
+                    <div class="single-item__meta">
+                      <h5 class="item-title">
+                        <a href="#">State level winners in Lawn Tennis</a>
+                      </h5>
+                      <p class="item-description">
+                        Many state and national level winners dominate the Lawn
+                        Tennis domain from Plato's.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="single-item">
+                  <div class="single-item__content">
+                    <div class="single-item__image">
+                      <img
+                        src="assets/images/stulifeimg3.JPG"
+                        alt="item-image"
+                      />
+                    </div>
+                    <div class="single-item__meta">
+                      <h5 class="item-title">
+                        <a href="#">Cricket Achievement</a>
+                      </h5>
+                      <p class="item-description">
+                        In tie-up with TSC, Plato's dominates the Cricket field
+                        with many state and national level players.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Swiper pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+
     <!-- newsletter start-->
 
     <div class="rts-newsletter v_1 rts-cta-background">
@@ -1162,7 +1108,8 @@
             <div class="rts-newsletter-box" style="background-image: url()">
               <div class="rts-newsletter-box-content">
                 <h4 class="newsletter-title">
-                  Don’t Miss Awesome Story From Our Alumni
+                  " Nurtured Here , <br />
+                  Shining Worldwide "
                 </h4>
                 <div class="newsletter-form w-530">
                   <form action="#">
@@ -1194,7 +1141,7 @@
     <footer class="rts-footer v_2 pt--100 pb--100">
       <div class="container-fluid" style="max-width: 1500px !important">
         <div class="row gy-5 gy-lg-0">
-          <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="col-lg-5 col-md-6 col-sm-6">
             <div class="row">
               <div class="col-md-6">
                 <a href="index.html" class="d-block rts-footer-logo mb--20">
@@ -1206,16 +1153,19 @@
                 </p>
               </div>
 
-              <div class="col-md-6 text-center">
+              <div class="col-md-6">
                 <h6 class="rt-semi">Address</h6>
                 <div class="rts-contact-link">
                   <a href="mailto:Plato'sacademy.com"
-                    ><i class="fa-sharp fa-light fa-location-dot"></i>
-                    Tiruppu,4/317, Paramankadu, Chinniyagoundan pudur,
-                    Chinnandipalayam, (Iduvampalayam Po), Tiruppur-641667
+                    ><i class="fa-sharp fa-light fa-location-dot"></i> 4/317,
+                    Paramankadu, Chinniyagoundan pudur, Chinnandipalayam,<br />
+                    (Iduvampalayam Po),<br />
+                    Tirupur-641667
                   </a>
                   <br />
-                  <a href="callto:+91 7200076653"
+                  <a
+                    href="callto:+91 7200076653"
+                    style="display: block; margin-top: 14px"
                     ><i class="fa-thin fa-phone"></i>+91 7200076653
                   </a>
                 </div>
@@ -1224,54 +1174,45 @@
             <div class="rts-footer-widget w-320"></div>
           </div>
           <div class="col-lg-2 col-md-6 col-sm-6">
-            <div
-              class="rts-footer-widget"
-              style="text-align: center !important"
-            >
+            <div class="rts-footer-widget">
               <h6 class="rt-semi">Our Campus</h6>
               <div class="rts-footer-menu">
                 <ul>
-                  <li><a href=".html">Academics</a></li>
-                  <li><a href="campus.html">Campus life</a></li>
-                  <li><a href=".html">Achievements</a></li>
+                  <li><a href="academics.html">Academics</a></li>
+                  <li><a href="campus.html">Campus</a></li>
+                  <li><a href="achievements.html">Achievements</a></li>
                   <li><a href="rifleclub.html">Rifle Club</a></li>
                   <li>
                     <a href="extracurricularactivities.html"
                       >Extracurricular Activities</a
                     >
                   </li>
-                  <li>
-                    <a href="gallery.html">Gallery</a>
-                  </li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="col-lg-2 col-md-6 col-sm-4">
-            <div
-              class="rts-footer-widget ml--30"
-              style="text-align: center !important"
-            >
+            <div class="rts-footer-widget ml--30">
               <h6 class="rt-semi">Admission Policy</h6>
               <div class="rts-footer-menu">
                 <ul>
                   <li><a href="admissions.html">Admission Process </a></li>
-                  <li><a href="admissions.html">Form</a></li>
-                  <li><a href="admissions.html">Enquiry</a></li>
+                  <li><a href="admissions.html"> Admission Form</a></li>
+                  <li><a href="policy.html">Policy</a></li>
                   <li><a href="about.html">About</a></li>
                   <li><a href="contact.html">Contact Us</a></li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-8">
+          <div class="col-lg-3 col-md-6 col-sm-8">
             <div class="rts-footer-widget ml--30">
-              <h6 class="rt-semi">Challo App</h6>
+              <h6 class="rt-semi">Chalo App</h6>
               <div class="rts-post-widget">
                 <ul class="list-unstyled">
                   <li class="single-post">
                     <div class="post-content">
-                      <a href="#">
+                      <a href="challoapp.html">
                         <strong>Student, Teacher & Parent Portal</strong>
                       </a>
                       <p style="margin-top: 5px">
@@ -1295,8 +1236,8 @@
         <div class="row">
           <div class="rt-center">
             <p class="--p-xs">
-              Copyright &copy; <span id="year"></span>
-              <a href="#">Plato's Academy</a> All Rights Reserved by
+              Copyright &copy; <span id="year"></span> <a href="#"></a> All
+              Rights Reserved by
               <a href="#">Palette Production</a>
             </p>
           </div>
@@ -1304,10 +1245,6 @@
       </div>
     </div>
     <!-- footer end -->
-    <!-- footer end -->
-    <!-- footer copyright -->
-
-    <!-- footer copyright end -->
 
     <!-- offcanvase menu -->
     <!-- header style two -->
@@ -1365,41 +1302,51 @@
               <a href="javascript:void(0);" class="main">About</a>
               <ul class="submenu mm-collapse">
                 <li>
-                  <a class="mobile-menu-link" href="about.html"
+                  <a class="mobile-menu-link" href="about.html#whychooseus"
                     >Why Choose Us</a
                   >
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="about.html">Vision</a>
+                  <a class="mobile-menu-link" href="about.html#visionmission"
+                    >Vision</a
+                  >
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="about.html">Mission</a>
+                  <a class="mobile-menu-link" href="about.html#visionmission"
+                    >Mission</a
+                  >
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="about.html"
+                  <a class="mobile-menu-link" href="about.html#foundersTrustee"
                     >Founders & Trustee</a
                   >
                 </li>
-                <li>
+                <!-- <li>
                   <a class="mobile-menu-link" href="about.html"
                     >Fascilitators</a
                   >
-                </li>
+                </li> -->
               </ul>
             </li>
             <li class="has-droupdown">
               <a href="javascript:void(0);" class="main">Admissions</a>
               <ul class="submenu mm-collapse">
                 <li>
-                  <a class="mobile-menu-link" href="admissions.html"
+                  <a
+                    class="mobile-menu-link"
+                    href="admissions.html#admissionprocess"
                     >Admission Process</a
                   >
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="admissions.html">Form</a>
+                  <a class="mobile-menu-link" href="admissions.html#form"
+                    >Form</a
+                  >
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="admissions.html">Enquiry</a>
+                  <a class="mobile-menu-link" href="admissions.html#enquiry"
+                    >Enquiry</a
+                  >
                 </li>
               </ul>
             </li>
@@ -1408,43 +1355,101 @@
               <a href="javascript:void(0);" class="main">Campus</a>
               <ul class="submenu mm-collapse">
                 <li>
-                  <a class="mobile-menu-link" href="campus.html">Campus Life</a>
-                </li>
-                <li>
-                  <a class="mobile-menu-link" href="campus.html"
-                    >Infrastructure</a
+                  <a class="mobile-menu-link" href="campus.html#campusresources"
+                    >Campus resources</a
                   >
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="academic-area.html"
+                  <a class="mobile-menu-link" href="campus.html#aminities"
+                    >Aminities</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="campus.html#campussafety"
                     >Campus Safety</a
                   >
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="campus-life.html"
+                  <a class="mobile-menu-link" href="campus.html.html#transport"
                     >Transport</a
                   >
                 </li>
               </ul>
             </li>
-            <li>
-              <a href="rifleclub.html" class="main">Riffle Club</a>
+
+            <li class="has-droupdown">
+              <a href="javascript:void(0);" class="main">Academics</a>
+              <ul class="submenu mm-collapse">
+                <li>
+                  <a class="mobile-menu-link" href="academics.html#ouracademics"
+                    >Our Academics</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="mobile-menu-link"
+                    href="academics.html#academicscurriculam"
+                    >Academics Curriculam</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-menu-link" href="academics.html#staffroles"
+                    >Roles & Responsibilities</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="mobile-menu-link"
+                    href="academics.html#academiccalender"
+                    >Academic Calender</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="mobile-menu-link"
+                    href="academics.html#coachingprograms"
+                    >Coaching Programs</a
+                  >
+                </li>
+              </ul>
             </li>
 
             <li class="has-droupdown">
-              <a href="javascript:void(0);" class="main">achievements</a>
+              <a href="javascript:void(0);" class="main">Achievements</a>
               <ul class="submenu mm-collapse">
                 <li>
-                  <a class="mobile-menu-link" href="achievements.html"
+                  <a
+                    class="mobile-menu-link"
+                    href="achievements.html#academicexcellence"
                     >Academic Excellence</a
                   >
                 </li>
                 <li>
-                  <a class="mobile-menu-link" href="achievements.html"
+                  <a
+                    class="mobile-menu-link"
+                    href="achievements.html#academicachievements"
+                    >Academic Achievements</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="mobile-menu-link"
+                    href="achievements.html#sportsexcellence"
                     >Sports Excellence</a
                   >
                 </li>
+                <li>
+                  <a
+                    class="mobile-menu-link"
+                    href="achievements.html#sportsachievements"
+                    >Sports Achievements</a
+                  >
+                </li>
               </ul>
+            </li>
+
+            <li>
+              <a href="rifleclub.html" class="main">Riffle Club</a>
             </li>
             <li>
               <a href="extracurricularactivities.html" class="main"
@@ -1645,6 +1650,64 @@
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         },
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Check if URL has hash and scroll to it
+        if (window.location.hash) {
+          const element = document.querySelector(window.location.hash);
+          if (element) {
+            setTimeout(() => {
+              element.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }, 300); // Small delay to allow page to load
+          }
+        }
+
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+
+              // Update URL without jumping
+              history.pushState(null, null, targetId);
+            }
+          });
+        });
+      });
+    </script>
+
+    <script>
+      const counters = document.querySelectorAll(".counter");
+      counters.forEach((counter) => {
+        const target = +counter.getAttribute("data-target");
+        const speed = 200; // Lower is faster
+        const increment = target / speed;
+
+        const updateCount = () => {
+          const current = +counter.innerText;
+          if (current < target) {
+            counter.innerText = Math.ceil(current + increment);
+            setTimeout(updateCount, 20);
+          } else {
+            counter.innerText = target;
+          }
+        };
+
+        updateCount();
       });
     </script>
   </body>
