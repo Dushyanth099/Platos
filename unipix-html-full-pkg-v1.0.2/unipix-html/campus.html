@@ -51,6 +51,10 @@
     rel="stylesheet"
     href="https://unpkg.com/swiper/swiper-bundle.min.css"
   />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
   <style>
     .rotating-cards-section {
       position: relative;
@@ -233,7 +237,11 @@
       z-index: 10;
     }
     .swiper-button-next,
-    .swiper-button-prev {
+    .swiper-button-prev,
+    .swiper-button-nextt,
+    .swiper-button-prevv,
+    .swiper-button-nexttt,
+    .swiper-button-prevvv {
       position: static; /* Remove absolute positioning */
       width: 45px;
       height: 45px;
@@ -258,6 +266,31 @@
     /* Optional: Remove default Swiper arrows */
     .swiper-button-next::after,
     .swiper-button-prev::after {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .swiper-button-nextt:hover,
+    .swiper-button-prevv:hover {
+      background-color: #0000cc;
+      transform: scale(1.1);
+    }
+
+    /* Optional: Remove default Swiper arrows */
+    .swiper-button-nextt::after,
+    .swiper-button-prevv::after {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .swiper-button-nexttt:hover,
+    .swiper-button-prevvv:hover {
+      background-color: #0000cc;
+      transform: scale(1.1);
+    }
+
+    /* Optional: Remove default Swiper arrows */
+    .swiper-button-nexttt::after,
+    .swiper-button-prevvv::after {
       font-size: 18px;
       font-weight: bold;
     }
@@ -603,11 +636,15 @@
       <div class="container">
         <!-- Swiper navigation -->
         <div class="custom-nav-wrapper">
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prevvv">
+            <i class="fa fa-chevron-left"></i>
+          </div>
+          <div class="swiper-button-nexttt">
+            <i class="fa fa-chevron-right"></i>
+          </div>
         </div>
 
-        <div class="swiper campusSwiper">
+        <div class="swiper campusSwiperrr">
           <div class="swiper-wrapper">
             <!-- Slide 1 -->
             <div class="swiper-slide">
@@ -1137,11 +1174,16 @@
         <div class="container">
           <!-- Swiper navigation -->
           <div class="custom-nav-wrapper">
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prevv">
+              <i class="fa fa-chevron-left"></i>
+            </div>
+            <div class="swiper-button-nextt">
+                <i class="fa fa-chevron-right"></i>
+              
+            </div>
           </div>
 
-          <div class="swiper campusSwiper">
+          <div class="swiper campusSwiperr">
             <div class="swiper-wrapper">
               <!-- Slide 1 -->
               <div class="swiper-slide">
@@ -1796,6 +1838,48 @@
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
+    </script>
+    <script>
+      const swiperrr = new Swiper(".campusSwiperrr", {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        grabCursor: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-nexttt",
+          prevEl: ".swiper-button-prevvv",
+        },
+        breakpoints: {
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
+    </script>
+    <script>
+      const swiperr = new Swiper(".campusSwiperr", {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        grabCursor: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-nextt",
+          prevEl: ".swiper-button-prevv",
         },
         breakpoints: {
           640: { slidesPerView: 1 },
