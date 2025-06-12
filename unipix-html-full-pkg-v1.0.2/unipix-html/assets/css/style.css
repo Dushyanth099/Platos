@@ -91,9 +91,8 @@ section[id] {
   scroll-margin-top: 140px; /* Adjust based on your header height */
 }
 
-.rts-section-pad
-{
-    padding: 40px 0;
+.rts-section-pad {
+  padding: 40px 0;
 }
 
 html {
@@ -652,7 +651,6 @@ ol ul {
     padding: 60px 0;
   }
 }
-
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rts-section-padding {
@@ -15137,7 +15135,6 @@ body.index-sc h6 {
   z-index: 9999;
 }
 
-
 @media screen and (max-width: 992px) {
   .rts-section-padding {
     padding: 80px 0;
@@ -15405,7 +15402,6 @@ body.index-sc h6 {
 .rts__section--wrapper.v__4 .rts__section--description2 {
   color: black;
   /* margin-top: 50px; */
-
 }
 .rts__section--wrapper.v__4 .rts__section--title {
   margin-bottom: 25px;
@@ -17955,6 +17951,9 @@ body.index-sc h6 {
 .banner.v__1 {
   background: var(--rt-primary-2);
   height: 600px;
+  padding:0;
+  max-width: 1800px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   position: relative;
@@ -18980,6 +18979,7 @@ body.index-sc h6 {
 }
 .rts-video-section-player {
   height: 100px;
+  background-color: #0b0be4;
   width: 100px;
   border-radius: 50%;
   border: 1px solid var(--rt-white);
@@ -28653,3 +28653,57 @@ h1 {
   padding-top: 120px;
   padding-bottom: 80px;
 } */
+/* mediaquerries */
+@media (max-width: 768px) {
+  .rts-breadcrumb .breadcrumb-content .section-title {
+    font-size: 25px;
+  }
+}
+
+/* Tablet and mobile shared */
+@media screen and (max-width: 992px) {
+  .rts-funfact-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100% !important;
+    min-width: auto !important;
+    padding: 30px 20px;
+  }
+
+  .rts-funfact-wrapper .single-cta-item {
+    max-width: 45%;
+    flex: 0 0 45%;
+    position: relative;
+  }
+
+  /* Hide vertical divider lines for tablet and below */
+  .rts-funfact-wrapper .single-cta-item::after {
+    display: none !important;
+  }
+}
+
+/* Mobile only: 1 item per row and red horizontal line */
+@media screen and (max-width: 576px) {
+  .rts-funfact-wrapper {
+    gap: 20px;
+  }
+
+  .rts-funfact-wrapper .single-cta-item {
+    max-width: 100%;
+    flex: 0 0 100%;
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  .rts-funfact-wrapper .single-cta-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: 0;
+    height: 1px;
+    background: #af2944;
+    display: block !important;
+  }
+}

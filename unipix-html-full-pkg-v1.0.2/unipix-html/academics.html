@@ -309,14 +309,53 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   }
 </style>
 <style>
-  #schoolCalendar {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    background: #fff;
-  }
+  .calendar-event-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.calendar-col,
+.event-col {
+  display: flex;
+  flex-direction: column;
+}
+
+  #schoolCalendar,
+.monthly-events-box {
+  flex-grow: 1;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  padding: 20px;
+}
+
+.monthly-events-box {
+  background: white;
+  overflow-y: auto;
+}
+.monthly-events-box h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.event-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.event-list li {
+  padding: 10px;
+  margin-bottom: 8px;
+  background-color: #fff;
+  border-left: 5px solid #007bff;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
 </style>
 
 
@@ -896,8 +935,8 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 
             </p>
             <div class="rts__slider--arrow">
-              <div class="rts__prev slider__btn" style="background-color: #022d58;"><i class="fa-light fa-arrow-left"></i></div>
-              <div class="rts__next slider__btn"style="background-color: #022d58;"><i class="fa-light fa-arrow-right"></i></div>
+              <div class="rts__prev slider__btn" style="background-color: #0f0dae;"><i class="fa-light fa-arrow-left"></i></div>
+              <div class="rts__next slider__btn"style="background-color: #0f0dae;"><i class="fa-light fa-arrow-right"></i></div>
             </div>
           </div>
         </div>
@@ -1018,7 +1057,22 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
       </div>
     </div>
   </div>
-  <div id="schoolCalendar" data-aos="fade-up"></div>
+  <div class="container">
+    <div class="row">
+      <!-- Calendar column -->
+      <div class="col-md-8" data-aos="fade-up">
+        <div id="schoolCalendar"></div>
+      </div>
+
+      <!-- Event list column -->
+      <div class="col-md-4 event-col" data-aos="fade-up">
+        <div id="monthlyEvents" class="monthly-events-box">
+          <h4>Events This Month</h4>
+          <ul id="eventList" class="event-list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
  </section>
   
 
@@ -1043,10 +1097,10 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
       
           <div class="faq-list">
             <!-- NEET Coaching -->
-            <div class="faq-item">
+            <div class="faq-item active">
               <div class="faq-question">
                 <strong>NEET Coaching</strong>
-                <span class="toggle-icon">+</span>
+              
               </div>
               <div class="faq-answer">
                 <div class="sub-item">
@@ -1057,10 +1111,10 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
             </div>
   
             <!-- JEE Coaching -->
-            <div class="faq-item">
+            <div class="faq-item active">
               <div class="faq-question">
                 <strong>JEE Coaching</strong>
-                <span class="toggle-icon">+</span>
+            
               </div>
               <div class="faq-answer">
                 <div class="sub-item">
@@ -1073,10 +1127,10 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
             </div>
   
             <!-- IIT Coaching -->
-            <div class="faq-item">
+            <div class="faq-item active">
               <div class="faq-question">
                 <strong>IIT Coaching</strong>
-                <span class="toggle-icon">+</span>
+             
               </div>
               <div class="faq-answer">
                 <div class="sub-item">
@@ -1087,10 +1141,10 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
             </div>
   
             <!-- Civil Services Coaching -->
-            <div class="faq-item">
+            <div class="faq-item active">
               <div class="faq-question">
                 <strong>Civil Services Coaching</strong>
-                <span class="toggle-icon">+</span>
+            
               </div>
               <div class="faq-answer">
                 <div class="sub-item">
@@ -1194,36 +1248,32 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 
         <div class="row g-5 justify-content-center " style="margin-top: 70px;">
             <!-- Color swatch 5 -->
-      <div class="col-6 col-sm-4 col-md-3 color-card" style="background-color: #007FFF ;">
+      <div class="col-6 col-sm-4 col-md-3 color-card" style="background-color: #043a85 ;">
   <img src="assets/pushpin_9522486.png" alt="pin" class="pin-image" />
   <div class="color-box">
     <img class="color-swatch" src="assets/gal27.jpg" alt="Club Image" style="height: 230px; border-radius: 8px 8px 0 0;" />
     <div class="club-description p-2 mt--10">
-      <h6>Grammarian Galaxy Club</h6>
+      <h6>Gyan Ganga – Hindi Club</h6>
      <p>
-        Our vibrant English club fosters students’ language skills through a variety of engaging 
-     activities such as debates, quizzes,
-      Just A Minute (JAM) sessions, oration, compering, singing and other English-centric disciplines. 
-      It aims to build confidence,
-       communication and creativity among students.
+      Gyan Ganga nurtures a love for Hindi through poetry, storytelling, street plays, and language games.
+      It builds fluency, creativity, and deepens cultural appreciation.
+      The club celebrates Hindi Divas with vibrant competitions and performances honouring the legacy of the language
      </p> 
     </div>
   </div>
 </div>
 
 
-<div class="col-6 col-sm-4 col-md-3 color-card" style="background-color: #5cbce9 ;">
+<div class="col-6 col-sm-4 col-md-3 color-card" style="background-color: #0f56ba ;">
   <img src="assets/pushpin_9522486.png" alt="pin" class="pin-image" />
   <div class="color-box">
     <img class="color-swatch" src="assets/gal27.jpg" alt="Club Image" style="height: 230px; border-radius: 8px 8px 0 0;" />
     <div class="club-description p-2 mt--10">
-      <h6>Grammarian Galaxy Club</h6>
+      <h6>Civic Circle Club</h6>
      <p>
-        Our vibrant English club fosters students’ language skills through a variety of engaging 
-     activities such as debates, quizzes,
-      Just A Minute (JAM) sessions, oration, compering, singing and other English-centric disciplines. 
-      It aims to build confidence,
-       communication and creativity among students.
+      Civic Circle fosters social awareness, civic responsibility, and active citizenship.
+      Through role plays, model parliaments, and awareness drives, students stay informed and engaged.
+      The club nurtures critical thinking and shapes responsible future citizens.
      </p> 
     </div>
   </div>
@@ -1231,34 +1281,30 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 
 
 
-<div class="col-6 col-sm-4 col-md-3 color-card" style="background-color: #47c5d6 ;">
+<div class="col-6 col-sm-4 col-md-3 color-card" style="background-color: rgb(10, 128, 212);">
   <img src="assets/pushpin_9522486.png" alt="pin" class="pin-image" />
   <div class="color-box">
     <img class="color-swatch" src="assets/gal27.jpg" alt="Club Image" style="height: 230px; border-radius: 8px 8px 0 0;" />
     <div class="club-description p-2 mt--10">
-      <h6>Grammarian Galaxy Club</h6>
+      <h6>Platonius Fabulinus – GK Club</h6>
      <p>
-        Our vibrant English club fosters students’ language skills through a variety of engaging 
-     activities such as debates, quizzes,
-      Just A Minute (JAM) sessions, oration, compering, singing and other English-centric disciplines. 
-      It aims to build confidence,
-       communication and creativity among students.
+      Unleashing the power of knowledge, Platonius Fabulinus sharpens young minds through quizzes, facts, and current affairs.
+      It fosters curiosity, logical reasoning, and a well-informed worldview.
+      The club inspires future thinkers, analysts, and global citizens.
      </p> 
     </div>
   </div>
 </div>
-<div class="col-6 col-sm-4 col-md-3 color-card" style="background-color: #8dd2f7 ;">
+<div class="col-6 col-sm-4 col-md-3 color-card" style="background-color: rgb(83, 141, 213) ;">
   <img src="assets/pushpin_9522486.png" alt="pin" class="pin-image" />
   <div class="color-box">
     <img class="color-swatch" src="assets/gal27.jpg" alt="Club Image" style="height: 230px; border-radius: 8px 8px 0 0;" />
      <div class="club-description p-2 mt--10">
-      <h6>Grammarian Galaxy Club</h6>
+      <h6>Artemistierre’s Club – Art Club</h6>
      <p>
-        Our vibrant English club fosters students’ language skills through a variety of engaging 
-     activities such as debates, quizzes,
-      Just A Minute (JAM) sessions, oration, compering, singing and other English-centric disciplines. 
-      It aims to build confidence,
-       communication and creativity among students.
+      Artemistierre’s Club celebrates creativity through colours, craft, and imagination.
+It nurtures artistic talent while enhancing focus, patience, and expression.
+Every masterpiece here tells a story shaped by passion and vision.
      </p> 
     </div>
   </div>
@@ -1736,9 +1782,25 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   <script src="assets/js/main.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      var calendarEl = document.getElementById("schoolCalendar");
-
-      var calendar = new FullCalendar.Calendar(calendarEl, {
+      const calendarEl = document.getElementById("schoolCalendar");
+      const eventListEl = document.getElementById("eventList");
+  
+      const allEvents = [
+        { title: "New Year's Day", start: "2025-01-01", color: "#FF5722" },
+        { title: "Republic Day", start: "2025-01-26", color: "#3F51B5" },
+        { title: "Holi", start: "2025-03-13", color: "#E91E63" },
+        { title: "Good Friday", start: "2025-04-18", color: "#9C27B0" },
+        { title: "Labour Day", start: "2025-06-01", color: "#4CAF50" },
+        { title: "Independence Day", start: "2025-08-15", color: "#F44336" },
+        { title: "Raksha Bandhan", start: "2025-06-18", color: "#FF9800" },
+        { title: "Janmashtami", start: "2025-06-27", color: "#2196F3" },
+        { title: "Gandhi Jayanti", start: "2025-10-02", color: "#00BCD4" },
+        { title: "Dussehra", start: "2025-10-01", color: "#673AB7" },
+        { title: "Diwali", start: "2025-10-20", color: "#FF5722" },
+        { title: "Christmas", start: "2025-12-25", color: "#009688" },
+      ];
+  
+      const calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: "dayGridMonth",
         height: "auto",
         headerToolbar: {
@@ -1746,27 +1808,35 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
           center: "title",
           right: "",
         },
-        events: [
-          { title: "New Year's Day", start: "2025-01-01", color: "#FF5722" },
-          { title: "Republic Day", start: "2025-01-26", color: "#3F51B5" },
-          { title: "Holi", start: "2025-03-13", color: "#E91E63" },
-          { title: "Good Friday", start: "2025-04-18", color: "#9C27B0" },
-          { title: "Labour Day", start: "2025-05-01", color: "#4CAF50" },
-          {
-            title: "Independence Day",
-            start: "2025-08-15",
-            color: "#F44336",
-          },
-          { title: "Raksha Bandhan", start: "2025-08-18", color: "#FF9800" },
-          { title: "Janmashtami", start: "2025-08-27", color: "#2196F3" },
-          { title: "Gandhi Jayanti", start: "2025-10-02", color: "#00BCD4" },
-          { title: "Dussehra", start: "2025-10-01", color: "#673AB7" },
-          { title: "Diwali", start: "2025-10-20", color: "#FF5722" },
-          { title: "Christmas", start: "2025-12-25", color: "#009688" },
-        ],
+        events: allEvents,
+        datesSet: function (info) {
+          updateEventList(info.start);
+        },
       });
-
+  
       calendar.render();
+  
+      function updateEventList(viewStart) {
+        const viewMonth = viewStart.getMonth();
+        const viewYear = viewStart.getFullYear();
+        const filteredEvents = allEvents.filter(event => {
+          const eventDate = new Date(event.start);
+          return eventDate.getMonth() === viewMonth && eventDate.getFullYear() === viewYear;
+        });
+  
+        eventListEl.innerHTML = "";
+  
+        if (filteredEvents.length === 0) {
+          eventListEl.innerHTML = "<li>No events this month.</li>";
+        } else {
+          filteredEvents.forEach(event => {
+            const li = document.createElement("li");
+            li.textContent = `${event.title} - ${new Date(event.start).toDateString()}`;
+            li.style.borderLeftColor = event.color;
+            eventListEl.appendChild(li);
+          });
+        }
+      }
     });
   </script>
   <!-- AOS JS -->
@@ -1774,7 +1844,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   <script>
     AOS.init();
   </script>
-  <script>
+  <!-- <script>
     // Add click functionality to FAQ items
     document.querySelectorAll('.faq-item').forEach(item => {
       const question = item.querySelector('.faq-question');
@@ -1782,7 +1852,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
         item.classList.toggle('active');
       });
     });
-  </script>
+  </script> -->
 
 
 <script>

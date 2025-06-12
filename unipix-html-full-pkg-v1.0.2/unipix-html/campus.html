@@ -81,7 +81,7 @@
       position: absolute;
       width: 420px;
       height: 520px;
-      background: rgb(1, 35, 79);
+      background: var(--rt-primary-2);
       border-radius: 15px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
       padding: 25px;
@@ -132,7 +132,7 @@
       top: 50%;
       left: 0;
       transform: translateY(-50%);
-      padding: 0 20px;
+      padding: 0 140px;
       box-sizing: border-box;
       z-index: 20;
     }
@@ -159,24 +159,105 @@
       transform: scale(1.1);
     }
 
-    @media (max-width: 768px) {
+    /* Medium devices (tablets, 768px and below) */
+    @media (max-width: 1200px) {
+      .rotating-cards-section {
+        padding: 30px 0;
+      }
+
       .cards-container {
+        min-width: 100%;
         height: 400px;
+        perspective: 800px;
       }
 
       .card {
-        width: 240px;
-        height: 340px;
+        width: 280px;
+        height: 380px;
+        padding: 20px;
+      }
+
+      .card h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+
+      .card p {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+
+      .card-icon {
+        font-size: 40px;
+        margin-bottom: 20px;
       }
 
       .navigation-controls {
-        padding: 0 10px;
+        padding: 0 15px;
       }
 
       .nav-btn {
         width: 40px;
         height: 40px;
         font-size: 16px;
+      }
+    }
+
+    /* Small devices (phones, 576px and below) */
+    @media (max-width: 576px) {
+      .rotating-cards-section {
+        padding: 20px 0;
+      }
+
+      .cards-container {
+        height: 350px;
+      }
+
+      .card {
+        width: 240px;
+        height: 320px;
+        padding: 15px;
+      }
+
+      .card h3 {
+        font-size: 18px;
+      }
+
+      .card p {
+        font-size: 13px;
+        line-height: 1.4;
+      }
+
+      .card-icon {
+        font-size: 36px;
+        margin-bottom: 15px;
+      }
+
+      .nav-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+      }
+    }
+
+    /* Extra small devices (phones, 400px and below) */
+    @media (max-width: 400px) {
+      .cards-container {
+        height: 320px;
+      }
+
+      .card {
+        width: 220px;
+        height: 300px;
+        padding: 12px;
+      }
+
+      .card h3 {
+        font-size: 17px;
+      }
+
+      .card p {
+        font-size: 12px;
       }
     }
   </style>
@@ -651,7 +732,7 @@
               <div class="single-item">
                 <div class="single-item__content">
                   <div class="single-item__image">
-                    <img src="assets/images/stulifeimg1.JPG" alt="item-image" />
+                    <img src="assets/smartclassroom.jpg" alt="item-image" />
                   </div>
                   <div class="single-item__meta">
                     <h5 class="item-title">
@@ -670,10 +751,7 @@
               <div class="single-item">
                 <div class="single-item__content">
                   <div class="single-item__image">
-                    <img
-                      src="assets/images/stulifeimg2.jpeg"
-                      alt="item-image"
-                    />
+                    <img src="assets/library.jpg" alt="item-image" />
                   </div>
                   <div class="single-item__meta">
                     <h5 class="item-title"><a href="#">Library</a></h5>
@@ -690,7 +768,7 @@
               <div class="single-item">
                 <div class="single-item__content">
                   <div class="single-item__image">
-                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
+                    <img src="assets/auditorium.jpg" alt="item-image" />
                   </div>
                   <div class="single-item__meta">
                     <h5 class="item-title">
@@ -709,7 +787,10 @@
               <div class="single-item">
                 <div class="single-item__content">
                   <div class="single-item__image">
-                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
+                    <img
+                      src="assets/ventilatedclassroom.jpg"
+                      alt="item-image"
+                    />
                   </div>
                   <div class="single-item__meta">
                     <h5 class="item-title">
@@ -744,7 +825,7 @@
               <div class="single-item">
                 <div class="single-item__content">
                   <div class="single-item__image">
-                    <img src="assets/images/stulifeimg3.JPG" alt="item-image" />
+                    <img src="assets/playground.jpg" alt="item-image" />
                   </div>
                   <div class="single-item__meta">
                     <h5 class="item-title">
@@ -824,10 +905,7 @@
                   <div class="single-item">
                     <div class="single-item__content">
                       <div class="single-item__image">
-                        <img
-                          src="assets/images/stulifeimg1.JPG"
-                          alt="item-image"
-                        />
+                        <img src="assets/cricketground.jpg" alt="item-image" />
                       </div>
                       <div class="single-item__meta">
                         <h5 class="item-title">
@@ -846,10 +924,7 @@
                   <div class="single-item">
                     <div class="single-item__content">
                       <div class="single-item__image">
-                        <img
-                          src="assets/images/stulifeimg2.jpeg"
-                          alt="item-image"
-                        />
+                        <img src="assets/footballground.jpg" alt="item-image" />
                       </div>
                       <div class="single-item__meta">
                         <h5 class="item-title">
@@ -869,10 +944,7 @@
                   <div class="single-item">
                     <div class="single-item__content">
                       <div class="single-item__image">
-                        <img
-                          src="assets/images/stulifeimg3.JPG"
-                          alt="item-image"
-                        />
+                        <img src="assets/tennisground.jpg" alt="item-image" />
                       </div>
                       <div class="single-item__meta">
                         <h5 class="item-title">
@@ -893,7 +965,7 @@
                     <div class="single-item__content">
                       <div class="single-item__image">
                         <img
-                          src="assets/images/stulifeimg3.JPG"
+                          src="assets/volleyballground.jpg"
                           alt="item-image"
                         />
                       </div>
@@ -915,7 +987,7 @@
                     <div class="single-item__content">
                       <div class="single-item__image">
                         <img
-                          src="assets/images/stulifeimg3.JPG"
+                          src="assets/basketballground.jpg"
                           alt="item-image"
                         />
                       </div>
@@ -937,10 +1009,7 @@
                   <div class="single-item">
                     <div class="single-item__content">
                       <div class="single-item__image">
-                        <img
-                          src="assets/images/stulifeimg3.JPG"
-                          alt="item-image"
-                        />
+                        <img src="assets/skattingground.jpg" alt="item-image" />
                       </div>
                       <div class="single-item__meta">
                         <h5 class="item-title">
@@ -960,10 +1029,7 @@
                   <div class="single-item">
                     <div class="single-item__content">
                       <div class="single-item__image">
-                        <img
-                          src="assets/images/stulifeimg3.JPG"
-                          alt="item-image"
-                        />
+                        <img src="assets/athletics.jpg" alt="item-image" />
                       </div>
                       <div class="single-item__meta">
                         <h5 class="item-title">
@@ -983,10 +1049,7 @@
                   <div class="single-item">
                     <div class="single-item__content">
                       <div class="single-item__image">
-                        <img
-                          src="assets/images/stulifeimg3.JPG"
-                          alt="item-image"
-                        />
+                        <img src="assets/rifle.jpg" alt="item-image" />
                       </div>
                       <div class="single-item__meta">
                         <h5 class="item-title">
@@ -1007,7 +1070,7 @@
                     <div class="single-item__content">
                       <div class="single-item__image">
                         <img
-                          src="assets/images/stulifeimg3.JPG"
+                          src="assets/multipurposehallground.jpg"
                           alt="item-image"
                         />
                       </div>
@@ -1176,7 +1239,7 @@
 
     <!-- TRANSPORT SECTION -->
     <section class="rts-section-padding" id="transport">
-      <div class="row rt-center ">
+      <div class="row rt-center">
         <div class="col-sm-12" data-aos="fade-up">
           <div class="rts__section--wrapper v__5">
             <h2 class="rts__section--title">Transport</h2>
@@ -1954,7 +2017,7 @@
         let autoRotate = setInterval(function () {
           currentIndex = (currentIndex + 1) % totalCards;
           animateCards();
-        }, 5000);
+        }, 2000);
 
         // Pause auto-rotation on hover
         const container = document.querySelector(".cards-container");
@@ -1965,7 +2028,7 @@
           autoRotate = setInterval(function () {
             currentIndex = (currentIndex + 1) % totalCards;
             animateCards();
-          }, 5000);
+          }, 2000);
         });
 
         function positionCards() {
