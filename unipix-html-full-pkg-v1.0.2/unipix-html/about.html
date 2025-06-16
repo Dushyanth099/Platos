@@ -36,17 +36,23 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <!-- <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    /> -->
+    <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   </head>
   
   <style>
+ 
+  .single-timeline-item img {
+    transition: all 0.5s ease;
+    transform: translateY(0);
+  }
+
+  .single-timeline-item img:hover {
+    transform: translateY(-30px);
+    cursor: pointer;
+    opacity: 0.9;
+  }
     /* Add this to your style section */
 .equal-height {
   display: flex;
@@ -926,7 +932,7 @@
             <div class="rts-timeline-section">
               <div class="rts-timeline-content">
                 <div class="left-side">
-                  <div class="single-timeline-item">
+                  <div class="single-timeline-item"data-aos="fade-left" data-aos-delay="100">
                     <h5 class="timeline-title">1985 – The Founding Years</h5>
                     <p class="martop">
                       Plato’s Academy was founded with a vision to impart
@@ -939,7 +945,7 @@
                       style="max-width: 70% !important"
                     />
                   </div>
-                  <div class="single-timeline-item">
+                  <div class="single-timeline-item"data-aos="fade-left" data-aos-delay="200">
                     <h5 class="timeline-title">1990 – Healthy Rivalry</h5>
                     <p class="martop">
                       The school introduced inter-house competitions to foster a
@@ -956,7 +962,7 @@
                 </div>
                 <div class="separator"></div>
                 <div class="right-side">
-                  <div class="single-timeline-item">
+                  <div class="single-timeline-item"data-aos="fade-right" data-aos-delay="300">
                     <h5 class="timeline-title">2005 – Global Communication</h5>
                     <p>
                       We launched spoken English and accent training modules,
@@ -969,7 +975,7 @@
                       style="max-width: 70% !important"
                     />
                   </div>
-                  <div class="single-timeline-item">
+                  <div class="single-timeline-item"data-aos="fade-right" data-aos-delay="400">
                     <h5 class="timeline-title">2010 – Interactive Learning</h5>
                     <p>
                       Smart classrooms and interactive learning tools were
@@ -991,7 +997,7 @@
             <div class="rts-timeline-section">
               <div class="rts-timeline-content">
                 <div class="left-side">
-                  <div class="single-timeline-item">
+                  <div class="single-timeline-item"data-aos="fade-left" data-aos-delay="500">
                     <h5 class="timeline-title">1995 – Sports Excellence</h5>
                     <p class="martop">
                       A structured sports programme was implemented, encouraging
@@ -1004,7 +1010,7 @@
                       style="max-width: 70% !important"
                     />
                   </div>
-                  <div class="single-timeline-item">
+                  <div class="single-timeline-item"data-aos="fade-left" data-aos-delay="600">
                     <h5 class="timeline-title">2000 – Digital Integration</h5>
                     <p class="martop">
                       The academy integrated computer education and
@@ -1021,7 +1027,7 @@
                 </div>
                 <div class="separator"></div>
                 <div class="right-side">
-                  <div class="single-timeline-item">
+                  <div class="single-timeline-item"data-aos="fade-right" data-aos-delay="700">
                     <h5 class="timeline-title">2015 – Global Readiness</h5>
                     <p>
                       Our learners continue to shine in both academics and
@@ -1034,7 +1040,7 @@
                       style="max-width: 70% !important"
                     />
                   </div>
-                  <div class="single-timeline-item">
+                  <div class="single-timeline-item"data-aos="fade-right" data-aos-delay="800">
                     <h5 class="timeline-title">
                       2025 – International Prestige
                     </h5>
@@ -1783,5 +1789,11 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
     </script>
+    <!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>  
+
   </body>
 </html>
