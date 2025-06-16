@@ -17951,7 +17951,7 @@ body.index-sc h6 {
 .banner.v__1 {
   background: var(--rt-primary-2);
   height: 600px;
-  padding:0;
+  padding: 0;
   max-width: 1800px;
   margin: 0 auto;
   display: flex;
@@ -28705,5 +28705,17 @@ h1 {
     height: 1px;
     background: #af2944;
     display: block !important;
+  }
+}
+@media screen and (max-width: 620px) {
+  .faq-list {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    font-size: 5px !important;
+    gap: 15px;
+  }
+  #club {
+    margin-top: 220px;
   }
 }
