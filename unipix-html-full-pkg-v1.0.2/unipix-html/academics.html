@@ -1781,18 +1781,152 @@ Every masterpiece here tells a story shaped by passion and vision.
       const eventListEl = document.getElementById("eventList");
   
       const allEvents = [
-        { title: "New Year's Day", start: "2025-01-01", color: "#FF5722" },
-        { title: "Republic Day", start: "2025-01-26", color: "#3F51B5" },
-        { title: "Holi", start: "2025-03-13", color: "#E91E63" },
-        { title: "Good Friday", start: "2025-04-18", color: "#9C27B0" },
-        { title: "Labour Day", start: "2025-06-01", color: "#4CAF50" },
-        { title: "Independence Day", start: "2025-08-15", color: "#F44336" },
-        { title: "Raksha Bandhan", start: "2025-06-18", color: "#FF9800" },
-        { title: "Janmashtami", start: "2025-06-27", color: "#2196F3" },
-        { title: "Gandhi Jayanti", start: "2025-10-02", color: "#00BCD4" },
-        { title: "Dussehra", start: "2025-10-01", color: "#673AB7" },
-        { title: "Diwali", start: "2025-10-20", color: "#FF5722" },
-        { title: "Christmas", start: "2025-12-25", color: "#009688" },
+        { title: "Holiday", start: "2025-06-01", color: "#009688" },
+        { title: "World Bicycle Day", start: "2025-06-03", color: "#FF5722" },
+        { title: "World Environment Day", start: "2025-06-05", color: "#009688" },
+        { title: "Bakrid Holiday", start: "2025-06-07", color: "#009688" },
+        { title: "Holiday-World Ocean Day", start: "2025-06-07", color: "#FF5722" },
+        { title: "World Day Against Child Labour", start: "2025-06-12", color: "#FF5722" },
+        { title: "World Blood Donor Day", start: "2025-06-14", color: "#00BCD4" },
+        { title: "Holiday- World Fathers's Day", start: "2025-06-15", color: "#FF5722" },
+        { title: "International Yoga Day", start: "2025-06-21", color: "#FF5722" },
+        { title: "Holiday", start: "2025-06-22", color: "#3F51B5" },
+        { title: "International Day Against Drug", start: "2025-06-26", color: "#3F51B5" },
+        { title: "Abuse and Illccit Trafficking", start: "2025-06-27", color: "#3F51B5" },
+        { title: "Holiday", start: "2025-06-29", color: "#F44336" },
+
+
+
+        { title: "Doctors' Day", start: "2025-07-01", color: "#b60202"},
+        { title: "HoliDay/Muharram", start: "2025-07-06", color: "#f1c40f"},
+        { title: "World Chocolate Day", start: "2025-07-07", color: "#616a6b"},
+        { title: "World Population Day", start: "2025-07-11", color: "#eea600"},
+        { title: "HoliDay", start: "2025-07-13", color: "#93d300"},
+        { title: "Educational Development Day & kamarajar Birthday ", start: "2025-07-15", color: "#254d63"},
+        { title: "HoliDay", start: "2025-07-20", color: "#77e100"},
+        { title: "National Flag Day", start: "2025-07-22", color: "#5700b3"},
+        { title: "HoliDay/Abdul Kalam's Death Anniversary", start: "2025-07-27", color: "#5b2c6f"},
+        { title: "World Tiger Day", start: "2025-07-29", color: "#19873a"},
+
+
+
+
+        { title: "Raksha Bandhan", start: "2025-08-09", color: "#ffa100"},
+        { title: "HoliDay", start: "2025-08-10", color: "#45e19d"},
+        { title: "World Elephant Day", start: "2025-08-12", color: "#2b8c57"},
+        { title: "World Organ Donation Day", start: "2025-08-13", color: "#fbe804"},
+        { title: "Independence Day", start: "2025-08-15", color: "#56ba01"},
+        { title: "Gokula Ashtami", start: "2025-08-16", color: "#706a00"},
+        { title: "HoliDay", start: "2025-08-17", color: "#ff9200"},
+        { title: "World Photography Day", start: "2025-08-19", color: "#e4e000"},
+        { title: "HoliDay", start: "2025-08-24", color: "#64b403"},
+        { title: "Vinayagar Chaturthi", start: "2025-08-27", color: "#89b95e" },
+        { title: "National Sports Day", start: "2025-08-29", color: "#99ff3e" },
+        { title: "HoliDay", start: "2025-08-31", color: "#f1d400" },
+
+
+
+
+        { title: "National Nutrition Day", start: "2025-09-01", color: "#ff0902" },
+        { title: "National Wildlife Day", start: "2025-09-04", color: "#e95b03" },
+        { title: "Teachers' Day & miladi nabi & Onam", start: "2025-09-05", color: "#00d5c7" },
+        { title: "HoliDay", start: "2025-09-07", color: "#009c92" },
+        { title: "international literacy day", start: "2025-09-08", color: "#0ee5d7" },
+        { title: "hindi diwas", start: "2025-09-14", color: "#c5c547" },
+        { title: "HoliDay", start: "2025-09-21", color: "#f9f800" },
+        { title: "Navaratri Begins", start: "2025-09-22", color: "#2b0573" },
+        { title: "World Environmental Health Day", start: "2025-09-26", color: "#151941" },
+        { title: "World River Day & HoliDay", start: "2025-09-28", color: "#4d55a6" },
+        { title: "World Heart Day", start: "2025-09-29", color: "#472854" },
+
+
+        { title: "pooja HoliDays", start: "2025-10-01", color: "#5b2c6f" },
+        { title: "Gandhi Jayanti & Vijayadashami", start: "2025-10-02", color: "#5dade2" },
+        { title: "World Smile Day", start: "2025-10-03", color: "#922b21" },
+        { title: "HoliDay/world Teachers' Day", start: "2025-10-05", color: "#85929e" },
+        { title: "Indian Air Force Day", start: "2025-10-08", color: "#f7dc6f" },
+        { title: "World Post Day", start: "2025-10-09", color: "#0e6655" },
+        { title: "HoliDay", start: "2025-10-12", color: "#f7dc6f" },
+        { title: "APJ abdul kalam birthday", start: "2025-10-15", color: "#d0d3d4" },
+        { title: "World Food Day & Dictionary Day", start: "2025-10-16", color: "#21618c" },
+        { title: "HoliDay", start: "2025-10-19", color: "#0e6251" },
+        { title: "Diwali HoliDay", start: "2025-10-20", color: "#78281f" },
+        { title: "Diwali HoliDay", start: "2025-10-21", color: "#17202a" },
+        { title: "HoliDay", start: "2025-10-26", color: "#f9ebea" },
+
+
+
+
+        { title: "HoliDay", start: "2025-11-30", color: "#ff7c22" },
+        { title: "Thanks-Giving Day", start: "2025-11-27", color: "#fa5576" },
+        { title: "HoliDay", start: "2025-11-23", color: "#f03b9e" },
+        { title: "World Toilet Day/International Men's Day", start: "2025-11-19", color: "#e11ecc" },
+        { title: "HoliDay", start: "2025-11-16", color: "#e66bf5" },
+        { title: "Children's Day", start: "2025-11-14", color: "#2f2b7e" },
+        { title: "National Education Day", start: "2025-11-11", color: "#59677f" },
+        { title: "World Science Day for Peace and Development", start: "2025-11-10", color: "#6b8bc1" },
+        { title: "HoliDay", start: "2025-11-09", color: "#24d8fc" },
+        { title: "Guru Nanak jayanti", start: "2025-11-05", color: "#76f9cb" },
+        { title: "HoliDay", start: "2025-11-02", color: "#54f594" },
+        { title: "National Author's Day", start: "2025-11-01", color: "#56f815" },
+
+
+
+
+        { title: "Good FriDay", start: "2026-04-03", color: "#a0ee49" },
+        { title: "HoliDay/Easter", start: "2026-04-05", color: "#b5ee1d" },
+        { title: "World Health Day", start: "2026-04-07", color: "#d7de05" },
+        { title: "HoliDay", start: "2026-04-12", color: "#8f802a" },
+        { title: "Tamil New Year", start: "2026-04-14", color: "#e2c41d" },
+        { title: "World Art Day", start: "2026-04-15", color: "#d18800" },
+        { title: "HoliDay", start: "2026-04-19", color: "#f37633" },
+        { title: "Earth Day", start: "2026-04-22", color: "#8d7f7d" },
+        { title: "World Book Day", start: "2026-04-23", color: "#ff5733" },
+        { title: "HoliDay", start: "2026-04-26", color: "#b86554 " },
+
+        { title: "Indian Navy Day", start: "2025-12-04", color: "#e2c41d" },
+        { title: "Holiday", start: "2025-12-07", color: "#b87554 " },
+        { title: "Indian Army Day", start: "2025-12-08", color: "#d7de05" },
+        { title: "Human Right Day", start: "2025-12-10", color: "#e2c41d" },
+        { title: "Holiday", start: "2025-12-14", color: "#d7de05" },
+        { title: "Holiday", start: "2025-12-21", color: "#d7de05" },
+        { title: "National Mathematics Day", start: "2025-12-22", color: "#e2c41d" },
+        { title: "National Farmer's Day", start: "2025-12-23", color: "#b86554 " },
+        { title: "Christmas", start: "2025-12-25", color: "#e2c41d" },
+        { title: "Holiday", start: "2025-12-28", color: "#d7de05" },
+
+
+        { title: "New-year-Holiday", start: "2026-01-01", color: "#e7de05" },
+        { title: "Holiday", start: "2026-01-04", color: "#f7de05" },
+        { title: "World Hindi Day", start: "2026-01-10", color: "#a7de05" },
+        { title: "Holiday", start: "2026-01-11", color: "#b7de05" },
+        { title: "Lohri", start: "2026-01-11", color: "#v7de05" },
+        { title: "Pongal Holiday", start: "2026-01-14", color: "#c7de05" },
+        { title: "Pongal Holiday", start: "2026-01-15", color: "#d7de05" },
+        { title: "Pongal Holiday", start: "2026-01-16", color: "#e7de05" },
+        { title: "Holiday", start: "2026-01-18", color: "#i7de05" },
+        { title: "National Girl Child Day", start: "2026-01-24", color: "#j7de05" },
+        { title: "Holiday", start: "2026-01-25", color: "#k7de05" },
+        { title: "Republic Day", start: "2026-01-26", color: "#l7de05" },
+    
+        { title: "Thai Poosam-Holiday", start: "2026-02-01", color: "#m1fe05" },
+        { title: "World Cancer Day", start: "2026-02-04", color: "#d7de05" },
+        { title: "Holiday", start: "2026-02-08", color: "#n7de05" },
+        { title: "Holiday", start: "2026-02-15", color: "#o7de05" },
+        { title: "World Scout Day-Holiday", start: "2026-02-22", color: "#d7de05" },
+        { title: "National Science Day", start: "2026-02-28", color: "#p7de05" },
+        
+
+        { title: "Holiday", start: "2026-03-01", color: "#1a5276" },
+        { title: "World Wildlife Day", start: "2026-03-03", color: "#1f618d" },
+        { title: "Holi", start: "2026-03-04", color: "#a0ee49" },
+        { title: "National Dentist's Day", start: "2026-03-06", color: "#a9cce3" },
+        { title: "International Women's Day & Holiday", start: "2026-03-08", color: "#c0392b" },
+        { title: "Holiday", start: "2026-03-15", color: "#f1c40f" },
+        { title: "Ugadi & Ramzan", start: "2026-03-19", color: "#d98880" },
+        { title: "World Water Day", start: "2026-03-22", color: "#3498db" },
+        { title: "Holiday", start: "2026-03-29", color: "#f1c40f" },
+        { title: "Mahavir Jayanti", start: "2026-03-31", color: "#4a235a" },
       ];
   
       const calendar = new FullCalendar.Calendar(calendarEl, {
@@ -1805,12 +1939,14 @@ Every masterpiece here tells a story shaped by passion and vision.
         },
         events: allEvents,
         datesSet: function (info) {
-          updateEventList(info.start);
+          updateEventList(info.view.currentStart);
         },
       });
   
       calendar.render();
-  
+      updateEventList(calendar.view.currentStart);
+
+      
       function updateEventList(viewStart) {
         const viewMonth = viewStart.getMonth();
         const viewYear = viewStart.getFullYear();
