@@ -17519,7 +17519,7 @@ body.index-sc h6 {
   content: "";
   left: 0;
   top: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
 }
 @media screen and (max-width: 992px) {
   .rts-breadcrumb.breadcrumb-height {
