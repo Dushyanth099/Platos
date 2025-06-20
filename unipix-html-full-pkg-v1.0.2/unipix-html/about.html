@@ -40,7 +40,75 @@
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   </head>
+  <style>
+  .ourrow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+  }
+  .ourcolumn {
+    padding: 10px;
+    text-align: center;
   
+  }
+    .holographic-card {
+      width: 100%;
+      max-width: 253px;
+      height: 354px !important;
+      aspect-ratio: 6 / 7; /* keeps height proportional */
+      /* background-image: url(assets/hariphoto.jpg);  */
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      transition: all 0.5s ease;
+      margin: 0 auto;
+    }
+    
+    /* 📱 Responsive tweaks */
+    @media (max-width: 768px) {
+      .holographic-card {
+        margin-top: 30px;
+        max-width: 90%;
+        aspect-ratio: 6 / 7;
+      }
+    }
+    
+    
+    
+    .holographic-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        0deg, 
+        transparent, 
+        transparent 30%, 
+        rgba(0, 34, 255, 0.3)
+      );
+      transform: rotate(-45deg);
+      transition: all 0.5s ease;
+      opacity: 0;
+    }
+    
+    .holographic-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 26, 255, 0.797);
+    }
+    
+    .holographic-card:hover::before {
+      opacity: 1;
+      transform: rotate(-45deg) translateY(100%);
+    }
+        </style>
   <style>
  
   .single-timeline-item img {
@@ -588,27 +656,27 @@
             >
               <div class="single-cta-item">
                 <h2 class="single-cta-item__title">
+                  <span class="counter" data-target="100">0</span>%
+                </h2>
+                <p>Success in Board Exams</p>
+              </div>
+              <div class="single-cta-item">
+                <h2 class="single-cta-item__title">
                   <span class="counter" data-target="40">0</span>+
                 </h2>
                 <p>Years of Academic Excellence</p>
               </div>
               <div class="single-cta-item">
                 <h2 class="single-cta-item__title">
-                  <span class="counter" data-target="100">0</span>%
+                  <span class="counter" data-target="2500">0</span>+
                 </h2>
-                <p>Pass Rate</p>
+                <p>Students Enrolled</p>
               </div>
               <div class="single-cta-item">
                 <h2 class="single-cta-item__title">
                   <span class="counter" data-target="50">0</span>+
                 </h2>
                 <p>Certified Faculty Members</p>
-              </div>
-              <div class="single-cta-item">
-                <h2 class="single-cta-item__title">
-                  <span class="counter" data-target="2500">0</span>+
-                </h2>
-                <p>Students Enrolled</p>
               </div>
             </div>
           </div>
@@ -698,14 +766,68 @@
         </div>
       </div>
     </div>
-    <div class="messagedd-container">
+    <div class="row rt-center">
+      <div class="col-sm-12">
+         <div class="container-fluid mt--40" style="max-width:90%;">
+      <div class="row ourrow">
+        <div class="ourcolumn">
+           <div class="">
+    <div class="holographic-card">
+      <!-- <h2>HOLOGRAM</h2> -->
+       <img src="assets/trusteecookie.jpg" alt="" srcset="">
+       
+    </div>
+     <h3 class="messageddperson-name">Mrs. Grisilda</h3>
+  </div>
+        </div>
+        <div class="ourcolumn">
+           <div class="">
+    <div class="holographic-card">
+      <!-- <h2>HOLOGRAM</h2> -->
+          <img src="assets/founder2.jpg" alt="" srcset="">    
+    </div>
+     <h3 class="messageddperson-name">Mr. Hari Krishnan</h3>
+  </div>
+        </div>
+        <div class="ourcolumn">
+           <div class="">
+    <div class="holographic-card">
+      <!-- <h2>HOLOGRAM</h2> -->
+          <img src="assets/founder3.jpg" alt="" srcset="">
+    </div>
+     <h3 class="messageddperson-name">Mrs. Kareena Lopez</h3>
+  </div>
+        </div>
+        <div class="ourcolumn">
+           <div class="">
+    <div class="holographic-card">
+      <!-- <h2>HOLOGRAM</h2> -->
+          <img src="assets/founder4.jpg" alt="" srcset="">
+    </div>
+     <h3 class="messageddperson-name">Mr. Conrad Lopez</h3>
+  </div>
+        </div>
+        <div class="ourcolumn">
+           <div class="">
+    <div class="holographic-card">
+      <!-- <h2>HOLOGRAM</h2> -->
+          <img src="assets/founder05.jpg" alt="" srcset="">
+    </div>
+     <h3 class="messageddperson-name">Mr. Royston Lopez</h3>
+  </div>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+    <div class="messagedd-container mt--40"  >
       <div class="messageddleft-side">
         <img
           src="assets/hariphoto.jpg"
           alt="Chairman Photo"
           class="profile-image"
         />
-        <h3 class="messageddperson-name">Mr. Hari Krishnan</h3>
+        <h3 class="messageddperson-name">Mrs. SriKumari NS</h3>
         <p class="messageddperson-title">The Director</p>
       </div>
       <div
@@ -968,7 +1090,7 @@
                       made their mark at the state level in track and field.
                     </p>
                     <img
-                      src="assets/milestonecommunnication.jpg"
+                      src="assets/interactivelearning.jpg"
                       alt=""
                       style="max-width: 70% !important"
                     />
@@ -982,7 +1104,7 @@
                       recognition.
                     </p>
                     <img
-                      src="assets/modern2.jpg"
+                      src="assets/smartclassabout.jpg"
                       alt=""
                       style="max-width: 70% !important"
                     />
@@ -1017,7 +1139,7 @@
                       commendable success.
                     </p>
                     <img
-                      src="assets/milestonemodern.jpg"
+                      src="assets/modern1.jpg"
                       alt=""
                       style="max-width: 70% !important"
                     />
@@ -1049,7 +1171,7 @@
                       National-level shooting championship. '
                     </p>
                     <img
-                      src="assets/milestonestudies2.jpg"
+                      src="assets/rifleimgg.jpg"
                       alt=""
                       style="max-width: 70% !important"
                     />

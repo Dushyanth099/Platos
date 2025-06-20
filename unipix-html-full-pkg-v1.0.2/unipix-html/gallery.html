@@ -1009,37 +1009,71 @@
       const galleryImages = {
         leftToRight: [
           "assets/gallery/1.jpg",
-          "assets/gallery/2.jpg",
+          "assets/gallery/gallery1.jpg",
           "assets/gallery/3.jpg",
-          "assets/gallery/4.jpg",
+          "assets/gallery/gallery2.jpg",
           "assets/gallery/5.jpg",
-          "assets/gallery/6.jpg",
+          "assets/gallery/gallery3.jpg",
           "assets/gallery/7.jpeg",
-          "assets/gallery/8.jpg",
+          "assets/gallery/gallery4.jpg",
           "assets/gallery/9.jpg",
-          "assets/gallery/10.jpg",
-          "assets/gallery/11.jpg",
+          "assets/gallery/gallery5.jpg",
+          "assets/gallery/gallery6.jpg",
           "assets/gallery/12.jpg",
-          "assets/gallery/13.jpg",
+          "assets/gallery/gallery7.jpg",
           "assets/gallery/14.jpg",
-          "assets/gallery/15.jpg",
+          "assets/gallery/gallery8.jpg",
         ],
         rightToLeft: [
           "assets/gallery/16.jpg",
-          "assets/gallery/17.jpg",
+          "assets/gallery/gallery9.jpg",
           "assets/gallery/18.jpg",
-          "assets/gallery/19.jpg",
+          "assets/gallery/gallery10.jpg",
           "assets/gallery/20.jpg",
-          "assets/gallery/21.jpg",
+          "assets/gallery/gallery11.jpg",
           "assets/gallery/22.jpg",
-          "assets/gallery/23.jpg",
+          "assets/gallery/gallery12.jpg",
           "assets/gallery/24.jpg",
-          "assets/gallery/25.jpg",
+          "assets/gallery/gallery13.jpg",
           "assets/gallery/26.jpg",
-          "assets/gallery/27.jpg",
+          "assets/gallery/gallery14.jpg",
           "assets/gallery/28.jpg",
-          "assets/gallery/29.jpg",
+          "assets/gallery/gallery15.jpg",
           "assets/gallery/30.jpg",
+        ],
+        uptobottom: [
+          "assets/gallery/2.jpg",
+          "assets/gallery/gallery11.jpg",
+          "assets/gallery/4.jpg",
+          "assets/gallery/gallery12.jpg",
+          "assets/gallery/6.jpg",
+          "assets/gallery/gallery13.jpg",
+          "assets/gallery/8.jpg",
+          "assets/gallery/gallery14.jpg",
+          "assets/gallery/10.jpg",
+          "assets/gallery/gallery15.jpg",
+          "assets/gallery/gallery16.jpg",
+          "assets/gallery/11.jpg",
+          "assets/gallery/gallery17.jpg",
+          "assets/gallery/15.jpg",
+          "assets/gallery/16.jpg",
+        ],
+        bottomtoup: [
+          "assets/gallery/17.jpg",
+          "assets/gallery/1.jpg",
+          "assets/gallery/19.jpg",
+          "assets/gallery/3.jpg",
+          "assets/gallery/21.jpg",
+          "assets/gallery/gallery11.jpg",
+          "assets/gallery/5.jpg",
+          "assets/gallery/gallery12.jpg",
+          "assets/gallery/9.jpg",
+          "assets/gallery/gallery13.jpg",
+          "assets/gallery/10.jpg",
+          "assets/gallery/gallery14.jpg",
+          "assets/gallery/11.jpg",
+          "assets/gallery/gallery15.jpg",
+          "assets/gallery/12.jpg",
         ],
       };
 
@@ -1111,11 +1145,11 @@
         generateGalleryCards("right-to-left-track", galleryImages.rightToLeft);
         generateGalleryCards(
           "left-to-right-track-2",
-          galleryImages.leftToRight
+          galleryImages.uptobottom
         );
         generateGalleryCards(
           "right-to-left-track-2",
-          galleryImages.rightToLeft
+          galleryImages.bottomtoup
         );
 
         // Initialize any carousel/slider functionality here if needed
